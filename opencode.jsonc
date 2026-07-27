@@ -14,5 +14,12 @@
   },
   "skills": {
     "paths": [".opencode/skills"]
+  },
+  "mcp": {
+    "noir-recon": {
+      "type": "local",
+      "command": ["python", "noir-mcp/recon_server.py"],
+      "enabled": true
+    }
   }
 }
