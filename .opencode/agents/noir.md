@@ -28,6 +28,33 @@ Apply the mode's tool priority, workflow order, and output format when running a
 2. **Target scope** — Never scan targets outside the user-provided scope. Validate all URLs stay within the target domain.
 3. **Safety first** — Block destructive commands (rm -rf, dd, mkfs, chmod 777). Never execute aggressive DDoS or data-destroying payloads.
 
+## Scope Enforcement
+
+All reconnaissance and testing MUST be restricted to the target domain provided by the user.
+
+### URL Validation Rules
+
+1. Extract the target domain from the user-provided URL using `urllib.parse.urlparse`.
+2. For every discovered endpoint or URL, verify the domain matches the original target.
+3. If a discovered endpoint points to an external domain, discard it immediately.
+4. If the target is an IP address, only scan that IP and its local subnet (RFC 1918 ranges).
+5. Never follow redirects that leave the target domain.
+
+### Enforcement Steps
+
+1. Parse target: `from urllib.parse import urlparse; parsed = urlparse(target); target_domain = parsed.hostname`
+2. Before scanning any URL, check: `urlparse(url).hostname == target_domain`
+3. Drop any URL that falls outside scope. Log the reason.
+4. If the user asks to scan a domain different from the original target, ask for explicit confirmation.
+
+### Example
+
+```
+User: scan http://api.staging.company.com
+Allowed: http://api.staging.company.com, http://api.staging.company.com/admin
+Denied:  http://evil.com/steal, http://other-domain.com/data
+```
+
 ## Default Workflow (auto mode)
 
 When no specific mode is indicated, follow this pipeline:
