@@ -25,7 +25,7 @@ Noir transforms natural language prompts into structured security assessments �
 ## Getting Started
 
 ```bash
-git clone <repo> noir
+git clone https://github.com/rheatkhs/noir.git
 cd noir
 opencode
 ```
@@ -51,18 +51,18 @@ validate http://localhost:3000
 
 Noir auto-detects the engagement mode from the target URL, or you can specify one explicitly.
 
-| Mode | Use Case | Workflow Priority | Output Format |
-|------|----------|-------------------|---------------|
-| `auto` | Unknown target | Adaptive | Standard |
-| `bug-bounty` | HackerOne, Bugcrowd, Intigriti | Recon → Enum → Exploit | HackerOne format |
-| `red-team` | Stealth ops, persistence, AD | Recon → Exploit → Enum | Executive summary |
-| `ctf` | HackTheBox, TryHackMe, picoCTF | Exploit → Enum → Recon | Flag submission |
-| `blue-team` | Detection, IR, defensive audit | Enum → Recon → Report | IR report |
-| `offensive` | Aggressive exploitation, PoC chains | Exploit → Enum → Recon | Technical |
-| `grey-hat` | Balanced assessment | Balanced | Technical |
-| `forensic` | Evidence preservation, disk/memory | Forensics → Report | Chain-of-custody |
-| `reverse-engineering` | Binaries, firmware, malware | RE → Exploit → Utility | Technical RE |
-| `mobile-pentest` | Android/iOS app assessment | Mobile → Enum → Exploit | OWASP Mobile Top 10 |
+| Mode                  | Use Case                            | Workflow Priority       | Output Format       |
+| --------------------- | ----------------------------------- | ----------------------- | ------------------- |
+| `auto`                | Unknown target                      | Adaptive                | Standard            |
+| `bug-bounty`          | HackerOne, Bugcrowd, Intigriti      | Recon → Enum → Exploit  | HackerOne format    |
+| `red-team`            | Stealth ops, persistence, AD        | Recon → Exploit → Enum  | Executive summary   |
+| `ctf`                 | HackTheBox, TryHackMe, picoCTF      | Exploit → Enum → Recon  | Flag submission     |
+| `blue-team`           | Detection, IR, defensive audit      | Enum → Recon → Report   | IR report           |
+| `offensive`           | Aggressive exploitation, PoC chains | Exploit → Enum → Recon  | Technical           |
+| `grey-hat`            | Balanced assessment                 | Balanced                | Technical           |
+| `forensic`            | Evidence preservation, disk/memory  | Forensics → Report      | Chain-of-custody    |
+| `reverse-engineering` | Binaries, firmware, malware         | RE → Exploit → Utility  | Technical RE        |
+| `mobile-pentest`      | Android/iOS app assessment          | Mobile → Enum → Exploit | OWASP Mobile Top 10 |
 
 Override auto-detection by including the mode in your prompt:
 
@@ -75,18 +75,18 @@ recon http://target.com in red-team mode
 
 ## Skills
 
-| Skill | Purpose |
-|-------|---------|
-| `noir-modes` | Engagement mode definitions and auto-detection rules |
-| `noir-playbook` | Master workflow orchestrating all phases |
-| `noir-recon` | Port scanning, directory fuzzing, header probing, LLM endpoint discovery |
-| `noir-fuzzing` | Parameter discovery, HTTP method fuzzing, header injection |
-| `noir-exploit` | SQLi and Path Traversal payload testing |
-| `noir-ssrf` | Server-Side Request Forgery — cloud metadata, internal services |
-| `noir-idor` | Insecure Direct Object Reference — horizontal & vertical escalation |
-| `noir-broken-auth` | Weak credentials, JWT attacks, session fixation, rate limiting |
-| `noir-race` | Race condition and TOCTOU testing |
-| `noir-validate` | Python PoC generation, execution, and markdown reporting |
+| Skill              | Purpose                                                                  |
+| ------------------ | ------------------------------------------------------------------------ |
+| `noir-modes`       | Engagement mode definitions and auto-detection rules                     |
+| `noir-playbook`    | Master workflow orchestrating all phases                                 |
+| `noir-recon`       | Port scanning, directory fuzzing, header probing, LLM endpoint discovery |
+| `noir-fuzzing`     | Parameter discovery, HTTP method fuzzing, header injection               |
+| `noir-exploit`     | SQLi and Path Traversal payload testing                                  |
+| `noir-ssrf`        | Server-Side Request Forgery — cloud metadata, internal services          |
+| `noir-idor`        | Insecure Direct Object Reference — horizontal & vertical escalation      |
+| `noir-broken-auth` | Weak credentials, JWT attacks, session fixation, rate limiting           |
+| `noir-race`        | Race condition and TOCTOU testing                                        |
+| `noir-validate`    | Python PoC generation, execution, and markdown reporting                 |
 
 ---
 
@@ -117,8 +117,8 @@ README.md
 
 ## Commands
 
-| Command | Description |
-|---------|-------------|
+| Command      | Description                                                    |
+| ------------ | -------------------------------------------------------------- |
 | `scan <url>` | Full security assessment using auto-detected or specified mode |
 
 ---
