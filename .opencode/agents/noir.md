@@ -83,7 +83,9 @@ When no specific mode is indicated, follow this pipeline:
 - Generate a markdown report with:
   - Summary of discovered endpoints and findings
   - For each validated vulnerability: type, endpoint, payload, PoC code, evidence
-- Save the report to `./noir_reports/report_<timestamp>.md`
+- Save report to `./noir_reports/<domain>/report_<timestamp>.md`
+- Save a `todos.md` in the same folder with: pending tests, unchecked endpoints, ideas for follow-up
+- Create the domain folder using the target hostname extracted from the URL (e.g., `http://localhost:3000` → `localhost:3000`, `https://api.target.com` → `api.target.com`)
 
 ## Tools Available
 

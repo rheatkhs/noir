@@ -48,10 +48,11 @@ If applicable: `noir-post-linux-privesc`, `noir-post-windows-privesc`, `noir-pos
 For each potential vulnerability, write a standalone Python PoC script and execute it. Use `noir-vuln-exploit-validation` and `noir-pentest-exploit`. Only mark as validated if PoC exits with code 0.
 
 ### Phase 7: Reporting
-Generate markdown report with:
-- Summary table (endpoints found, potential vulns, validated vulns)
-- Detailed findings with type, endpoint, payload, PoC code, evidence
-- Save to `./noir_reports/report_<timestamp>.md`
+Generate markdown report and todos list, organized per target domain:
+- Extract domain from target URL (e.g., `http://localhost:3000` → `localhost:3000`, `https://api.target.com` → `api.target.com`)
+- Create folder `./noir_reports/<domain>/`
+- Save report as `./noir_reports/<domain>/report_<timestamp>.md`
+- Save todos as `./noir_reports/<domain>/todos.md` with: unchecked endpoints, pending tests, ideas for deeper investigation
 
 ## Tool Usage
 Available tools: `noir-tool-nmap`, `noir-tool-sqlmap`, `noir-tool-nuclei`, `noir-tool-metasploit`, `noir-tool-impacket`, `noir-tool-hashcat-john`, `noir-tool-dalfox`, `noir-tool-semgrep`, `noir-tool-source-audit`, `noir-tool-caido`, `noir-tool-advanced-fuzzing`, `noir-tool-browser-automation`, `noir-tool-scripting`.
