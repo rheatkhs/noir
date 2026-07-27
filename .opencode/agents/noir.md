@@ -1,7 +1,6 @@
 ---
 description: Autonomous security penetration testing agent.
 mode: primary
-model: oc/deepseek-v4-flash-free
 permission:
   bash:
     "nmap *": allow
