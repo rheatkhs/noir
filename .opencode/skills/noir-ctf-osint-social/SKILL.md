@@ -1,5 +1,5 @@
 ---
-name: ctf-osint-social
+name: noir-ctf-osint-social
 description: "CTF OSINT social media investigation. Twitter/X persistent IDs, Tumblr header fingerprinting, BlueSky API, Unicode homoglyph steganography, Discord metadata, Strava GPS exposure, multi-platform username enumeration. Triggers: 'social media osint', 'twitter osint', 'instagram osint', 'discord osint', 'bluesky osint', 'username enumeration', 'social network investigation', 'ctf osint social'."
 ---
 

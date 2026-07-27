@@ -1,5 +1,5 @@
 ---
-name: proto-smb
+name: noir-proto-smb
 description: "SMB/NetBIOS security testing skill. Null session enumeration, credential spraying, pass-the-hash, relay attacks, EternalBlue, and share enumeration. Triggers: 'smb', 'samba', 'netbios', 'smb testing', 'smb enumeration', 'smb relay', 'eternalblue', 'ntlm relay', 'smb signing', 'share enumeration'."
 ---
 

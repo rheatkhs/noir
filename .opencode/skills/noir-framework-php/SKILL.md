@@ -1,5 +1,5 @@
 ---
-name: framework-php
+name: noir-framework-php
 description: "PHP security testing — LFI/RFI, file upload bypass, eval injection, type juggling loose comparison, phpinfo disclosure, PHP wrappers, log poisoning, deserialization via unserialize(). Triggers: 'php security', 'php pentest', 'php lfi', 'php rfi', 'php eval', 'php type juggling', 'phpinfo', 'php wrapper', 'php unserialize'."
 ---
 

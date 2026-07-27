@@ -1,5 +1,5 @@
 ---
-name: tool-sqlmap
+name: noir-tool-sqlmap
 description: "SQLMap usage guide — detection mode, database enumeration, data extraction, file read/write, OS shell, WAF bypass, tamper scripts, custom payloads. Triggers: 'sqlmap', 'sql injection tool', 'sqlmap enum', 'sqlmap dump', 'sqlmap os-shell', 'sqlmap tamper', 'sqlmap waf bypass', 'sqlmap file', 'automated sql injection'."
 ---
 

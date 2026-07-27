@@ -1,5 +1,5 @@
 ---
-name: ctf-pwn-format-string
+name: noir-ctf-pwn-format-string
 description: "CTF format string exploitation. GOT overwrite via %n, canary/PIE leak, argument retargeting, blind pwn, free_hook overwrite, argv[0] stack smash info leak, format string game state manipulation. Triggers: 'format string', 'printf exploit', 'fsb', '%n exploit', 'got overwrite', 'format string vulnerability', 'printf format string', 'libc leak format string'."
 ---
 

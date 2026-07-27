@@ -1,5 +1,5 @@
 ---
-name: tech-spring
+name: noir-tech-spring
 description: "Spring Framework security testing. Use when target uses Spring Boot/Spring MVC. Trigger keywords: spring, spring boot, actuator, jolokia, heapdump, env."
 ---
 

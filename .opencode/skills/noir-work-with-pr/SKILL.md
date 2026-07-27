@@ -1,5 +1,5 @@
 ---
-name: work-with-pr
+name: noir-work-with-pr
 description: "Full pentest finding submission lifecycle in an isolated engagement workspace: implement via the pentest-loop skill with mandatory evidence-bound manual QA → detailed English PR → verification loop (validation + review-work reviewers + Cubic, where Cubic is skipped only when its quota is exhausted) → submit by default → engagement workspace cleanup. Decomposes one task into the smallest atomic, independently-submitable PRs and builds the independent ones concurrently via a engagement workspace per PR driven by parallel subagents or a team. Unbounded loop: any failing gate sends you back to fix-and-re-QA inside the engagement workspace. Use whenever implementation work needs to land as a PR. Triggers: 'create a PR', 'implement and PR', 'work on this and make a PR', 'implement issue', 'land this as a PR', 'split into atomic PRs', 'parallel PRs', 'work-with-pr', 'PR workflow', 'implement end to end', even when user just says 'implement X' if the context implies PR delivery."
 ---
 

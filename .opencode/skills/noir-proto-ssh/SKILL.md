@@ -1,5 +1,5 @@
 ---
-name: proto-ssh
+name: noir-proto-ssh
 description: "SSH security testing — version detection, brute force, key-based auth bypass, SSH tunneling, authorized_keys misconfiguration, weak ciphers. Triggers: 'ssh', 'ssh pentest', 'ssh attack', 'ssh brute force', 'ssh key', 'ssh misconfiguration', 'ssh tunneling', 'openssh vulnerability'."
 ---
 

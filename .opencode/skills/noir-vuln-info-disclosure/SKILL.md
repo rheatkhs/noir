@@ -1,5 +1,5 @@
 ---
-name: vuln-info-disclosure
+name: noir-vuln-info-disclosure
 description: "Information disclosure testing — error message leakage, debug endpoints, stack traces, API schema exposure, backup files, git repositories, environment variables exposure, directory listing. Triggers: 'information disclosure', 'info disclosure', 'error leak', 'stack trace', 'debug info', 'backup file', 'source code disclosure', 'git exposed', 'env exposure', 'directory listing'."
 ---
 

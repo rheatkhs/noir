@@ -1,5 +1,5 @@
 ---
-name: tech-enterprise-web
+name: noir-tech-enterprise-web
 description: "Enterprise web penetration testing workflow. Scope definition, httpx fingerprinting, katana crawling, nuclei scanning, authentication testing, JWT analysis, business logic review, IDOR, dependency SCA, manual verification. Triggers: 'enterprise pentest', 'web assessment', 'web pentest workflow', 'authentication testing', 'jwt testing', 'business logic', 'sca analysis', 'api pentest', 'web application pentest'."
 ---
 

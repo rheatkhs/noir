@@ -1,5 +1,5 @@
 ---
-name: ctf-crypto-modern
+name: noir-ctf-crypto-modern
 description: "CTF modern cipher attacks. AES padding oracle, CBC bitflipping, ECB image oracle, AES-CFB-8 IV state forging, GCM key recovery, LFSR attacks, hash length extension, CRIME compression oracle, CBC-MAC forgery. Triggers: 'aes attack', 'padding oracle', 'cbc bitflip', 'ecb oracle', 'gcm attack', 'lfsr', 'hash length extension', 'compression oracle', 'cbc-mac forgery', 'modern cipher'."
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: recon-internal
+name: noir-recon-internal
 description: "Internal network penetration test reconnaissance — network discovery, service enumeration, LDAP/AD enumeration, SMB shares, internal web apps, printer discovery. Triggers: 'internal pentest', 'internal recon', 'internal network', 'lan recon', 'intranet recon', 'active directory recon', 'internal service discovery', 'network scan internal'."
 ---
 

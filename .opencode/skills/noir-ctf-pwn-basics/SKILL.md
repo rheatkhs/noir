@@ -1,5 +1,5 @@
 ---
-name: ctf-pwn-basics
+name: noir-ctf-pwn-basics
 description: "CTF binary exploitation basics. Stack buffer overflow, ret2win, stack alignment, offset calculation, cyclic pattern, struct pointer overwrite, signed integer bypass, canary brute-force on forking servers, OOB read via stride. Triggers: 'buffer overflow', 'ret2win', 'stack overflow', 'pwn basics', 'bof', 'binary exploitation basics', 'stack smashing', 'overflow offset', 'cyclic pattern', 'stack canary bypass'."
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: ctf-crypto-ecc
+name: noir-ctf-crypto-ecc
 description: "CTF ECC attacks. Smart's attack on anomalous curves, Pohlig-Hellman, ECDSA nonce reuse, invalid curve, singular curves, Ed25519 torsion side channel, clock group DLP. Triggers: 'ecc attack', 'elliptic curve', 'ecdsa nonce reuse', 'smart attack', 'anomalous curve', 'pohlig hellman', 'ecdsa signature forgery', 'ecc discrete log', 'secp256k1 attack'."
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: payload-command-injection
+name: noir-payload-command-injection
 description: "Command injection payload collection and exploitation — pipe/semicolon/backtick/newline injection, blind OOB exfiltration, filter bypass encodings, WAF evasion, polyglot OS command injection. Triggers: 'command injection payload', 'os command injection', 'rce payload', 'cmd injection', 'blind command injection', 'command injection bypass', 'shell injection payload'."
 ---
 

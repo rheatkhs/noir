@@ -1,5 +1,5 @@
 ---
-name: iot-firmware
+name: noir-iot-firmware
 description: "IoT and embedded firmware security analysis. Firmware extraction, binwalk filesystem extraction, credential discovery, binary analysis, QEMU emulation, web interface testing. Triggers: 'iot firmware', 'firmware analysis', 'binwalk', 'firmware extraction', 'embedded security', 'iot pentest', 'embedded device', 'router firmware', 'iot vulnerability', 'firmware reverse engineering', 'squashfs extraction'."
 ---
 

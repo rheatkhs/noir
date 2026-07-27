@@ -1,5 +1,5 @@
 ---
-name: tool-hashcat-john
+name: noir-tool-hashcat-john
 description: "Password cracking with Hashcat and John the Ripper — hash identification, wordlist attacks, rule-based attacks, hybrid attacks, rainbow tables, mask attacks. Triggers: 'hashcat', 'john the ripper', 'password cracking', 'hash cracking', 'hashcat crack', 'john crack', 'wordlist attack', 'password hash', 'crack hash'."
 ---
 

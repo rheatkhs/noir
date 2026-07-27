@@ -1,5 +1,5 @@
 ---
-name: tool-nmap
+name: noir-tool-nmap
 description: "Nmap comprehensive usage — SYN scan, service detection, script scanning, OS fingerprinting, aggressive scan, CVE detection, UDP scan, output formats. Triggers: 'nmap', 'port scan', 'nmap scan', 'service detection', 'nmap script', 'nse script', 'port scanning', 'network scan', 'nmap aggressive', 'nmap udp'."
 ---
 

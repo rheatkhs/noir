@@ -1,5 +1,5 @@
 ---
-name: ctf-reverse-tools
+name: noir-ctf-reverse-tools
 description: "CTF reverse engineering tools. GDB/pwndbg, Radare2/Cutter, Ghidra, Binary Ninja, dogbolt.org multi-decompiler, Unicorn emulation, FLIRT signatures, angr symbolic execution. Triggers: 'reverse engineering tools', 'ghidra', 'radare2', 'gdb pwndbg', 'decompiler', 'binary analysis', 'ctf re tools', 'disassembler', 'angr', 'unicorn emulation', 'binary ninja'."
 ---
 

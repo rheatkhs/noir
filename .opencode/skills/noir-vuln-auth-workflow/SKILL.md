@@ -1,5 +1,5 @@
 ---
-name: vuln-auth-workflow
+name: noir-vuln-auth-workflow
 description: "Authentication workflow testing — login bypass, session management flaws, insecure remember-me, concurrent session handling, account lockout bypass, credential stuffing. Triggers: 'authentication testing', 'auth bypass', 'login bypass', 'session management', 'remember me', 'concurrent sessions', 'account lockout', 'auth workflow', 'login security'."
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: vuln-blind-xss
+name: noir-vuln-blind-xss
 description: "Blind XSS (out-of-band XSS) testing. Stored XSS in admin panels, log viewers, moderation queues. interactsh callback setup, injection point mapping, payload delivery via forms/headers/file metadata. Triggers: 'blind xss', 'stored xss', 'out of band xss', 'xss blind', 'admin panel xss', 'xss interactsh', 'blind xss hunter', 'bxss', 'xss log viewer'."
 ---
 

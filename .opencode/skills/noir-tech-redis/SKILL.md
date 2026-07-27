@@ -1,5 +1,5 @@
 ---
-name: tech-redis
+name: noir-tech-redis
 description: "Redis security testing — unauthenticated access, AUTH brute force, config write for cron/SSH injection, Lua RCE, Redis module exploitation. Triggers: 'redis', 'redis security', 'redis pentest', 'redis unauth', 'redis rce', 'redis cron', 'redis ssh', 'redis exploit', 'redis config write'."
 ---
 

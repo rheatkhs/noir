@@ -1,5 +1,5 @@
 ---
-name: ctf-osint-web
+name: noir-ctf-osint-web
 description: "CTF OSINT web and DNS investigation. Google dorking, DNS TXT/zone transfer, WHOIS, Wayback Machine CDX API, certificate transparency, OSINT framework. Triggers: 'osint', 'ctf osint', 'google dork', 'dns osint', 'zone transfer', 'whois', 'wayback machine', 'web osint', 'open source intelligence', 'passive recon ctf'."
 ---
 

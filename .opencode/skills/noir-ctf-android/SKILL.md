@@ -1,5 +1,5 @@
 ---
-name: ctf-android
+name: noir-ctf-android
 description: "CTF Android challenge analysis. APK static analysis with Jadx and APKTool, smali disassembly for flag validation logic, native library JNI reverse engineering with Radare2, ADB dynamic analysis with exported activity launch and content provider query, Frida dynamic instrumentation for method hooking and return value patching, smali patching to bypass flag checks, React Native JS bundle extraction, root detection bypass, SharedPreferences and SQLite flag recovery. Triggers: 'android ctf', 'apk reverse engineering', 'jadx decompile', 'apktool smali', 'frida android', 'adb ctf', 'android frida hook', 'apk flag', 'smali patch', 'android native jni', 'react native apk'."
 ---
 

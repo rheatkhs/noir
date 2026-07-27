@@ -1,5 +1,5 @@
 ---
-name: recon-js-analysis
+name: noir-recon-js-analysis
 description: "JavaScript analysis skill for SPA reconnaissance. Extracts API endpoints, hardcoded secrets, internal hostnames, and authentication tokens from client-side JavaScript bundles. Triggers: 'js analysis', 'javascript recon', 'api endpoint extraction', 'js secret scanning', 'spa recon', 'webpack bundle analysis', 'js endpoint discovery', 'hardcoded secrets'."
 ---
 

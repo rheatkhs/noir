@@ -1,5 +1,5 @@
 ---
-name: post-credential-dumping
+name: noir-post-credential-dumping
 description: "Windows credential dumping post-exploitation. LSASS dump via procdump/nanodump/comsvcs, SAM/SYSTEM/SECURITY hive extraction, NTDS.dit dump via shadow copy, DCSync attack, LSA secrets, cached credentials, DPAPI, hash cracking, pass-the-hash. Triggers: 'credential dumping', 'lsass dump', 'mimikatz', 'secretsdump', 'dcsync', 'ntds dump', 'sam hive', 'pass the hash', 'cached credentials', 'windows post exploitation credentials'."
 ---
 

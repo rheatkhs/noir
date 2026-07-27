@@ -1,5 +1,5 @@
 ---
-name: mobile-ios
+name: noir-mobile-ios
 description: "iOS app security testing skill. IPA analysis, jailbreak detection bypass, SSL pinning bypass, Keychain inspection, runtime class introspection, and traffic interception using frida, objection, and MobSF. Triggers: 'ios pentest', 'ipa analysis', 'ios security', 'frida ios', 'swift reverse', 'objc reverse', 'jailbreak bypass'."
 ---
 

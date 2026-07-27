@@ -1,5 +1,5 @@
 ---
-name: vuln-jwt
+name: noir-vuln-jwt
 description: "JWT vulnerability exploitation. Algorithm confusion (alg:none, RS256→HS256), weak secret cracking, kid injection, JWK header injection, claim manipulation. Triggers: 'jwt', 'json web token', 'jwt attack', 'alg none', 'algorithm confusion', 'rs256 hs256', 'jwt secret', 'kid injection', 'jwk injection', 'jwt bypass', 'jwt forgery'."
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: vuln-crlf
+name: noir-vuln-crlf
 description: "CRLF injection testing — HTTP header injection, response splitting, cookie injection, XSS via CRLF, log injection, redirect via CRLF. Triggers: 'crlf injection', 'crlf', 'response splitting', 'header injection', 'http header injection', 'cookie injection', 'http response splitting', 'newline injection'."
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: tech-cicd
+name: noir-tech-cicd
 description: "CI/CD pipeline security attacks. GitHub Actions pull_request_target exploitation, GitLab CI variable injection, Jenkins RCE via Groovy console, secret scanning, OIDC token hijacking, dependency confusion. Triggers: 'cicd', 'ci/cd', 'github actions', 'gitlab ci', 'pipeline poisoning', 'pull_request_target', 'oidc token', 'dependency confusion', 'jenkins rce', 'github secrets'."
 ---
 

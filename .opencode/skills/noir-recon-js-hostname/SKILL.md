@@ -1,5 +1,5 @@
 ---
-name: recon-js-hostname
+name: noir-recon-js-hostname
 description: "JavaScript internal hostname intelligence — extract internal hostnames, API endpoints, microservice URLs, cloud metadata endpoints, internal IP addresses from client-side JavaScript. Triggers: 'js hostname', 'internal hostname', 'javascript endpoint', 'api endpoint extraction', 'internal url js', 'microservice discovery', 'internal service js', 'js endpoint recon'."
 ---
 

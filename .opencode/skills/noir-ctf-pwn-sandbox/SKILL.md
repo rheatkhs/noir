@@ -1,5 +1,5 @@
 ---
-name: ctf-pwn-sandbox
+name: noir-ctf-pwn-sandbox
 description: "CTF sandbox escape. Python jail escape, custom bytecode VM exploitation, FUSE/CUSE character device exploitation, busybox restricted shell, /proc/self/mem write-anywhere, shell fd redirection tricks. Triggers: 'sandbox escape', 'python jail', 'vm exploitation', 'fuse exploit', 'cuse exploit', 'proc self mem', 'shell fd redirect', 'restricted environment escape', 'ctf sandbox'."
 ---
 

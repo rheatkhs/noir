@@ -1,5 +1,5 @@
 ---
-name: post-linux-privesc
+name: noir-post-linux-privesc
 description: "Linux privilege escalation skill. Systematic enumeration and exploitation of sudo misconfigs, SUID binaries, writable cron jobs, capabilities, kernel exploits, and weak file permissions. Triggers: 'linux privesc', 'privilege escalation linux', 'local root', 'sudo exploit', 'suid binary', 'linux priv esc', 'escalate privileges linux'."
 ---
 

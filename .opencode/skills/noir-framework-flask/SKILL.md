@@ -1,5 +1,5 @@
 ---
-name: framework-flask
+name: noir-framework-flask
 description: "Flask security testing — Werkzeug debug console RCE, secret key brute force, Jinja2 SSTI, session cookie forgery, PIN generation, unsafe redirects. Triggers: 'flask', 'werkzeug', 'flask security', 'jinja2 ssti', 'flask debug', 'python flask', 'flask secret key', 'werkzeug debugger'."
 ---
 

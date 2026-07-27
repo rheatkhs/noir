@@ -1,5 +1,5 @@
 ---
-name: vuln-rce
+name: noir-vuln-rce
 description: "Remote Code Execution testing skill. Tests command injection, template injection RCE, deserialization RCE, SSRF-to-RCE chains, and container escape vectors. Triggers: 'rce', 'remote code execution', 'command injection', 'os command injection', 'code execution', 'shell injection', 'rce exploit', 'execute command'."
 ---
 

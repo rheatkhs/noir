@@ -1,5 +1,5 @@
 ---
-name: re-static
+name: noir-re-static
 description: "Static reverse engineering skill. Disassembly, decompilation, string extraction, and binary analysis without execution. Tools: ghidra, radare2, cutter, strings, binwalk, objdump. Triggers: 'static analysis', 'reverse engineer', 'disassemble', 'decompile', 'binary analysis', 'strings', 'crackme', 'keygen'."
 ---
 

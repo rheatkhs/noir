@@ -1,5 +1,5 @@
 ---
-name: ctf-web-server-side-advanced
+name: noir-ctf-web-server-side-advanced
 description: "CTF advanced server-side web exploitation. ExifTool DjVu ANTa eval injection, Go rune/byte mismatch UTF-8 length bypass, ZIP symlink traversal for file read, React Server Components Flight protocol RCE via constructor chain, Castor XML xsi:type polymorphism to JNDI/RMI, Nginx URL-encoded slash path traversal bypass, non-breaking space SQL subquery injection, Docker API unauthenticated daemon exploitation via port 2375, WeasyPrint SSRF file read via attachment processing, ReDoS timing oracle for file content extraction. Triggers: 'exiftool injection', 'go rune byte mismatch', 'zip symlink traversal', 'react server components rce', 'castor xml deserialization', 'nginx path traversal bypass', 'docker api unauthenticated', 'weasyprint ssrf', 'redos oracle', 'server side advanced ctf'."
 ---
 

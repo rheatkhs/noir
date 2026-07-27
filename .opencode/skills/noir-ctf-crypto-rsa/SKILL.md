@@ -1,5 +1,5 @@
 ---
-name: ctf-crypto-rsa
+name: noir-ctf-crypto-rsa
 description: "CTF RSA cryptography attacks. Small exponent cube root, common modulus, Wiener attack, Pollard p-1, Hastad broadcast, Fermat factorization, batch GCD, Manger padding oracle, p=q bypass, gcd(e,phi)>1, signature forgery. Triggers: 'rsa attack', 'rsa ctf', 'crypto rsa', 'wiener attack', 'hastad broadcast', 'small exponent', 'common modulus', 'pollard p-1', 'fermat factorization', 'rsa cipher', 'rsa decryption'."
 ---
 

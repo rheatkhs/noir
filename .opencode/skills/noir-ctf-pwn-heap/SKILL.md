@@ -1,5 +1,5 @@
 ---
-name: ctf-pwn-heap
+name: noir-ctf-pwn-heap
 description: "CTF heap exploitation. House of Apple 2 (FSOP), House of Einherjar, tcache poisoning, seccomp bypass, ret2dlresolve, musl libc attacks, setcontext pivot, tcache stashing unlink. Triggers: 'heap exploitation', 'house of', 'fsop', 'tcache', 'heap pwn', 'heap overflow', 'use after free', 'double free', 'glibc heap', 'house of apple', 'heap grooming'."
 ---
 

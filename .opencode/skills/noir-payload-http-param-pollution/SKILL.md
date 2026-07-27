@@ -1,5 +1,5 @@
 ---
-name: payload-http-param-pollution
+name: noir-payload-http-param-pollution
 description: "HTTP Parameter Pollution (HPP) testing. Duplicate parameter injection, first-wins vs last-wins precedence, query/body override, JSON body conflict, path semicolon smuggling, validation bypass via arrays. Triggers: 'http parameter pollution', 'hpp', 'duplicate parameters', 'parameter pollution', 'parameter override', 'parameter smuggling', 'first-wins last-wins', 'parameter bypass'."
 ---
 

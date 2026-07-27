@@ -1,5 +1,5 @@
 ---
-name: vuln-api-testing
+name: noir-vuln-api-testing
 description: "REST API security testing — endpoint discovery, authentication testing, rate limiting bypass, versioning attacks, excessive data exposure, API security top 10. Triggers: 'api testing', 'rest api', 'api security', 'api pentest', 'api endpoints', 'api vulnerability', 'api rate limit', 'api auth bypass', 'rest security', 'excessive data exposure'."
 ---
 

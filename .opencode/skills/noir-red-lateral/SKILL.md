@@ -1,5 +1,5 @@
 ---
-name: red-lateral
+name: noir-red-lateral
 description: "Red team lateral movement skill. Active Directory attacks, SMB/WinRM pivoting, and credential relay. Use for red team lateral movement and domain dominance. Triggers: 'red lateral', 'lateral movement', 'ad attack', 'kerberos', 'smb', 'pivot'."
 version: 1.0.0
 phase: ["exploitation"]

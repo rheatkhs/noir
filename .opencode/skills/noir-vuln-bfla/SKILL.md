@@ -1,5 +1,5 @@
 ---
-name: vuln-bfla
+name: noir-vuln-bfla
 description: "Broken Function Level Authorization (BFLA) testing — accessing admin functions as regular user, HTTP method override, hidden admin endpoints, privilege escalation via API versioning. Triggers: 'bfla', 'broken function level authorization', 'function level access control', 'admin function bypass', 'api function bypass', 'horizontal function access', 'unauthorized function'."
 ---
 

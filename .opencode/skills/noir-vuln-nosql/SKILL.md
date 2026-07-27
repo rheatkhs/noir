@@ -1,5 +1,5 @@
 ---
-name: vuln-nosql
+name: noir-vuln-nosql
 description: "NoSQL injection testing — MongoDB operator injection ($ne/$gt/$where), authentication bypass, blind NoSQL injection, MongoDB aggregation abuse, Redis command injection. Triggers: 'nosql injection', 'mongodb injection', 'nosql', 'operator injection', '$ne injection', '$where injection', 'mongodb auth bypass', 'nosql auth bypass', 'mongodb exploit'."
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: tool-impacket
+name: noir-tool-impacket
 description: "Impacket toolkit — psexec, wmiexec, smbexec, secretsdump, GetUserSPNs, GetNPUsers, NTLM relay, SMB client, DCSync, pass-the-hash, Kerberos ticket. Triggers: 'impacket', 'secretsdump', 'psexec impacket', 'wmiexec', 'dcsync', 'ntlm relay impacket', 'pass the hash impacket', 'impacket smb', 'impacket kerberos'."
 ---
 

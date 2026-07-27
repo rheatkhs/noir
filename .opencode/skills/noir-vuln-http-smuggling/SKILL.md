@@ -1,5 +1,5 @@
 ---
-name: vuln-http-smuggling
+name: noir-vuln-http-smuggling
 description: "HTTP request smuggling testing skill. Tests CL.TE, TE.CL, TE.TE, H2.CL, H2.TE desync vulnerabilities. Triggers: 'http smuggling', 'request smuggling', 'desync', 'cl.te', 'te.cl', 'h2 smuggling', 'front-end back-end desync'."
 ---
 

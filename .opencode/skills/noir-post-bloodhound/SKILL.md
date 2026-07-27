@@ -1,5 +1,5 @@
 ---
-name: post-bloodhound
+name: noir-post-bloodhound
 description: "BloodHound Active Directory attack path analysis. bloodhound-python collection, Neo4j Cypher queries, shortest path to DA, Kerberoastable accounts, ASREPRoastable, ACL edges, unconstrained delegation, session data. Triggers: 'bloodhound', 'bloodhound-python', 'attack path', 'ad attack path', 'domain admin path', 'cypher query ad', 'neo4j bloodhound', 'ad enumeration', 'kerberoastable', 'asreproastable'."
 ---
 

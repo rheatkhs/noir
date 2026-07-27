@@ -1,5 +1,5 @@
 ---
-name: ctf-web-server-side
+name: noir-ctf-web-server-side
 description: "CTF web server-side injection attacks. PHP type juggling, LFI/php://filter, SQL injection (backslash escape, hex, second-order, LIKE brute-force, column truncation, SQLi-to-SSTI), SSTI (Jinja2, Go, EJS, ERB, Mako, Twig), SSRF, XXE, command injection, Host Header SSRF, DNS rebinding. Triggers: 'ctf web', 'server side injection', 'php type juggling', 'php lfi', 'ssti jinja2', 'sql injection ctf', 'xxe ctf', 'ssrf ctf', 'command injection ctf', 'web ctf'."
 ---
 

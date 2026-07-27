@@ -1,5 +1,5 @@
 ---
-name: red-persistence
+name: noir-red-persistence
 description: "Red team persistence skill. Backdoor mechanisms, scheduled tasks, registry persistence, and covert channels. Use for establishing long-term access during red team engagements. Triggers: 'red persistence', 'backdoor', 'covert channel', 'scheduled task', 'registry persistence'."
 version: 1.0.0
 phase: ["exploitation"]

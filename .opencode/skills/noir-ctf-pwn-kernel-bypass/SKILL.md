@@ -1,5 +1,5 @@
 ---
-name: ctf-pwn-kernel-bypass
+name: noir-ctf-pwn-kernel-bypass
 description: "CTF kernel protection bypass techniques. KASLR bypass via stack leak, FGKASLR bypass using stable .text gadgets and __ksymtab relative offset resolution, KPTI bypass via swapgs_restore trampoline (+22 offset), SIGSEGV handler, modprobe_path ROP, core_pattern overwrite, SMEP/SMAP bypass with kernel ROP gadgets, initramfs extraction and virtio-9p sharing, symbol offset discovery without CONFIG_KALLSYMS_ALL, musl-libc static exploit compilation. Triggers: 'kaslr bypass', 'fgkaslr bypass', 'kpti bypass', 'swapgs trampoline', 'smep bypass', 'smap bypass', 'kernel rop chain', 'modprobe_path', 'core_pattern', 'initramfs extraction', 'kernel protection bypass', 'ksymtab offset'."
 ---
 

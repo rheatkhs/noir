@@ -1,5 +1,5 @@
 ---
-name: ctf-crypto-advanced-math
+name: noir-ctf-crypto-advanced-math
 description: "CTF advanced math crypto. LLL lattice attacks, Coppersmith method, Pohlig-Hellman on smooth curves, isogeny graph traversal, quaternion RSA factoring, LWE via CVP, Manger padding oracle, non-permutation S-box collision, polynomial CRT in GF(2). Triggers: 'lll attack', 'lattice crypto', 'coppersmith', 'pohlig-hellman', 'isogeny', 'lwe', 'lattice', 'manger oracle', 'quaternion rsa', 'gf2 polynomial'."
 ---
 

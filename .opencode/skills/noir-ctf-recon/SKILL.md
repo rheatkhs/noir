@@ -1,5 +1,5 @@
 ---
-name: ctf-recon
+name: noir-ctf-recon
 description: "CTF reconnaissance skill. Fast OSINT, flag format detection, challenge identification. Use for CTF challenges, binary analysis, and crypto challenges. Triggers: 'ctf', 'ctf recon', 'challenge', 'pwn', 'crypto', 'rev', 'forensics'."
 version: 1.0.0
 phase: ["recon"]

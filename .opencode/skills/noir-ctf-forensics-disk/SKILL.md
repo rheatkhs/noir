@@ -1,5 +1,5 @@
 ---
-name: ctf-forensics-disk
+name: noir-ctf-forensics-disk
 description: "CTF disk and memory forensics. Volatility 3 memory analysis, Sleuth Kit disk imaging, deleted file recovery, VMware snapshot analysis, ZFS forensics, RAID 5 recovery, Docker layer analysis, APFS snapshots, MFT analysis. Triggers: 'disk forensics', 'memory forensics', 'volatility', 'memory dump', 'deleted file recovery', 'disk image', 'filesystem forensics', 'vmware forensics', 'sleuth kit'."
 ---
 

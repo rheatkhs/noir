@@ -1,5 +1,5 @@
 ---
-name: ctf-osint-geolocation
+name: noir-ctf-osint-geolocation
 description: "CTF OSINT geolocation and media analysis. Reverse image search (Google Lens crop, Yandex for faces, Baidu for China), MGRS military grid coordinate conversion, Google Plus Codes (XXXX+XX format), metadata extraction with exiftool, VGA signal analysis, Google Street View panorama matching with ORB feature detection, road sign language analysis (Kanji=Japan, Cyrillic=Russia), post-Soviet architecture brand identification, IP geolocation with ip-api, Google Lens cropped region search, reflected mirrored text reading, What3Words 3-meter precision, Overpass Turbo spatial queries for POI discovery. Triggers: 'geolocation ctf', 'reverse image search', 'osint location', 'mgrs coordinates', 'google plus codes', 'what3words', 'street view matching', 'overpass turbo', 'metadata exif', 'road sign identification', 'osint image analysis'."
 ---
 

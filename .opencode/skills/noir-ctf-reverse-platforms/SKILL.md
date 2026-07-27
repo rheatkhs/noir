@@ -1,5 +1,5 @@
 ---
-name: ctf-reverse-platforms
+name: noir-ctf-reverse-platforms
 description: "CTF reverse engineering by platform. macOS Mach-O analysis, iOS class-dump, IoT/embedded firmware (ARM/MIPS), Linux kernel modules, eBPF programs, game engines (Unreal .pak, Unity C#), automotive CAN/UDS, RISC-V custom extensions, HD44780 LCD reconstruction. Triggers: 'macos reverse', 'ios reverse', 'mach-o', 'iot reverse', 'kernel module', 'ebpf reverse', 'unreal pak', 'can forensics', 'uds reverse', 'risc-v', 'lcd reconstruction'."
 ---
 

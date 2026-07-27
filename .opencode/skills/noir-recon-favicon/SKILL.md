@@ -1,5 +1,5 @@
 ---
-name: recon-favicon
+name: noir-recon-favicon
 description: "Favicon hash fingerprinting for asset discovery. MurmurHash3 (mmh3) computation of favicon.ico from target URLs, Shodan http.favicon.hash search, FOFA icon_hash search, Censys favicon hash search, httpx live verification of discovered assets. Triggers: 'favicon hash', 'favicon fingerprint', 'shodan favicon', 'fofa icon hash', 'mmh3 hash', 'asset discovery favicon', 'infrastructure enumeration favicon'."
 ---
 

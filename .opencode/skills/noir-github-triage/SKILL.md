@@ -1,5 +1,5 @@
 ---
-name: github-triage
+name: noir-github-triage
 description: "Read-only GitHub triage for issues AND PRs. . item = . background task (category: quick). Analyzes all open items and writes evidence-backed reports to /tmp/{datetime}/. Every claim requires a GitHub permalink as proof. NEVER takes any action on GitHub - no comments, no submits, no closes, no labels. Reports only. Triggers: 'triage', 'triage issues', 'triage PRs', 'github triage'."
 ---
 

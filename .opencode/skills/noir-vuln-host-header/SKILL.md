@@ -1,5 +1,5 @@
 ---
-name: vuln-host-header
+name: noir-vuln-host-header
 description: "Host header injection testing — password reset poisoning, cache poisoning via Host, SSRF via Host header, routing bypass, virtual host confusion, port-based bypass. Triggers: 'host header injection', 'host header attack', 'host header poisoning', 'password reset poisoning host', 'cache poisoning host header', 'x-forwarded-host', 'x-host injection'."
 ---
 

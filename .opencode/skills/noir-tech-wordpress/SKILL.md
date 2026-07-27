@@ -1,5 +1,5 @@
 ---
-name: tech-wordpress
+name: noir-tech-wordpress
 description: "WordPress security testing. Use when target uses WordPress CMS. Trigger keywords: wordpress, wp, woocommerce, wp-admin, wp-config."
 ---
 

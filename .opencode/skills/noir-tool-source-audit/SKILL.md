@@ -1,5 +1,5 @@
 ---
-name: tool-source-audit
+name: noir-tool-source-audit
 description: "Manual source code security audit — PHP/Python/Node/Java code review, dangerous function patterns, file inclusion vulnerabilities, SQL injection in ORM, authentication logic flaws. Triggers: 'source code audit', 'code review security', 'manual code review', 'php audit', 'python security review', 'java code audit', 'source code vulnerability', 'code audit'."
 ---
 

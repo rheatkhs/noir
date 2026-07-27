@@ -1,5 +1,5 @@
 ---
-name: post-pivoting
+name: noir-post-pivoting
 description: "Network pivoting skill for post-exploitation — SSH tunneling, SOCKS proxy, chisel, ligolo-ng, socat port forwarding, double pivot, rpivot. Triggers: 'pivoting', 'network pivot', 'tunnel', 'socks proxy', 'ssh tunnel', 'port forwarding', 'chisel', 'ligolo', 'rpivot', 'double pivot', 'internal network access'."
 ---
 

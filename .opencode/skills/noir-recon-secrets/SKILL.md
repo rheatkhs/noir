@@ -1,5 +1,5 @@
 ---
-name: recon-secrets
+name: noir-recon-secrets
 description: "Secrets and credential exposure scanning — gitleaks, trufflehog, JS secret scanning, S3 bucket secrets, environment variables, hardcoded credentials in source code. Triggers: 'secret scanning', 'credential scan', 'hardcoded secrets', 'api key leak', 'gitleaks', 'trufflehog', 'secret detection', 'env variable leak', 'secret in code'."
 ---
 

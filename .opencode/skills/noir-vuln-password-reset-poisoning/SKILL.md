@@ -1,5 +1,5 @@
 ---
-name: vuln-password-reset-poisoning
+name: noir-vuln-password-reset-poisoning
 description: "Password reset poisoning via Host header injection and redirect parameter manipulation. Causes reset emails with attacker-controlled URLs. Triggers: 'password reset poisoning', 'host header injection', 'reset link manipulation', 'password reset attack', 'x-forwarded-host injection', 'account takeover password reset', 'forgot password injection'."
 ---
 

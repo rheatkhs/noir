@@ -1,5 +1,5 @@
 ---
-name: tech-tomcat
+name: noir-tech-tomcat
 description: "Apache Tomcat security testing — manager app default creds, WAR deployment RCE, CVE exploitation (Ghostcat, CVE-2019-0232), AJP connector abuse, session fixation. Triggers: 'tomcat', 'apache tomcat', 'tomcat manager', 'tomcat rce', 'war deployment', 'ghostcat', 'ajp connector', 'tomcat exploit', 'tomcat default creds'."
 ---
 

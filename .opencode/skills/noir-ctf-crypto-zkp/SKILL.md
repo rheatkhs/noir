@@ -1,5 +1,5 @@
 ---
-name: ctf-crypto-zkp
+name: noir-ctf-crypto-zkp
 description: "CTF zero-knowledge proof and advanced cryptography attacks. Groth16 broken trusted setup delta==gamma forgery, Groth16 replay with unconstrained nullifier, DV-SNARG forgery via verifier oracle, KZG pairing oracle for permutation recovery, FROST lattice threshold signature attack, MAYO post-quantum fault injection over GF(16), garbled circuits free XOR delta recovery, Shamir deterministic coefficients univariate root-finding, race condition on crypto endpoints, Z3 BPF/SECCOMP constraint solving. Triggers: 'groth16 attack', 'trusted setup', 'zkp forgery', 'kzg oracle', 'frost threshold attack', 'mayo post-quantum', 'garbled circuit', 'shamir secret sharing attack', 'zk proof forgery', 'bpf seccomp z3', 'seccomp bypass z3', 'snark attack', 'snarg oracle'."
 ---
 

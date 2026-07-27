@@ -1,5 +1,5 @@
 ---
-name: vuln-path-traversal
+name: noir-vuln-path-traversal
 description: "Path traversal / directory traversal / LFI testing — ../../../etc/passwd, URL encoding bypass, null byte bypass, filter bypass with encoding, absolute path injection, path normalization bypass. Triggers: 'path traversal', 'directory traversal', 'lfi', 'local file inclusion', '../etc/passwd', 'file read', 'path injection', 'dot dot slash', 'traversal bypass', 'file disclosure'."
 ---
 

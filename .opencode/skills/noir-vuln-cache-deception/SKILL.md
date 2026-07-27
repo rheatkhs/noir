@@ -1,5 +1,5 @@
 ---
-name: vuln-cache-deception
+name: noir-vuln-cache-deception
 description: "Web cache deception testing. CDN caching of authenticated content via extension tricks, path manipulation, URL encoding. Cache behavior analysis, sensitive endpoint discovery. Triggers: 'cache deception', 'web cache deception', 'cdn caching', 'cache poisoning', 'cache-control bypass', 'cache private content', 'cdnjs caching', 'cloudflare cache'."
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: payload-ssrf
+name: noir-payload-ssrf
 description: "SSRF payload collection — cloud metadata endpoints (AWS/GCP/Azure), internal port scan, protocol abuse (gopher/dict/file/sftp), bypass techniques (127.0.0.1 variants, IPv6, DNS rebinding, open redirect chains). Triggers: 'ssrf payload', 'server side request forgery payload', 'cloud metadata payload', 'gopher ssrf', 'ssrf bypass', 'aws imds payload', '169.254.169.254 payload'."
 ---
 

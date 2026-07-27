@@ -1,5 +1,5 @@
 ---
-name: vuln-log4shell
+name: noir-vuln-log4shell
 description: "Log4Shell (CVE-2021-44228) detection and exploitation. JNDI injection, WAF bypass obfuscation, interactsh OOB detection, marshalsec LDAP exploit server, ysoserial gadget chains. Triggers: 'log4shell', 'log4j', 'jndi injection', 'cve-2021-44228', 'log4j rce', 'jndi ldap', 'jndi rmi', 'log4j2', 'log4j exploit'."
 ---
 

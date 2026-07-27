@@ -1,5 +1,5 @@
 ---
-name: ctf-forensics-disk-recovery
+name: noir-ctf-forensics-disk-recovery
 description: "CTF disk forensics. LUKS master key recovery from memory, PRNG timestamp seed brute force, VBA macro encoded binary extraction, FemtoZip shared dictionary, XFS inode reconstruction, tar duplicate entry extraction, nested matryoshka filesystem, anti-carving null byte interleaving. Triggers: 'luks memory', 'disk recovery', 'aeskeyfind', 'xfs inode', 'tar duplicate', 'matryoshka disk', 'anti carving', 'prng seed recovery', 'vba macro binary', 'filesystem extraction'."
 ---
 

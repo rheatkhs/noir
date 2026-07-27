@@ -1,5 +1,5 @@
 ---
-name: framework-rails
+name: noir-framework-rails
 description: "Ruby on Rails security testing — mass assignment via strong parameters bypass, YAML deserialization, SQL injection via ActiveRecord raw queries, debug routes, Rails secrets exposure, cookie tampering. Triggers: 'rails', 'ruby on rails', 'ror security', 'activerecord injection', 'rails mass assignment', 'ruby web pentest', 'rails secrets'."
 ---
 

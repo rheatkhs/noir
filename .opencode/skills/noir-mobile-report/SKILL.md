@@ -1,5 +1,5 @@
 ---
-name: mobile-report
+name: noir-mobile-report
 description: "Mobile pentest report generation skill. Compiles Android/iOS static and dynamic findings into a structured security report with CVSS scores, PoCs, and OWASP Mobile Top 10 mapping. Triggers: 'mobile report', 'mobile pentest report', 'owasp mobile', 'apk report', 'ios security report'."
 ---
 

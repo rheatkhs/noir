@@ -1,5 +1,5 @@
 ---
-name: ctf-heap-advanced
+name: noir-ctf-heap-advanced
 description: "CTF advanced heap exploitation for modern glibc (2.27–2.35+). Tcache poisoning, tcache dup double-free, tcache key bypass, fastbin dup into stack, fastbin into __malloc_hook, unsorted bin libc leak, largebin attack arbitrary write, House of Force top-chunk overflow, House of Botcake overlapping chunks, House of Orange _IO_FILE attack, GDB pwndbg heap commands, libc fingerprinting. Triggers: 'heap exploitation', 'tcache poisoning', 'tcache dup', 'house of botcake', 'house of force', 'house of orange', 'largebin attack', 'fastbin dup', 'glibc heap', 'malloc hook', 'free hook', '__malloc_hook', 'unsorted bin leak', 'heap pwn'."
 ---
 

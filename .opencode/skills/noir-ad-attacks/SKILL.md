@@ -1,5 +1,5 @@
 ---
-name: ad-attacks
+name: noir-ad-attacks
 description: "Active Directory credential attacks. Kerberoasting, AS-REP roasting, DCSync, Pass-the-Hash, Pass-the-Ticket, Silver Ticket, Golden Ticket, NTLM relay. Via Impacket + netexec (no Windows required). Triggers: 'kerberoasting', 'asreproasting', 'as-rep roast', 'dcsync', 'pass the hash', 'ntlm relay', 'overpass the hash', 'golden ticket', 'silver ticket', 'krbtgt hash', 'active directory attacks', 'ad credentials'."
 ---
 

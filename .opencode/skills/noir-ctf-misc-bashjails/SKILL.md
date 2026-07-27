@@ -1,5 +1,5 @@
 ---
-name: ctf-misc-bashjails
+name: noir-ctf-misc-bashjails
 description: "CTF Bash jail escape techniques. Restricted shell bypass, character whitelist bypass, HashCashSlash trick, /proc/cmdline enumeration, /dev/tcp reverse shell, SUID escalation, glob expansion bypass. Triggers: 'bash jail', 'restricted shell', 'rbash', 'shell escape', 'bash bypass', 'character filter bypass', 'bash restricted', 'shell jailbreak'."
 ---
 

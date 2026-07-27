@@ -1,5 +1,5 @@
 ---
-name: payload-xxe
+name: noir-payload-xxe
 description: "XXE payload collection — classic file read, OOB via DNS/HTTP callback, blind XXE, SVG XXE, XInclude, SSRF via XXE, error-based XXE, parameter entity abuse. Triggers: 'xxe payload', 'xml external entity payload', 'xxe oob', 'blind xxe payload', 'svg xxe', 'xxe file read', 'xml injection payload', 'dtd payload', 'xinclude payload'."
 ---
 

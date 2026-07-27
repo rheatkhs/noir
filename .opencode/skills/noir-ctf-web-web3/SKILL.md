@@ -1,5 +1,5 @@
 ---
-name: ctf-web-web3
+name: noir-ctf-web-web3
 description: "CTF Web3/blockchain challenges. EIP-1967 proxy exploitation, ABI coder v1 dirty address bypass, Groth16 proof forgery, delegatecall storage abuse, Solidity transient storage bug, phantom market manipulation, Foundry/cast tools. Triggers: 'web3 ctf', 'solidity exploit', 'smart contract', 'blockchain ctf', 'proxy pattern', 'delegatecall', 'groth16', 'zk proof', 'evm exploit', 'foundry ctf'."
 ---
 

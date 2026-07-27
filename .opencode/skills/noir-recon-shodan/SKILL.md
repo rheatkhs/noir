@@ -1,5 +1,5 @@
 ---
-name: recon-shodan
+name: noir-recon-shodan
 description: "Shodan, Censys, FOFA passive reconnaissance. ASN enumeration, IP range discovery, favicon hashing, internet-wide scanning, exposed service discovery. Triggers: 'censys', 'shodan search', 'censys search', 'asn enumeration', 'ip range discovery', 'internet scan', 'fofa', 'shodan cli', 'censys api', 'passive recon', 'favicon hash', 'favicon fingerprint', 'shodan favicon', 'mmh3 hash'."
 ---
 

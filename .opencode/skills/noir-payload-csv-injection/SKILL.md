@@ -1,5 +1,5 @@
 ---
-name: payload-csv-injection
+name: noir-payload-csv-injection
 description: "CSV formula injection payloads. Excel/Google Sheets formula execution via exported CSV, HYPERLINK exfiltration, WEBSERVICE/IMPORTXML data exfil, bypass techniques. Triggers: 'csv injection', 'formula injection', 'excel injection', 'spreadsheet injection', 'csv formula', 'csv export injection', 'google sheets injection', 'librecalc injection'."
 ---
 

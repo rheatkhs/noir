@@ -1,5 +1,5 @@
 ---
-name: tool-scripting
+name: noir-tool-scripting
 description: "Pentest scripting techniques — bash one-liners, Python exploit scripts, curl chaining, Burp Extender automation, jq parsing, grep pattern extraction for pentest workflows. Triggers: 'scripting', 'pentest script', 'bash script pentest', 'python exploit', 'curl chain', 'automation pentest', 'one liner', 'jq parse', 'grep extract'."
 ---
 

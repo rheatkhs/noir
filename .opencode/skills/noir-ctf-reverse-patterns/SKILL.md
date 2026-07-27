@@ -1,5 +1,5 @@
 ---
-name: ctf-reverse-patterns
+name: noir-ctf-reverse-patterns
 description: "CTF reverse engineering patterns. Custom VM analysis, anti-debug bypass, XOR known-plaintext, control flow flattening, mixed-mode execution, signal-based obfuscation, S-box/keystream identification. Triggers: 'reverse engineering', 'binary reverse', 'custom vm', 'anti debug bypass', 'xor key recovery', 'control flow flattening', 'obfuscation bypass', 'ctf reverse', 'crackme'."
 ---
 

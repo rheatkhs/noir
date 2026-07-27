@@ -1,5 +1,5 @@
 ---
-name: vuln-ssti
+name: noir-vuln-ssti
 description: "Server-Side Template Injection (SSTI) testing — Jinja2/Twig/Freemarker/Velocity/Pebble/Smarty/ERB/Mako detection, template expression probing, RCE via SSTI, sandbox escape. Triggers: 'ssti', 'server side template injection', 'template injection', 'jinja2 injection', 'twig injection', 'freemarker injection', 'erb injection', 'template rce', '{{7*7}}', 'smarty injection'."
 ---
 

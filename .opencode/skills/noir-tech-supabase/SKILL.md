@@ -1,5 +1,5 @@
 ---
-name: tech-supabase
+name: noir-tech-supabase
 description: "Supabase security testing — anon key abuse, Row Level Security bypass, PostgREST direct access, service_role key exposure, real-time subscription abuse. Triggers: 'supabase', 'supabase security', 'supabase rls', 'row level security bypass', 'supabase pentest', 'postgrest security', 'supabase anon key'."
 ---
 

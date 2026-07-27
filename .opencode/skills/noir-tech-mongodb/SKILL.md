@@ -1,5 +1,5 @@
 ---
-name: tech-mongodb
+name: noir-tech-mongodb
 description: "MongoDB security testing — unauthenticated access, collection enumeration, NoSQL injection, data exfiltration, MongoDB bind IP misconfiguration. Triggers: 'mongodb', 'mongodb security', 'mongodb pentest', 'mongodb unauth', 'mongodb injection', 'nosql mongo', 'mongodb exploit', 'mongo db pentest'."
 ---
 

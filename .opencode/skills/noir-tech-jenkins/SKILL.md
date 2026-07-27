@@ -1,5 +1,5 @@
 ---
-name: tech-jenkins
+name: noir-tech-jenkins
 description: "Jenkins security testing — unauthenticated RCE via Groovy console, credential exposure, Jenkinsfile injection, CSRF bypass, build artifact secrets, pipeline abuse. Triggers: 'jenkins', 'jenkins security', 'jenkins pentest', 'jenkins rce', 'jenkins groovy', 'jenkins credential', 'jenkins exploit', 'ci cd security', 'jenkinsfile injection'."
 ---
 

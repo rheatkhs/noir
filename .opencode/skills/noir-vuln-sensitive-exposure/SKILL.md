@@ -1,5 +1,5 @@
 ---
-name: vuln-sensitive-exposure
+name: noir-vuln-sensitive-exposure
 description: "Sensitive data and PII exposure testing — credentials in responses, API key leakage, PII in logs/responses, unencrypted sensitive data, EXIF data, S3 bucket exposure, cloud storage misconfig. Triggers: 'sensitive data', 'pii exposure', 'credential leak', 'api key exposure', 'data exposure', 'unencrypted data', 's3 exposure', 'secret in response', 'data leakage'."
 ---
 

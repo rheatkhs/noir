@@ -1,5 +1,5 @@
 ---
-name: tech-memcached
+name: noir-tech-memcached
 description: "Memcached security testing — unauthenticated access, cache poisoning, session hijacking, data extraction, DDoS amplification, memcached stats enumeration. Triggers: 'memcached', 'memcached security', 'memcached pentest', 'memcached unauth', 'cache poisoning', 'memcached exploit', 'memcached session', 'memcached amplification'."
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: tool-advanced-fuzzing
+name: noir-tool-advanced-fuzzing
 description: "Advanced web fuzzing techniques — ffuf, feroxbuster, custom wordlists, virtual host fuzzing, API endpoint fuzzing, parameter fuzzing, HTTP method fuzzing, header fuzzing. Triggers: 'fuzzing', 'ffuf', 'feroxbuster', 'directory fuzzing', 'api fuzzing', 'parameter fuzzing', 'vhost fuzzing', 'content discovery', 'wordlist fuzzing', 'fuzz endpoint'."
 ---
 

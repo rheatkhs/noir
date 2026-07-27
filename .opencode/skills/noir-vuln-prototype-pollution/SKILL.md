@@ -1,5 +1,5 @@
 ---
-name: vuln-prototype-pollution
+name: noir-vuln-prototype-pollution
 description: "Prototype pollution testing skill. Tests client-side (DOM XSS gadgets) and server-side (Node.js RCE, auth bypass) via Object.prototype injection. Triggers: 'prototype pollution', 'proto pollution', '__proto__', 'constructor.prototype', 'object prototype injection', 'lodash merge', 'deep merge vulnerability'."
 ---
 

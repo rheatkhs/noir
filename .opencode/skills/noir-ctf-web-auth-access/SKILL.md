@@ -1,5 +1,5 @@
 ---
-name: ctf-web-auth-access
+name: noir-ctf-web-auth-access
 description: "CTF web auth and access control. Structured ID as password, weak MAC forgery, HAProxy URL encoding bypass, Express %2F route bypass, NoSQL boolean injection, LLM chatbot secret leak, affine cipher OTP brute, IDOR with zero UUID. Triggers: 'ctf web auth', 'access control bypass', 'idor', 'auth bypass', 'nosql injection', 'haproxy bypass', 'route bypass', 'llm leak', 'jwt', 'session attack'."
 ---
 

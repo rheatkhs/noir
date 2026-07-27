@@ -1,5 +1,5 @@
 ---
-name: tech-config-hardening
+name: noir-tech-config-hardening
 description: "Web application and server configuration hardening review. Security header audit (CSP, HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy), TLS/SSL configuration check, debug endpoint enumeration (actuator, metrics, env, debug, swagger), verbose error message detection, backup and config file exposure check (.env, .env.bak, config.php.bak, backup.sql), CORS misconfiguration, cookie security flags (Secure, HttpOnly, SameSite), directory listing detection. Triggers: 'config hardening', 'security headers', 'header audit', 'hsts check', 'debug endpoint', 'env file exposure', 'backup file disclosure', 'cors misconfiguration', 'cookie flags', 'tls audit', 'security posture'."
 ---
 

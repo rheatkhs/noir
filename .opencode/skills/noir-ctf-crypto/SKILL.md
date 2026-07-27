@@ -1,5 +1,5 @@
 ---
-name: ctf-crypto
+name: noir-ctf-crypto
 description: "CTF cryptography skill. Hash cracking, encoding/decoding, RSA/AES challenges, and crypto analysis. Use for crypto challenges and hash identification. Triggers: 'ctf crypto', 'crypto', 'hash', 'rsa', 'aes', 'base64', 'decode'."
 version: 1.0.0
 phase: ["exploitation"]

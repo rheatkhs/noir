@@ -1,5 +1,5 @@
 ---
-name: vuln-clickjacking
+name: noir-vuln-clickjacking
 description: "Clickjacking (UI redressing) vulnerability testing. X-Frame-Options check, CSP frame-ancestors bypass, PoC iframe creation, drag-and-drop variant, multi-step clickjacking. Triggers: 'clickjacking', 'ui redressing', 'iframe attack', 'x-frame-options', 'csp frame-ancestors', 'clickjacking poc', 'frame injection'."
 ---
 

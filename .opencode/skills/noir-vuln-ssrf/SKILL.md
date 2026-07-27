@@ -1,5 +1,5 @@
 ---
-name: vuln-ssrf
+name: noir-vuln-ssrf
 description: "Server-Side Request Forgery (SSRF) testing — cloud metadata exfiltration, internal service pivoting, blind SSRF via OOB callbacks, protocol abuse (Gopher/dict/file), DNS rebinding, SSRF filter bypass. Triggers: 'ssrf', 'server side request forgery', 'cloud metadata', 'aws imds', '169.254.169.254', 'internal service access', 'webhook ssrf', 'blind ssrf', 'url fetch', 'gopher protocol', 'dns rebinding ssrf'."
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: ctf-misc-encodings
+name: noir-ctf-misc-encodings
 description: "CTF encoding challenges. Base64/32/hex decode, IEEE 754 float-as-text, UTF-16 mojibake fix, BCD decode, QR code repair, esoteric languages (Whitespace, Brainfuck, Piet), SMS PDU reassembly, Gray code, RTF hidden data, multi-layer cascade decoder. Triggers: 'encoding ctf', 'base64 decode', 'qr code repair', 'whitespace language', 'brainfuck', 'esoteric language', 'ieee 754', 'mojibake', 'gray code', 'sms pdu', 'multi-layer decode'."
 ---
 

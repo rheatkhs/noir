@@ -1,5 +1,5 @@
 ---
-name: proto-ftp
+name: noir-proto-ftp
 description: "FTP security testing — anonymous login, brute force, FTP bounce, PASV/PORT exploitation, clear-text sniffing, path traversal in FTP. Triggers: 'ftp', 'ftp security', 'ftp anonymous', 'ftp brute force', 'ftp pentest', 'ftp attack', 'ftp bounce', 'vsftpd backdoor'."
 ---
 

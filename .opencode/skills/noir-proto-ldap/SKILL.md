@@ -1,5 +1,5 @@
 ---
-name: proto-ldap
+name: noir-proto-ldap
 description: "LDAP security testing — anonymous bind, LDAP injection, user enumeration, attribute extraction, Kerberoasting prep, LDAP injection bypass. Triggers: 'ldap', 'ldap security', 'ldap injection', 'ldap pentest', 'ldap enumeration', 'anonymous bind', 'ldap auth bypass', 'active directory ldap'."
 ---
 

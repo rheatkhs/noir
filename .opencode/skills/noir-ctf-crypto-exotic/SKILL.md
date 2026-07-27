@@ -1,5 +1,5 @@
 ---
-name: ctf-crypto-exotic
+name: noir-ctf-crypto-exotic
 description: "CTF exotic cryptography attacks. Braid group Diffie-Hellman Alexander polynomial multiplicativity attack, tropical semiring cryptography residuation-based key recovery, Paillier homomorphic encryption oracle binary search, Hamming code linear algebra brute-force, ElGamal multiplicative re-encryption homomorphism attack. Triggers: 'braid group crypto', 'tropical semiring', 'paillier oracle', 'hamming code ctf', 'elgamal re-encryption', 'exotic cryptography', 'non-abelian crypto', 'homomorphic oracle attack'."
 ---
 

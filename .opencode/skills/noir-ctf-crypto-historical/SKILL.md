@@ -1,5 +1,5 @@
 ---
-name: ctf-crypto-historical
+name: noir-ctf-crypto-historical
 description: "CTF historical cipher attacks. Lorenz SZ40/42 (Tunny) delta attack with known plaintext, ITA2/Baudot encoding, book cipher brute force. Triggers: 'lorenz cipher', 'tunny', 'ita2', 'baudot', 'book cipher', 'historical cipher', 'ww2 cipher', 'lorenz attack', 'wheel cipher', 'chi psi motor'."
 ---
 

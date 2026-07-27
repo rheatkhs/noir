@@ -1,5 +1,5 @@
 ---
-name: ctf-forensics-3d-printing
+name: noir-ctf-forensics-3d-printing
 description: "CTF 3D printing and G-code forensics. PrusaSlicer binary G-code (bgcode/GCDE) parsing, heatshrink decompression, G-code coordinate visualization for hidden patterns, QOIF image format extraction, uncommon file format identification. Triggers: '3d printing', 'gcode', 'gcde', 'bgcode', 'prusaslicer', 'heatshrink', 'qoif', 'stl forensics', 'g-code forensics'."
 ---
 

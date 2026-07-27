@@ -1,5 +1,5 @@
 ---
-name: ad-netexec
+name: noir-ad-netexec
 description: "NetExec (CrackMapExec) complete workflow. SMB/WinRM/LDAP/MSSQL enumeration, credential spraying, code execution, credential dumping, lateral movement. Triggers: 'netexec', 'nxc', 'crackmapexec', 'cme', 'smb enumeration', 'password spraying', 'sam dump', 'lsass dump', 'lateral movement smb', 'winrm exploit', 'smb shares enum'."
 ---
 

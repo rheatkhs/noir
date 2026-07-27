@@ -1,5 +1,5 @@
 ---
-name: tool-dalfox
+name: noir-tool-dalfox
 description: "Dalfox XSS scanner — parameter discovery, DOM XSS, blind XSS, WAF bypass, pipe mode, custom payloads, Burp integration. Triggers: 'dalfox', 'xss scanner', 'dalfox scan', 'dalfox xss', 'automated xss', 'xss tool', 'blind xss dalfox', 'dalfox burp', 'dom xss scan'."
 ---
 

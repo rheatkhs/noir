@@ -1,5 +1,5 @@
 ---
-name: ctf-forensics-network-advanced
+name: noir-ctf-forensics-network-advanced
 description: "CTF advanced network forensics. Timing-based packet encoding, USB HID mouse/pen drawing recovery, DNS exfiltration via query names, TCP flag base64 covert channel, ICMP steganography, Active Directory RID recycling, Timeroasting NTP hash, decompression anomaly detection. Triggers: 'timing covert channel', 'usb hid recovery', 'dns covert channel', 'tcp flags stego', 'icmp stego', 'ad ridenum', 'timeroasting', 'ntp hash', 'covert channel', 'advanced pcap'."
 ---
 

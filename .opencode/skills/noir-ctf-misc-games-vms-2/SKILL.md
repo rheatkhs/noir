@@ -1,5 +1,5 @@
 ---
-name: ctf-misc-games-vms-2
+name: noir-ctf-misc-games-vms-2
 description: "CTF misc challenges part 2. ML model weight perturbation and LoRA adapter attacks, Flask session secret brute-force and decode, WebSocket coordinate/state manipulation, De Bruijn sequence generation for format string or offset discovery, Brainfuck/esoteric VM instrumentation and tracing, WASM linear memory patching via JavaScript. Triggers: 'ml weight attack', 'flask session decode', 'websocket manipulation', 'de bruijn sequence', 'brainfuck ctf', 'esoteric vm', 'wasm memory patch', 'lora adapter merge', 'neural model poison', 'flask secret brute'."
 ---
 

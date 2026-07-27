@@ -1,5 +1,5 @@
 ---
-name: payload-sqli
+name: noir-payload-sqli
 description: "SQL injection payload collection — auth bypass, UNION select, blind boolean, time-based, stacked queries, OOB DNS exfiltration, DBMS-specific payloads (MySQL/PostgreSQL/MSSQL/SQLite/Oracle). Triggers: 'sqli payload', 'sql injection payload', 'auth bypass payload', 'union select payload', 'blind sqli', 'sql injection bypass', 'sqlmap payload', 'sql bypass waf'."
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: payload-ldap-injection
+name: noir-payload-ldap-injection
 description: "LDAP injection payloads and testing. Filter breakout, authentication bypass, blind enumeration, attribute extraction. Triggers: 'ldap injection', 'ldap filter bypass', 'ldap auth bypass', 'ldap attack', 'ldap enumeration', 'active directory injection', 'openldap injection'."
 ---
 

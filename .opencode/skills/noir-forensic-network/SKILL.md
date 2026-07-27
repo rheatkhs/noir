@@ -1,5 +1,5 @@
 ---
-name: forensic-network
+name: noir-forensic-network
 description: "Network forensics skill. PCAP analysis, traffic reconstruction, C2 detection, credential extraction, and protocol analysis using tshark, tcpdump, and wireshark. Triggers: 'network forensics', 'pcap analysis', 'traffic analysis', 'c2 detection', 'packet capture', 'tshark', 'wireshark forensics'."
 ---
 

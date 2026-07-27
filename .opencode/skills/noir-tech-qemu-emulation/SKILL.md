@@ -1,5 +1,5 @@
 ---
-name: tech-qemu-emulation
+name: noir-tech-qemu-emulation
 description: "QEMU cross-architecture emulation for firmware analysis and exploit testing. ARM/MIPS/RISC-V binary execution, GDB debugging cross-arch, firmware extraction with binwalk, chroot emulation, IoT service testing, cross-compile exploitation. Triggers: 'qemu', 'arm emulation', 'mips emulation', 'firmware analysis', 'iot emulation', 'cross architecture', 'binwalk', 'firmwalker', 'embedded binary', 'cross compile'."
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: post-container-escape
+name: noir-post-container-escape
 description: "Container escape and Docker breakout techniques. Privileged containers, Docker socket exploitation, cgroup v1 release agent, nsenter, CVE-based kernel escapes, Kubernetes pod escape. Triggers: 'container escape', 'docker escape', 'privileged container', 'docker socket exploit', 'cgroup escape', 'nsenter', 'kubernetes escape', 'k8s pod escape', 'container breakout', 'docker breakout', 'release_agent cgroup'."
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: vuln-cors
+name: noir-vuln-cors
 description: "CORS misconfiguration testing skill. Tests origin reflection, null origin, subdomain trust chains, and credential-bearing cross-origin requests. Triggers: 'cors', 'cross origin', 'access-control-allow-origin', 'cors misconfiguration', 'cors bypass', 'cors exploit', 'origin reflection'."
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: ctf-misc-games-vms
+name: noir-ctf-misc-games-vms
 description: "CTF misc games and VMs. WASM game AI weakening via wasm2wat patching, Roblox version history binary format parsing, PyInstaller extraction with opcode remapping, Python marshal code analysis, Python environment RCE via PYTHONWARNINGS, Z3 constraint solving for custom VMs, YARA rules with Z3, Kubernetes RBAC bypass via hostPath pod, floating-point precision exploitation with large multipliers, custom assembly sandbox escape via Python MRO chain, memfd_create packed binary RC4 decryption. Triggers: 'wasm game patch', 'roblox forensics', 'pyinstaller opcode', 'python marshal', 'pythonwarnings rce', 'z3 vm solving', 'kubernetes rbac pod escape', 'floating point exploit', 'custom assembly sandbox', 'game theory ctf', 'memfd create'."
 ---
 

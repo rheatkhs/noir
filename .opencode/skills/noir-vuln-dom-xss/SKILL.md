@@ -1,5 +1,5 @@
 ---
-name: vuln-dom-xss
+name: noir-vuln-dom-xss
 description: "DOM-based XSS and client-side vulnerabilities. Source-to-sink analysis, postMessage origin bypass, open redirect via DOM, eval/innerHTML sinks, DOM clobbering. Triggers: 'dom xss', 'dom-based xss', 'client-side xss', 'innerHTML injection', 'postmessage xss', 'javascript xss', 'dom clobbering', 'open redirect dom', 'client side vulnerability', 'sink source analysis'."
 ---
 

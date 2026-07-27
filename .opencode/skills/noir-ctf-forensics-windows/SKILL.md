@@ -1,5 +1,5 @@
 ---
-name: ctf-forensics-windows
+name: noir-ctf-forensics-windows
 description: "CTF Windows forensics. Event log parsing (evtx), registry analysis, SAM hash extraction, MFT/USN journal analysis, wmiexec.py artifact detection, PowerShell history timeline, RDP event IDs, Windows Defender MPLog, anti-forensics detection. Triggers: 'windows forensics', 'evtx analysis', 'registry forensics', 'mft analysis', 'usn journal', 'sam database', 'wmiexec artifacts', 'rdp forensics', 'defender logs', 'windows event log'."
 ---
 

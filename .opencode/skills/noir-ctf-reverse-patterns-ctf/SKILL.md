@@ -1,5 +1,5 @@
 ---
-name: ctf-reverse-patterns-ctf
+name: noir-ctf-reverse-patterns-ctf
 description: "CTF-specific reverse engineering patterns. Hidden opcode crypto key capture, image XOR mask via smoothness, RC4 parameter extraction, Z3 VM constraint solving, Sprague-Grundy Nim strategy, block cipher zero diffusion, meet-in-middle hash inversion, kernel ioctl maze, recursive process counter, RWX shellcode detection. Triggers: 'ctf reverse patterns', 'crypto key capture', 'image xor brute', 'z3 constraint', 'sprague grundy', 'meet in middle hash', 'ioctl maze', 'reverse patterns', 'hidden opcode', 'xor image recovery'."
 ---
 

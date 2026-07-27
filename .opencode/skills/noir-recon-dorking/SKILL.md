@@ -1,5 +1,5 @@
 ---
-name: recon-dorking
+name: noir-recon-dorking
 description: "Google/Bing/DuckDuckGo dorking skill for passive OSINT reconnaissance. Discovers exposed credentials, sensitive files, admin panels, git repos, and attack surface via search engine operators. Triggers: 'dorking', 'google dork', 'dork', 'search engine recon', 'osint dork', 'exposed credentials', 'directory listing', 'filetype dork', 'site dork'."
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: tool-caido
+name: noir-tool-caido
 description: "Caido web security proxy — intercepting proxy, replay, automate, workflow rules, filter, match/replace, HTTPQL querying, Caido Automate for fuzzing. Triggers: 'caido', 'caido proxy', 'caido intercept', 'caido replay', 'caido automate', 'caido workflow', 'caido fuzz', 'web proxy testing'."
 ---
 

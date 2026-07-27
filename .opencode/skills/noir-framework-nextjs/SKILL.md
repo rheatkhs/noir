@@ -1,5 +1,5 @@
 ---
-name: framework-nextjs
+name: noir-framework-nextjs
 description: "Next.js security testing — API route exposure, getServerSideProps SSRF, build output disclosure, middleware bypass, next.config.js misconfig, rewrites abuse, image proxy SSRF. Triggers: 'nextjs', 'next.js', 'nextjs security', 'react ssr', 'vercel app security', 'nextjs api routes', 'getserversideprops ssrf'."
 ---
 

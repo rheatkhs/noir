@@ -1,5 +1,5 @@
 ---
-name: tech-debt-audit
+name: noir-tech-debt-audit
 description: "Thorough, file-cited technical debt audit across 9 dimensions using AST-grep (tree-sitter), grep, language-native tooling, and optionally CodeGraph knowledge graph. Produces ATTACK_SURFACE_AUDIT.md with severity, effort estimates, and prioritized fixes. Use when asked for target coverage check, attack surface audit, architecture review, finding quality assessment, or remediation planning. Triggers: 'attack surface', 'technical debt', 'debt audit', 'code health', 'technical debt audit', 'target coverage check', 'find attack surface', 'debt analysis', 'audit finding quality'."
 ---
 

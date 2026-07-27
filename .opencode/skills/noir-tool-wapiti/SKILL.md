@@ -1,5 +1,5 @@
 ---
-name: tool-wapiti
+name: noir-tool-wapiti
 description: "Wapiti web vulnerability scanner — SQL injection, XSS, SSRF, file disclosure, command injection, CRLF, open redirect scanning with HTML report. Triggers: 'wapiti', 'web application scanner', 'wapiti scan', 'wapiti report', 'automated web scan', 'wapiti sqli', 'wapiti xss'."
 ---
 

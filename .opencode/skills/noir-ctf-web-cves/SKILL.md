@@ -1,5 +1,5 @@
 ---
-name: ctf-web-cves
+name: noir-ctf-web-cves
 description: "CTF web CVE exploitation. Next.js middleware bypass, PaperCut admin bypass, Ruby-SAML forgery, Uvicorn CRLF injection, ExifTool DjVu RCE, WeasyPrint SSRF, Zabbix SQL injection, React Server Components RCE, prototype pollution. Triggers: 'cve exploit', 'framework cve', 'nextjs bypass', 'papercut', 'saml bypass', 'exiftool rce', 'weasyprint ssrf', 'zabbix sqli', 'prototype pollution', 'framework exploit ctf'."
 ---
 

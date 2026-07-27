@@ -1,5 +1,5 @@
 ---
-name: vuln-websocket
+name: noir-vuln-websocket
 description: "WebSocket security testing — cross-site WebSocket hijacking (CSWSH), message injection, authentication bypass, SQL/NoSQL/command injection via WebSocket messages, privilege escalation via WebSocket. Triggers: 'websocket', 'websocket security', 'cswsh', 'cross-site websocket hijacking', 'websocket injection', 'ws pentest', 'socket.io security', 'websocket exploit'."
 ---
 

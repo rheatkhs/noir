@@ -1,5 +1,5 @@
 ---
-name: ctf-misc-rf-sdr
+name: noir-ctf-misc-rf-sdr
 description: "CTF RF/SDR signal processing. IQ file formats (cf32/cs16/cu8), spectrum analysis, QAM-16 demodulation with carrier and timing recovery, cyclostationary analysis for symbol rate, Mueller-Muller timing, GNU Radio integration. Triggers: 'sdr', 'rf ctf', 'iq signal', 'qam demodulation', 'signal processing', 'gnuradio', 'rtlsdr', 'iq file', 'cf32', 'radio frequency'."
 ---
 

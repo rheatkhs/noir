@@ -1,5 +1,5 @@
 ---
-name: tech-observability
+name: noir-tech-observability
 description: "Observability platform security testing — Grafana default credentials, Prometheus metrics exposure, Jaeger unauth access, Zipkin, alertmanager webhook abuse, metric exfiltration. Triggers: 'grafana', 'prometheus', 'observability security', 'monitoring security', 'grafana default creds', 'prometheus exposed', 'jaeger security', 'metrics exposure', 'alertmanager'."
 ---
 

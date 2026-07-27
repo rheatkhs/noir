@@ -1,5 +1,5 @@
 ---
-name: framework-wordpress
+name: noir-framework-wordpress
 description: "WordPress security testing — user enumeration, xmlrpc.php abuse, plugin/theme CVEs, REST API exposure, WP-JSON, admin upload RCE, credential brute force. Triggers: 'wordpress', 'wp', 'wordpress security', 'xmlrpc', 'wpscan', 'wp plugin vuln'."
 ---
 

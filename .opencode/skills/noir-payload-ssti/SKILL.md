@@ -1,5 +1,5 @@
 ---
-name: payload-ssti
+name: noir-payload-ssti
 description: "SSTI payload collection — Jinja2/Python, Twig/PHP, FreeMarker/Java, Velocity/Java, Smarty/PHP, Mako/Python, Handlebars/Node, ERB/Ruby template injection payloads for RCE. Triggers: 'ssti payload', 'template injection payload', 'jinja2 payload', 'twig ssti', 'freemarker injection', 'velocity injection', 'smarty ssti', 'mako ssti', 'erb injection', 'server side template injection payload'."
 ---
 

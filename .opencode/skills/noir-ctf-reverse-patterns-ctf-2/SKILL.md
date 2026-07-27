@@ -1,5 +1,5 @@
 ---
-name: ctf-reverse-patterns-ctf-2
+name: noir-ctf-reverse-patterns-ctf-2
 description: "CTF reverse engineering competition patterns part 2. Multi-layer self-decrypting binary with JIT fork execution, embedded ZIP XOR license decryption, .rodata XOR blob deobfuscation, prefix hash brute-force, CVP/LLL lattice for constrained ASCII validation, decision tree function obfuscation via Ghidra headless scripting, GLSL shader VM with sequential emulation (texture bytecode), GF(2^8) Gaussian elimination for flag recovery, Z3 for single-line Python boolean circuits, sliding window popcount differential propagation, Morse code via keyboard LED ioctl, C++ destructor-hidden validation, VM sequential key-chain brute-force with OpenMP, syscall side-effect memory corruption. Triggers: 'self-decrypting binary', 'embedded zip license', 'rodata xor deobfuscation', 'cvp lattice ascii', 'decision tree obfuscation', 'glsl shader vm', 'gf28 gaussian elimination', 'z3 boolean circuit', 'popcount sliding window', 'keyboard led morse', 'cxx destructor validation', 'vm keychain brute', 'jit fork exploit'."
 ---
 

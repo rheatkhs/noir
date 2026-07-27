@@ -1,5 +1,5 @@
 ---
-name: vuln-waf-bypass
+name: noir-vuln-waf-bypass
 description: "WAF detection and bypass techniques — WAF fingerprinting, encoding bypass, case manipulation, header smuggling past WAF, chunked encoding, parameter pollution, Unicode normalization bypass. Triggers: 'waf bypass', 'waf detection', 'firewall bypass', 'web application firewall', 'waf evasion', 'cloudflare bypass', 'modsecurity bypass', 'waf fingerprint', 'bypass protection'."
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: tech-git-platforms
+name: noir-tech-git-platforms
 description: "Git platform security testing — GitLab/GitHub/Gitea misconfigs, exposed .git repos, API token abuse, CI/CD pipeline injection, secret scanning in public repos. Triggers: 'gitlab security', 'github security', 'gitea security', 'git platform', 'exposed git', 'ci pipeline injection', 'git secret'."
 ---
 

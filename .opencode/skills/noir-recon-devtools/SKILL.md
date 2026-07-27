@@ -1,5 +1,5 @@
 ---
-name: recon-devtools
+name: noir-recon-devtools
 description: "Exposed developer tools and debug interfaces detection — Webpack DevServer, React DevTools, Vue DevTools, exposed metrics endpoints, debug ports, GraphiQL, Jupyter notebooks, Kibana. Triggers: 'devtools', 'debug interface', 'developer tools', 'webpack devserver', 'exposed debug', 'react devtools', 'sourcemap exposure', 'source map leak', 'kibana exposed'."
 ---
 

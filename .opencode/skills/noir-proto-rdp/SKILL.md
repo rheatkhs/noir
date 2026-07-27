@@ -1,5 +1,5 @@
 ---
-name: proto-rdp
+name: noir-proto-rdp
 description: "RDP security testing — BlueKeep/DejaBlue detection, credential brute force, NLA bypass, RDP session hijacking, pass-the-hash via RDP, restricted admin mode. Triggers: 'rdp', 'remote desktop', 'rdp pentest', 'rdp brute force', 'bluekeep', 'rdp vulnerability', 'rdp attack', 'nla bypass', 'rdp session hijack'."
 ---
 

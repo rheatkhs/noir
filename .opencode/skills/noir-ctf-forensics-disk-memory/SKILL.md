@@ -1,5 +1,5 @@
 ---
-name: ctf-forensics-disk-memory
+name: noir-ctf-forensics-disk-memory
 description: "CTF disk and memory forensics. Volatility 3 process/network/MFT analysis, disk imaging with Sleuth Kit icat, VM forensics OVA/VMDK via 7z, vmss2core snapshot conversion, ransomware AES key oracle, RAID 5 XOR recovery, APFS/ZFS snapshot reversion, WordPerfect macro brute, Docker layer secrets, PowerShell history triage. Triggers: 'volatility', 'memory forensics', 'disk forensics', 'vmdk', 'memory dump', 'raid recovery', 'apfs snapshot', 'docker forensics', 'ransomware recovery', 'powershell history forensics'."
 ---
 

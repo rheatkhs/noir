@@ -1,5 +1,5 @@
 ---
-name: tech-nginx-apache
+name: noir-tech-nginx-apache
 description: "Nginx and Apache security testing — path traversal via alias misconfiguration, .htaccess bypass, Apache mod_status, nginx off-by-slash, server-side includes, HTTP methods abuse, server info disclosure. Triggers: 'nginx security', 'apache security', 'nginx misconfiguration', 'apache misconfiguration', 'nginx alias', 'htaccess bypass', 'apache mod_status', 'nginx off slash', 'apache pentest'."
 ---
 

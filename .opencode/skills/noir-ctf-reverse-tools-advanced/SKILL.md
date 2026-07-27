@@ -1,5 +1,5 @@
 ---
-name: ctf-reverse-tools-advanced
+name: noir-ctf-reverse-tools-advanced
 description: "CTF advanced reverse engineering tooling. VMProtect devirtualization, Themida unpacking, BinDiff/Diaphora patch analysis, D-810 deobfuscation, GOOMBA Ghidra, Miasm IR lifting, Qiling emulation, Triton symbolic execution, rr reverse debugging, pwndbg/GEF, LIEF binary patching. Triggers: 'vmprotect', 'themida', 'bindiff', 'binary diff', 'deobfuscation', 'qiling', 'triton', 'miasm', 'reverse debugging', 'ghidra scripting', 'pwndbg', 'lief patching', 'advanced reverse tools'."
 ---
 

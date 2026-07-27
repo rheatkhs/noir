@@ -1,5 +1,5 @@
 ---
-name: tech-docker
+name: noir-tech-docker
 description: "Docker and container security testing — privileged container escape, docker socket abuse, container breakout, image secret scanning, registry credentials, Kubernetes misconfiguration. Triggers: 'docker security', 'container escape', 'docker breakout', 'privileged container', 'docker socket', 'container pentest', 'kubernetes security', 'k8s pentest', 'docker misconfiguration'."
 ---
 

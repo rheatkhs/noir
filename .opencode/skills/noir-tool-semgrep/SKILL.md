@@ -1,5 +1,5 @@
 ---
-name: tool-semgrep
+name: noir-tool-semgrep
 description: "Semgrep static analysis for security — SAST rules, custom rules, secret detection, code pattern matching, OWASP Top 10 detection, CI/CD integration. Triggers: 'semgrep', 'sast', 'static analysis', 'source code scan', 'semgrep rule', 'code security scan', 'semgrep owasp', 'static application security testing'."
 ---
 

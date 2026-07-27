@@ -1,5 +1,5 @@
 ---
-name: vuln-csrf
+name: noir-vuln-csrf
 description: "CSRF (Cross-Site Request Forgery) testing — token bypass, SameSite bypass, Referer-only validation bypass, JSON CSRF, multipart CSRF, cross-origin state change. Triggers: 'csrf', 'cross site request forgery', 'csrf bypass', 'csrf token bypass', 'samesite bypass', 'csrf exploit', 'forged request', 'anti-csrf', 'state-changing request'."
 ---
 

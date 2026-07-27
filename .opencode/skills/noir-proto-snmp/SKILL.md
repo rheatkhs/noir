@@ -1,5 +1,5 @@
 ---
-name: proto-snmp
+name: noir-proto-snmp
 description: "SNMP security testing — community string brute force, SNMP v1/v2c info dump, OID enumeration, SNMP write abuse, MIB walking. Triggers: 'snmp', 'snmp security', 'snmp enum', 'community string', 'snmp brute', 'snmp attack', 'snmp v2', 'mib walk', 'snmpwalk'."
 ---
 

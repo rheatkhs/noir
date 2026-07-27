@@ -1,5 +1,5 @@
 ---
-name: vuln-xss
+name: noir-vuln-xss
 description: "Reflected and Stored XSS testing — injection point discovery, context-aware payload crafting, WAF bypass, stored XSS via API, CSP bypass, cookie theft, keylogging, BeEF hooking. Triggers: 'xss', 'cross site scripting', 'reflected xss', 'stored xss', 'xss payload', 'script injection', 'xss bypass', 'csp bypass', 'xss exploit', 'cookie theft xss'."
 ---
 

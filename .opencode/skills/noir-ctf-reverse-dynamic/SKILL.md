@@ -1,5 +1,5 @@
 ---
-name: ctf-reverse-dynamic
+name: noir-ctf-reverse-dynamic
 description: "CTF dynamic analysis tools. Frida hooking, angr symbolic execution, lldb, x64dbg, Qiling cross-platform emulation, Intel Pin instruction counting side channel. Triggers: 'dynamic analysis', 'frida ctf', 'angr symbolic', 'qiling emulation', 'x64dbg', 'lldb', 'instruction counting', 'symbolic execution ctf', 'pin instruction count'."
 ---
 

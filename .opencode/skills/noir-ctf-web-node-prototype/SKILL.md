@@ -1,5 +1,5 @@
 ---
-name: ctf-web-node-prototype
+name: noir-ctf-web-node-prototype
 description: "CTF Node.js prototype pollution and VM escape. flatnest CVE-2023-26135, lodash merge pollution, Pug AST injection, Happy-DOM VM escape, full pollution-to-RCE chains. Triggers: 'prototype pollution', 'node js ctf', 'vm escape', 'lodash merge', 'happy-dom', 'flatnest', 'pug injection', 'javascript prototype', 'node ctf'."
 ---
 

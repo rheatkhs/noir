@@ -1,5 +1,5 @@
 ---
-name: ctf-forensics-stego
+name: noir-ctf-forensics-stego
 description: "CTF steganography forensics. LSB extraction, PNG/JPEG/BMP format tricks, PDF hidden layers, SVG animation, steghide, zsteg, stegsolve, bitplane analysis, QR codes hidden in images. Triggers: 'steganography', 'stego', 'ctf forensics', 'hidden data image', 'lsb steganography', 'steghide', 'zsteg', 'stegsolve', 'image forensics', 'png stego', 'jpeg stego'."
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: vuln-account-takeover
+name: noir-vuln-account-takeover
 description: "Account takeover (ATO) testing — password reset flaws, OAuth misconfig, session fixation, CSRF chain to ATO, XSS cookie theft, IDOR-based ATO, credential stuffing, email change without verification. Triggers: 'account takeover', 'ato', 'account hijack', 'session hijack', 'credential theft', 'oauth ato', 'reset token abuse', 'account compromise'."
 ---
 

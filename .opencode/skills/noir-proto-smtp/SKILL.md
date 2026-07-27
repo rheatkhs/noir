@@ -1,5 +1,5 @@
 ---
-name: proto-smtp
+name: noir-proto-smtp
 description: "SMTP/IMAP security testing — SMTP relay, user enumeration via VRFY/RCPT, email spoofing (SPF/DKIM/DMARC bypass), SMTP injection, credential brute force. Triggers: 'smtp', 'imap', 'email security', 'smtp relay', 'email spoofing', 'smtp pentest', 'email enum', 'vrfy', 'smtp injection', 'mail server'."
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: tool-metasploit
+name: noir-tool-metasploit
 description: "Metasploit Framework usage — module search, exploit execution, payload generation, post-exploitation, meterpreter, auxiliary modules, MSFvenom. Triggers: 'metasploit', 'msf', 'msfconsole', 'meterpreter', 'msf exploit', 'metasploit module', 'msfvenom', 'exploit framework', 'msf payload'."
 ---
 

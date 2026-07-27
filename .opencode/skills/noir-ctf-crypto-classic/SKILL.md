@@ -1,5 +1,5 @@
 ---
-name: ctf-crypto-classic
+name: noir-ctf-crypto-classic
 description: "CTF classic cipher attacks. Vigenere key recovery, Kasiski examination, XOR frequency analysis, multi-byte XOR key recovery, OTP key reuse (many-time pad), cascade XOR, book cipher, homophonic substitution. Triggers: 'vigenere', 'classic cipher', 'substitution cipher', 'xor key recovery', 'many time pad', 'otp reuse', 'kasiski', 'cipher frequency analysis', 'cryptanalysis'."
 ---
 

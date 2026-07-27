@@ -1,5 +1,5 @@
 ---
-name: ctf-wasm
+name: noir-ctf-wasm
 description: "CTF WebAssembly challenge analysis. Initial recon with wasm-objdump, WAT decompilation with wasm2wat, wasm-decompile pseudo-code, wasm2c native compilation for ltrace/GDB analysis, wasmtime/wasmer execution, WASM linear memory dump and string extraction, binary patching via WAT edit then wat2wasm, XOR obfuscation recovery, character-by-character comparison pattern detection, Node.js WASM runtime wrapper analysis. Triggers: 'wasm ctf', 'webassembly reverse', 'wasm2wat', 'wasm2c', 'wasmtime', 'wasm-objdump', 'wasm binary', 'wat analysis', 'webassembly decompile', 'wasm memory dump', 'wasm flag'."
 ---
 

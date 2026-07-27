@@ -1,5 +1,5 @@
 ---
-name: ctf-web-server-exec
+name: noir-ctf-web-server-exec
 description: "CTF web server code execution challenges — PHP webshell, eval bypass, command injection CTF, RCE via deserialization, sandbox escape. Triggers: 'ctf web exec', 'ctf rce', 'ctf command injection', 'ctf php exec', 'ctf sandbox escape', 'ctf code execution'."
 ---
 

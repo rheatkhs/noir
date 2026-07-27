@@ -1,5 +1,5 @@
 ---
-name: ctf-crypto-prng
+name: noir-ctf-crypto-prng
 description: "CTF PRNG attacks. Mersenne Twister state recovery, time-seeded PRNG brute force, LCG parameter recovery, V8 Math.random XorShift128+ Z3 solver, GF(2) matrix approach. Triggers: 'prng attack', 'mersenne twister', 'random seed', 'predictable random', 'lcg attack', 'math.random crack', 'random state recovery', 'prng prediction', 'twister untemper'."
 ---
 

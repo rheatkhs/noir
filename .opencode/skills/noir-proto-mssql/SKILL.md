@@ -1,5 +1,5 @@
 ---
-name: proto-mssql
+name: noir-proto-mssql
 description: "Microsoft SQL Server (MSSQL) penetration testing. Authentication, enumeration, xp_cmdshell RCE, linked server abuse, privilege escalation, database enumeration, UNC path capture, OPSEC considerations. Triggers: 'mssql', 'sql server', 'mssql pentest', 'xp_cmdshell', 'mssql rce', 'mssql enumeration', 'sql server pentest', 'mssql credential', 'linked server', 'mssql xp_cmdshell'."
 ---
 

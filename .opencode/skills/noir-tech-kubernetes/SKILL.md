@@ -1,5 +1,5 @@
 ---
-name: tech-kubernetes
+name: noir-tech-kubernetes
 description: "Kubernetes cluster security assessment. API server enumeration, kubelet exploitation, etcd access, RBAC misconfigurations, pod escape, privilege escalation, service account abuse. Triggers: 'kubernetes', 'k8s', 'kubelet', 'etcd', 'rbac', 'kube-hunter', 'kube-bench', 'pod escape', 'service account', 'k8s pentest'."
 ---
 

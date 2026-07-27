@@ -1,5 +1,5 @@
 ---
-name: post-windows-privesc
+name: noir-post-windows-privesc
 description: "Windows privilege escalation skill. Token impersonation, unquoted service paths, weak service permissions, AlwaysInstallElevated, credential extraction, and scheduled task abuse. Triggers: 'windows privesc', 'privilege escalation windows', 'local admin', 'seimpersonateprivilege', 'potato exploit', 'winpeas', 'windows priv esc', 'escalate privileges windows'."
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: framework-laravel
+name: noir-framework-laravel
 description: "Laravel security testing — .env file exposure, debug mode info leak, mass assignment via Eloquent, Laravel Telescope exposure, queue deserialization, CSRF bypass, route listing. Triggers: 'laravel', 'php laravel', 'laravel security', 'laravel env', 'laravel telescope', 'eloquent injection', 'laravel pentest'."
 ---
 

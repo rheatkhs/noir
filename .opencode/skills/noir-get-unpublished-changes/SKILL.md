@@ -1,5 +1,5 @@
 ---
-name: get-unpublished-changes
+name: noir-get-unpublished-changes
 description: "Compare HEAD with the latest published npm versions and list all unpublished changes by release layer. Triggers: unpublished changes, engagement log, what changed, whats new."
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: ctf-pwn-kernel
+name: noir-ctf-pwn-kernel
 description: "CTF Linux kernel exploitation. QEMU debugging setup, KASLR/FGKASLR bypass, kernel heap spray (tty_struct, poll_list), stack overflow, ret2usr, kernel ROP, prepare_kernel_cred/commit_creds, modprobe_path overwrite, iretq restoration. Triggers: 'kernel exploit', 'kernel pwn', 'lpe', 'linux privilege escalation', 'kaslr bypass', 'kernel rop', 'kernel heap', 'tty_struct', 'modprobe_path', 'ctf kernel'."
 ---
 

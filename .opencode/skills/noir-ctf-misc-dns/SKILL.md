@@ -1,5 +1,5 @@
 ---
-name: ctf-misc-dns
+name: noir-ctf-misc-dns
 description: "CTF DNS exploitation. EDNS Client Subnet spoofing for geo-specific responses, DNSSEC NSEC zone walking, IXFR incremental zone transfer for deleted records, DNS rebinding, DNS tunneling detection in PCAP, custom DNS server with dnslib. Triggers: 'dns ctf', 'dnssec walking', 'zone transfer', 'nsec', 'dns rebinding', 'dns tunneling', 'edns', 'axfr', 'dns exfiltration', 'ixfr'."
 ---
 

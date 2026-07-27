@@ -1,5 +1,5 @@
 ---
-name: proto-vnc
+name: noir-proto-vnc
 description: "VNC (Virtual Network Computing) enumeration and exploitation. No-auth check, VNC brute force, CVE-2006-2369 auth bypass, screenshot capture, LibVNCServer CVEs, SSH tunnel access. Triggers: 'vnc', 'rfb protocol', 'vnc exploit', 'vnc brute', 'vnc no auth', 'virtual network computing', 'vnc pentest', 'vnc screenshot', 'vnc vulnerability'."
 ---
 

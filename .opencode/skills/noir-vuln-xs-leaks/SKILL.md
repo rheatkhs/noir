@@ -1,5 +1,5 @@
 ---
-name: vuln-xs-leaks
+name: noir-vuln-xs-leaks
 description: "XS-Leaks (cross-site leak) vulnerability testing. Timing attacks, resource event inference, redirect chain leaks, browser side channels, history.length leaks, frame counting. Triggers: 'xs-leaks', 'cross-site leaks', 'timing attack', 'cross-origin timing', 'browser side channel', 'frame counting', 'xs leak', 'cross site information leak'."
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: ctf-forensics-signals
+name: noir-ctf-forensics-signals
 description: "CTF signals and hardware forensics. VGA binary signal decoding (800x525 total frame, 640x480 active, 5-byte samples), HDMI TMDS 10-bit symbol decode, DisplayPort 8b/10b LFSR descrambling, Voyager golden record audio sync pulse image extraction, side-channel power analysis DPA with variance-based leak detection, Saleae Logic 2 .sal UART decode (delta encoding, baud rate detection), Flipper Zero .sub file parsing, keyboard acoustic side-channel MFCC classification. Triggers: 'vga signal', 'hdmi tmds', 'displayport lfsr', 'golden record audio', 'side channel power analysis', 'dpa attack', 'saleae logic uart', 'flipper zero sub', 'keyboard acoustic', 'hardware forensics', 'signal forensics', 'power trace analysis'."
 ---
 

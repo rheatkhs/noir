@@ -1,5 +1,5 @@
 ---
-name: ctf-pwn-rop
+name: noir-ctf-pwn-rop
 description: "CTF binary exploitation ROP chains and shellcode. ret2libc, ret2csu, raw syscall ROP, rdx control, stack pivot, bad character bypass via XOR, exotic gadgets (BEXTR/XLAT/STOSB), sprintf gadget chaining. Triggers: 'rop chain', 'ret2libc', 'rop gadget', 'pwn rop', 'binary exploitation', 'ctf pwn', 'stack overflow rop', 'ret2csu', 'shellcode', 'stack pivot', 'rdx control'."
 ---
 

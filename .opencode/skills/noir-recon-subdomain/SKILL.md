@@ -1,5 +1,5 @@
 ---
-name: recon-subdomain
+name: noir-recon-subdomain
 description: "Subdomain enumeration. subfinder, assetfinder, amass passive, dnsx resolution, httpx live service detection, permutation/brute-force, high-value subdomain prioritization. Triggers: 'subdomain enumeration', 'subdomain discovery', 'subdomain recon', 'subfinder', 'amass', 'assetfinder', 'dns enumeration', 'dnsx', 'subdomains', 'subdomain scan'."
 ---
 

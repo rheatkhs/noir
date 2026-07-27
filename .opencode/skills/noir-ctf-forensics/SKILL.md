@@ -1,5 +1,5 @@
 ---
-name: ctf-forensics
+name: noir-ctf-forensics
 description: "CTF forensics skill. Memory forensics, disk analysis, steganography, and file recovery. Use for forensic challenges and incident response. Triggers: 'ctf forensics', 'forensics', 'memory', 'stego', 'disk', 'pcap', 'volatility'."
 version: 1.0.0
 phase: ["reporting"]

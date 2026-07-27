@@ -1,5 +1,5 @@
 ---
-name: red-recon
+name: noir-red-recon
 description: "Red team reconnaissance skill. Stealth OSINT, passive enumeration, and social engineering preparation. Use for red team engagements requiring stealth. Triggers: 'red recon', 'red team recon', 'stealth recon', 'osint', 'passive recon'."
 version: 1.0.0
 phase: ["recon"]

@@ -1,5 +1,5 @@
 ---
-name: tool-nuclei
+name: noir-tool-nuclei
 description: "Nuclei template-based vulnerability scanner — community templates, custom templates, CVE scanning, severity filtering, bulk scanning, rate limiting, report output. Triggers: 'nuclei', 'nuclei scan', 'nuclei template', 'nuclei cve', 'template scanner', 'nuclei severity', 'bulk vulnerability scan', 'nuclei report'."
 ---
 

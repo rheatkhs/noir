@@ -1,5 +1,5 @@
 ---
-name: vuln-idor
+name: noir-vuln-idor
 description: "IDOR/BOLA (Insecure Direct Object Reference / Broken Object Level Authorization) testing skill. Tests horizontal/vertical access control across REST, GraphQL, WebSocket, and gRPC. Triggers: 'idor', 'bola', 'object level authorization', 'broken access control', 'unauthorized access', 'cross-account data', 'access control bypass'."
 ---
 

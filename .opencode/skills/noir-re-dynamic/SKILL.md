@@ -1,5 +1,5 @@
 ---
-name: re-dynamic
+name: noir-re-dynamic
 description: "Dynamic binary analysis skill. Runtime debugging, system call tracing, library call tracing, memory inspection, and exploit development using gdb, pwndbg, strace, ltrace, and angr. Triggers: 'dynamic analysis', 'debug binary', 'gdb', 'strace', 'ltrace', 'runtime analysis', 'exploit development', 'rop chain', 'buffer overflow'."
 ---
 

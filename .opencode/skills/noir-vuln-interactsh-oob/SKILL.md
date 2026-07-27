@@ -1,5 +1,5 @@
 ---
-name: vuln-interactsh-oob
+name: noir-vuln-interactsh-oob
 description: "Out-of-band vulnerability detection with Interactsh. Blind SSRF via URL/header injection, blind XXE with external entity and parameter entity OOB data exfiltration, blind SQL injection via MySQL/MSSQL/PostgreSQL/Oracle OOB channels, blind SSTI via Jinja2/Twig/FreeMarker with curl callback, blind command injection DNS/HTTP ping, Log4Shell JNDI payload detection across HTTP headers, bulk OOB testing with Nuclei -iserver, DNS subdomain base64 data exfiltration parsing. Triggers: 'interactsh', 'oob testing', 'blind ssrf', 'blind xxe', 'blind sqli oob', 'blind rce', 'oast', 'out-of-band', 'log4shell detection', 'dns callback', 'oob callback', 'blind vulnerability'."
 ---
 

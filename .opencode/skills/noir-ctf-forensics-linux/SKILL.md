@@ -1,5 +1,5 @@
 ---
-name: ctf-forensics-linux
+name: noir-ctf-forensics-linux
 description: "CTF Linux and application forensics. Log analysis, Docker image layer inspection, browser credential decryption (Chrome/Firefox), KeePass cracking, git reflog orphan recovery, USB audio extraction, TLS decryption via weak RSA, TFTP netascii decode. Triggers: 'linux forensics', 'log analysis', 'browser forensics', 'chrome decrypt', 'firefox forensics', 'git forensics', 'docker forensics', 'keepass crack', 'tls forensics'."
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: recon-full
+name: noir-recon-full
 description: "Comprehensive full reconnaissance methodology — passive intel, subdomain enumeration, live host detection, port scanning, tech stack fingerprinting, JS analysis, secret hunting. Triggers: 'full recon', 'comprehensive recon', 'full reconnaissance', 'complete recon', 'end to end recon', 'full scope recon', 'recon methodology', 'start recon', 'bug bounty recon'."
 ---
 

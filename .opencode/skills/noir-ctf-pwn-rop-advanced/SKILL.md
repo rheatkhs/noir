@@ -1,5 +1,5 @@
 ---
-name: ctf-pwn-rop-advanced
+name: noir-ctf-pwn-rop-advanced
 description: "CTF advanced ROP techniques. Double stack pivot via leave/ret, SROP with UTF-8 constraints, architecture switching via RETF to bypass seccomp, vDSO gadget harvesting, vsyscall fixed addresses, .fini_array hijack, seccomp alternative syscalls. Triggers: 'rop advanced', 'stack pivot', 'srop', 'sigreturn', 'retf', 'architecture switch', 'vsdo gadgets', 'seccomp bypass rop', 'fini_array hijack', 'rop chain advanced'."
 ---
 

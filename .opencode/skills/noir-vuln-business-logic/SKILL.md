@@ -1,5 +1,5 @@
 ---
-name: vuln-business-logic
+name: noir-vuln-business-logic
 description: "Business logic vulnerability testing. Tests workflow bypass, price manipulation, refund abuse, quota bypass, and state machine attacks. Triggers: 'business logic', 'workflow bypass', 'price manipulation', 'negative price', 'coupon abuse', 'refund abuse', 'step skip', 'quota bypass', 'application logic'."
 ---
 

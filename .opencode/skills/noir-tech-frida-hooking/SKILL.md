@@ -1,5 +1,5 @@
 ---
-name: tech-frida-hooking
+name: noir-tech-frida-hooking
 description: "Frida dynamic instrumentation and hooking. Android/iOS SSL pinning bypass, method interception, memory patching, native hook, Java method override, argument/return value modification, runtime analysis. Triggers: 'frida', 'ssl pinning bypass', 'dynamic instrumentation', 'frida hook', 'android hooking', 'ios hooking', 'method interception', 'runtime patching', 'frida android', 'java hooking frida'."
 ---
 

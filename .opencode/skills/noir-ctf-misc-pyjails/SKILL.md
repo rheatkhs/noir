@@ -1,5 +1,5 @@
 ---
-name: ctf-misc-pyjails
+name: noir-ctf-misc-pyjails
 description: "CTF Python jail escape techniques. Class hierarchy traversal, compile bypass, unicode bypass, decorator-based escape, walrus operator, octal escapes, oracle-based challenges, mastermind-style, restricted charset, quine+context detection, func_globals chain. Triggers: 'python jail', 'pyjail', 'python sandbox', 'python escape', 'ctf jail', 'sandbox escape python', 'python restrict', 'eval jail', 'exec bypass'."
 ---
 

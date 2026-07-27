@@ -1,5 +1,5 @@
 ---
-name: ctf-web-client-side
+name: noir-ctf-web-client-side
 description: "CTF client-side web attacks. XSS filter bypass, DOMPurify bypass via backend trust, DOM XSS jQuery hashchange, shadow DOM exfiltration, JPEG+HTML polyglot, image timing oracle, CSS text exfiltration without JS, Alpine.js/Hyperscript attribute execution. Triggers: 'xss', 'dom xss', 'client side attack', 'xss bypass', 'dompurify bypass', 'csp bypass', 'shadow dom', 'polyglot upload', 'css exfiltration', 'ctf web client'."
 ---
 

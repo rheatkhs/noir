@@ -1,5 +1,5 @@
 ---
-name: work-with-pr-workspace
+name: noir-work-with-pr-workspace
 description: "Git workflow skill for working with pull requests in isolated worktrees — branch creation, implementation, QA evidence, PR creation via gh CLI. Triggers: 'create pr', 'pull request', 'work with pr', 'git worktree', 'isolated branch', 'submit work', 'pr workflow'."
 ---
 

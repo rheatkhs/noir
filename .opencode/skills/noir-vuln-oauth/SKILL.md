@@ -1,5 +1,5 @@
 ---
-name: vuln-oauth
+name: noir-vuln-oauth
 description: "OAuth 2.0 and OpenID Connect misconfiguration testing. Open redirect ATO, state CSRF bypass, authorization code leakage and reuse, token audience confusion, PKCE bypass, scope escalation, implicit flow abuse. Triggers: 'oauth misconfig', 'oauth attack', 'oauth2 bypass', 'openid connect', 'redirect_uri bypass', 'oauth state csrf', 'pkce bypass', 'authorization code reuse', 'oauth token', 'sso bypass'."
 ---
 

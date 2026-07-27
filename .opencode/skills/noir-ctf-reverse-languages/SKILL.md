@@ -1,5 +1,5 @@
 ---
-name: ctf-reverse-languages
+name: noir-ctf-reverse-languages
 description: "CTF reverse engineering by language. Python bytecode (dis, PyInstaller, Pyarmor), Ruby/Perl polyglot, OPAL functional, UEFI VM bytecode, Unity IL2CPP, Roblox asset versioning, Godot KeyDot, HarmonyOS ABC, Electron ASAR, Rust serde_json, Node.js runtime introspection. Triggers: 'python reversing', 'pyinstaller unpack', 'pyarmor', 'unity il2cpp', 'godot reverse', 'electron asar', 'rust reverse', 'node introspect', 'ctf language', 'bytecode analysis'."
 ---
 

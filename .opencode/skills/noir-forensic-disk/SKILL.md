@@ -1,5 +1,5 @@
 ---
-name: forensic-disk
+name: noir-forensic-disk
 description: "Disk forensics skill. File carving, file system analysis, deleted file recovery, timeline reconstruction, and artifact extraction from disk images. Tools: autopsy, foremost, bulk_extractor, binwalk, exiftool. Triggers: 'disk forensics', 'file carving', 'deleted files', 'disk image', 'autopsy', 'partition analysis'."
 ---
 

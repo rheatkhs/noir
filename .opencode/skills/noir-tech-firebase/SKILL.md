@@ -1,5 +1,5 @@
 ---
-name: tech-firebase
+name: noir-tech-firebase
 description: "Firebase security testing — Firestore/RTDB unauthenticated read/write, Firebase Auth bypass, Storage bucket enumeration, API key exposure, Cloud Functions SSRF. Triggers: 'firebase', 'firestore', 'firebase security', 'firebase pentest', 'firebase rtdb', 'firebase auth bypass', 'firebase storage', 'firebase api key', 'firebase misconfiguration'."
 ---
 

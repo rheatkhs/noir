@@ -1,5 +1,5 @@
 ---
-name: blue-ir
+name: noir-blue-ir
 description: "Blue team incident response skill. Incident triage, timeline analysis, containment, and eradication. Use for incident response operations and breach investigation. Triggers: 'blue ir', 'incident response', 'breach', 'containment', 'eradication', 'timeline'."
 version: 1.0.0
 phase: ["reporting"]

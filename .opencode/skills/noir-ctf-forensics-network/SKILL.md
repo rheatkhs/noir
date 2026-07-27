@@ -1,5 +1,5 @@
 ---
-name: ctf-forensics-network
+name: noir-ctf-forensics-network
 description: "CTF network forensics. Wireshark/tshark PCAP analysis, TLS decryption with SSLKEYLOGFILE/RSA key, HTTP object extraction, USB HID decode, SMB3 decryption, TCP stream reconstruction, BCD encoding. Triggers: 'network forensics', 'pcap analysis', 'wireshark ctf', 'tshark', 'tls decrypt', 'usb forensics', 'smb decrypt', 'http exfil pcap', 'packet capture forensics'."
 ---
 

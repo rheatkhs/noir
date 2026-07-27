@@ -1,5 +1,5 @@
 ---
-name: vuln-grpc
+name: noir-vuln-grpc
 description: "gRPC security testing — service enumeration via reflection, proto file analysis, injection via gRPC methods, authentication bypass, plaintext gRPC interception. Triggers: 'grpc', 'grpc security', 'grpc pentest', 'protobuf injection', 'grpc reflection', 'grpc exploit', 'grpc auth bypass', 'protocol buffer', 'h2 grpc'."
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: vuln-open-redirect
+name: noir-vuln-open-redirect
 description: "Open redirect testing — parameter-based redirect bypass, host header redirect, subdomain bypass, URL scheme bypass, phishing chain, OAuth redirect_uri abuse. Triggers: 'open redirect', 'url redirect', 'redirect bypass', 'redirect_uri', 'unvalidated redirect', 'redirect parameter', 'oauth redirect', 'host header redirect', 'phishing redirect'."
 ---
 

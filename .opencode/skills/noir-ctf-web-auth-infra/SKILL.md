@@ -1,5 +1,5 @@
 ---
-name: ctf-web-auth-infra
+name: noir-ctf-web-auth-infra
 description: "CTF web infrastructure authentication attacks. OAuth open redirect token theft, OIDC alg-none manipulation, OAuth state CSRF, CORS reflected origin exploitation, git history credential leakage, CI/CD variable credential theft, identity provider API takeover (authentik/Keycloak), SAML SSO flow automation, Apache Guacamole connection parameter extraction, login page poisoning for credential harvesting, TeamCity REST API RCE. Triggers: 'oauth attack', 'oidc token manipulation', 'cors misconfiguration', 'git history credentials', 'cicd variable theft', 'authentik takeover', 'saml automation', 'guacamole credentials', 'teamcity rce', 'login page poisoning', 'oauth redirect theft', 'identity provider api'."
 ---
 

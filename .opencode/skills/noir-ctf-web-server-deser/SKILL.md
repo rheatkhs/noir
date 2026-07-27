@@ -1,5 +1,5 @@
 ---
-name: ctf-web-server-deser
+name: noir-ctf-web-server-deser
 description: "CTF web server-side deserialization and execution attacks. Java deserialization with ysoserial gadget chains (CommonsCollections, Spring, URLDNS), Python pickle deserialization RCE via __reduce__, race condition TOCTOU balance bypass, VolgaCTF pickle chaining via STOP opcode stripping with os.dup2 stdout redirect, Java XMLDecoder RCE without gadget chains. Triggers: 'java deserialization', 'ysoserial', 'pickle deserialization', 'race condition ctf', 'toctou exploit', 'xmldecoder rce', 'python pickle rce', 'pickle gadget', 'deserialization ctf', 'gadget chain', 'rO0AB exploit', 'aced0005'."
 ---
 

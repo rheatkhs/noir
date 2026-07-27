@@ -1,5 +1,5 @@
 ---
-name: tool-browser-automation
+name: noir-tool-browser-automation
 description: "Browser automation for pentesting — Playwright/Puppeteer for authenticated crawling, form submission, SPA spider, JavaScript rendering, DOM XSS detection, screenshot proof collection. Triggers: 'browser automation', 'playwright pentest', 'puppeteer pentest', 'headless browser', 'spa crawl', 'authenticated crawl', 'javascript rendering', 'dom xss automation'."
 ---
 

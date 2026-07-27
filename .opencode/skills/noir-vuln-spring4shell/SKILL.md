@@ -1,5 +1,5 @@
 ---
-name: vuln-spring4shell
+name: noir-vuln-spring4shell
 description: "Spring4Shell (CVE-2022-22965) detection and exploitation. JSP webshell via classloader pattern, nuclei detection, Spring/Tomcat fingerprinting, WAR deployment RCE. Triggers: 'spring4shell', 'cve-2022-22965', 'spring rce', 'spring mvc rce', 'spring framework rce', 'tomcat jsp shell', 'classloader exploit', 'spring boot rce'."
 ---
 

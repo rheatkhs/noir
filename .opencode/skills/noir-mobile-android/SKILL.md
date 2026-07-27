@@ -1,5 +1,5 @@
 ---
-name: mobile-android
+name: noir-mobile-android
 description: "Android app security testing skill. APK decompilation, static analysis, sensitive data discovery, manifest analysis, and network traffic interception. Tools: apktool, jadx, adb, frida, mobsf. Triggers: 'android pentest', 'apk analysis', 'android security', 'jadx', 'apktool', 'android app'."
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: blue-detect
+name: noir-blue-detect
 description: "Blue team detection skill. WAF detection, IDS/IPS identification, log analysis, and malware detection. Use for defensive operations and incident detection. Triggers: 'blue detect', 'blue team', 'waf detect', 'ids', 'log analysis', 'malware detect'."
 version: 1.0.0
 phase: ["enumeration", "reporting"]

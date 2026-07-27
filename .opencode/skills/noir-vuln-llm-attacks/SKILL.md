@@ -1,5 +1,5 @@
 ---
-name: vuln-llm-attacks
+name: noir-vuln-llm-attacks
 description: "LLM application security testing. Direct prompt injection, indirect RAG injection, tool abuse, output injection (XSS via markdown), pipeline mapping, system prompt extraction. Triggers: 'llm attack', 'prompt injection', 'ai security', 'llm pentest', 'chatgpt injection', 'rag injection', 'llm tool abuse', 'ai prompt injection', 'llm vulnerability', 'system prompt extraction'."
 ---
 

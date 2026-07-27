@@ -1,5 +1,5 @@
 ---
-name: ctf-forensics-stego-advanced
+name: noir-ctf-forensics-stego-advanced
 description: "CTF advanced steganography. FFT frequency domain image stego, SSTV decoding, DotCode barcode, DTMF custom frequency keypad, multi-track audio differential subtraction, cross-channel multi-bit LSB, video frame accumulation, audio waveform binary, spectrogram QR code, whitespace encoding in tar archives. Triggers: 'advanced stego', 'fft stego', 'sstv decode', 'dtmf decode', 'audio stego', 'video stego', 'spectrogram', 'whitespace stego', 'multi-track audio', 'differential audio'."
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: forensic-report
+name: noir-forensic-report
 description: "Forensic report generation skill. Compiles memory, disk, and network findings into a chain-of-custody IR report. Includes IOC list, timeline, evidence inventory, and remediation roadmap. Triggers: 'forensic report', 'ir report', 'incident report', 'chain of custody', 'ioc', 'forensics findings'."
 ---
 

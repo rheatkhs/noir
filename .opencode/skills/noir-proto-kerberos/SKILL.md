@@ -1,5 +1,5 @@
 ---
-name: proto-kerberos
+name: noir-proto-kerberos
 description: "Kerberos security testing — Kerberoasting, AS-REP roasting, Pass-the-Ticket, Golden/Silver Ticket, SPN enumeration, unconstrained delegation, constrained delegation bypass. Triggers: 'kerberos', 'kerberoasting', 'as-rep roasting', 'asreproast', 'pass the ticket', 'golden ticket', 'silver ticket', 'kerberos attack', 'spn attack', 'delegation attack'."
 ---
 

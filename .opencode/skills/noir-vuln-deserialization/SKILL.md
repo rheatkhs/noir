@@ -1,5 +1,5 @@
 ---
-name: vuln-deserialization
+name: noir-vuln-deserialization
 description: "Insecure deserialization testing — Java (ysoserial gadget chains), PHP object injection, Python pickle RCE, Ruby Marshal injection, .NET BinaryFormatter, Jackson/XStream, node-serialize. Triggers: 'deserialization', 'insecure deserialization', 'java deserialization', 'php deserialization', 'ysoserial', 'pickle rce', 'object injection', 'gadget chain', 'serialized object', 'java serialization'."
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: forensic-memory
+name: noir-forensic-memory
 description: "Memory forensics skill. Acquires and analyzes RAM dumps using volatility3. Extracts process lists, network connections, injected code, encryption keys, and malware artifacts. Triggers: 'memory forensics', 'ram analysis', 'volatility', 'memory dump', 'memdump', 'process injection'."
 ---
 

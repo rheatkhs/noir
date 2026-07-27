@@ -1,5 +1,5 @@
 ---
-name: framework-express
+name: noir-framework-express
 description: "Express.js/Node.js security testing — prototype pollution, CORS misconfiguration, middleware bypass, npm dependency vulns, JWT abuse, path traversal via static serving, eval injection. Triggers: 'express', 'expressjs', 'node.js security', 'nodejs pentest', 'express middleware', 'node prototype pollution'."
 ---
 

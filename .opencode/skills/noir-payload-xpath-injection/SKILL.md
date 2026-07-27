@@ -1,5 +1,5 @@
 ---
-name: payload-xpath-injection
+name: noir-payload-xpath-injection
 description: "XPath injection payloads and testing. Authentication bypass, boolean-based blind extraction, XML node enumeration. Triggers: 'xpath injection', 'xml query injection', 'xpath bypass', 'xpath attack', 'xml authentication bypass', 'xpath blind', 'xpath auth bypass'."
 ---
 

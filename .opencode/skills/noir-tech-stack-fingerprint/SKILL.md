@@ -1,5 +1,5 @@
 ---
-name: tech-stack-fingerprint
+name: noir-tech-stack-fingerprint
 description: "Technology stack fingerprinting for security assessment. httpx-based technology detection with status codes and server banners, HTTP response header analysis (Server, X-Powered-By, Set-Cookie tech reveals), WhatWeb aggressive detection, Nuclei tech-detect templates, WordPress/Drupal/Joomla/framework identification, outdated component detection. Triggers: 'tech stack fingerprint', 'technology detection', 'whatweb scan', 'httpx fingerprint', 'cms detection', 'framework identification', 'server banner', 'technology enumeration', 'stack identification'."
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: post-lateral-movement
+name: noir-post-lateral-movement
 description: "Lateral movement skill for post-exploitation. Credential spraying, pass-the-hash, WMI/SMB/WinRM execution, SSH key pivoting, and internal network traversal. Triggers: 'lateral movement', 'pass the hash', 'pth', 'credential spray', 'internal pivot', 'move laterally', 'spread access', 'wmiexec', 'psexec', 'evil-winrm'."
 ---
 

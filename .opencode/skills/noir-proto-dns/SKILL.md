@@ -1,5 +1,5 @@
 ---
-name: proto-dns
+name: noir-proto-dns
 description: "DNS security testing — zone transfer, DNS cache poisoning, DNS amplification, subdomain enumeration via brute force, DNSSEC bypass, DNS rebinding. Triggers: 'dns security', 'dns pentest', 'zone transfer', 'axfr', 'dns enum', 'dns attack', 'dns rebinding', 'dns cache poisoning', 'dns amplification', 'dnssec'."
 ---
 

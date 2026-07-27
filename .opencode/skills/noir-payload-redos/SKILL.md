@@ -1,5 +1,5 @@
 ---
-name: payload-redos
+name: noir-payload-redos
 description: "ReDoS (Regular Expression Denial of Service) testing. Nested quantifier detection, catastrophic backtracking payloads, email/URL/date validation bypass, input length scaling attack. Triggers: 'redos', 'regex dos', 'regular expression denial of service', 'catastrophic backtracking', 'regex amplification', 'regex attack', 'regex complexity'."
 ---
 

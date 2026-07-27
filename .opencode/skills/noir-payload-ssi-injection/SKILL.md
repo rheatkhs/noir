@@ -1,5 +1,5 @@
 ---
-name: payload-ssi-injection
+name: noir-payload-ssi-injection
 description: "Server-Side Include (SSI) injection payloads. Command execution via exec cmd, file inclusion, environment variable disclosure, printenv. Triggers: 'ssi injection', 'server side include', 'shtml injection', 'ssi payloads', 'ssi rce', 'ssi exec', 'include virtual', 'shtml rce'."
 ---
 

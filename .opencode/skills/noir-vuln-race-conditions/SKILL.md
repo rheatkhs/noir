@@ -1,5 +1,5 @@
 ---
-name: vuln-race-conditions
+name: noir-vuln-race-conditions
 description: "Race condition testing skill for concurrent request vulnerabilities. Tests TOCTOU, double-spend, coupon abuse, quota bypass using HTTP/2 tight synchronization. Triggers: 'race condition', 'race window', 'toctou', 'concurrent requests', 'double spend', 'coupon race', 'parallel requests', 'limit bypass'."
 ---
 

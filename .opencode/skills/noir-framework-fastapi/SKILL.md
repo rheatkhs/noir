@@ -1,5 +1,5 @@
 ---
-name: framework-fastapi
+name: noir-framework-fastapi
 description: "FastAPI security testing — OpenAPI schema exposure, auth dependency bypass, SSRF via request parameters, dependency injection abuse, pydantic bypass, debug endpoints. Triggers: 'fastapi', 'fast api', 'python api framework', 'openapi pentest', 'fastapi security', 'pydantic bypass', 'starlette security'."
 ---
 

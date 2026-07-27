@@ -1,5 +1,5 @@
 ---
-name: blue-forensics
+name: noir-blue-forensics
 description: "Blue team forensics skill. Memory forensics, disk analysis, timeline reconstruction, and evidence preservation. Use for deep forensic analysis and evidence collection. Triggers: 'blue forensics', 'memory forensics', 'disk forensics', 'evidence', 'timeline reconstruction'."
 version: 1.0.0
 phase: ["reporting"]

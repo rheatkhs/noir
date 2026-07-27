@@ -1,5 +1,5 @@
 ---
-name: framework-django
+name: noir-framework-django
 description: "Django framework security testing — admin panel exposure, DEBUG mode RCE, CSRF bypass, secret key extraction, SSTI via templates, SQL via ORM raw queries. Triggers: 'django', 'django security', 'django admin', 'django debug', 'python web framework', 'django orm injection'."
 ---
 

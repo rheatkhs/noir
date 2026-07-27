@@ -1,5 +1,5 @@
 ---
-name: vuln-privesc-web
+name: noir-vuln-privesc-web
 description: "Web application privilege escalation testing — horizontal to vertical escalation, parameter tampering for role bypass, JWT privilege escalation, cookie manipulation, admin panel access via role confusion. Triggers: 'web privilege escalation', 'privilege escalation web', 'role bypass', 'permission bypass', 'admin access bypass', 'privilege escalation app', 'role escalation'."
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: vuln-mass-assignment
+name: noir-vuln-mass-assignment
 description: "Mass assignment vulnerability testing — injecting extra parameters to elevate privileges, bypass access control, assign roles/admin flags via API body. Triggers: 'mass assignment', 'auto-binding', 'parameter binding', 'role assignment bypass', 'privilege via api body', 'hidden parameter', 'admin flag injection', 'json parameter injection'."
 ---
 

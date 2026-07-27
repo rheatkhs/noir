@@ -1,5 +1,5 @@
 ---
-name: tech-elasticsearch
+name: noir-tech-elasticsearch
 description: "Elasticsearch and Kibana security testing — unauthenticated data exposure, index enumeration, PII data extraction, Kibana console RCE, snapshot abuse, CVE exploitation. Triggers: 'elasticsearch', 'kibana', 'elastic', 'elasticsearch pentest', 'kibana security', 'elasticsearch unauth', 'elasticsearch data exposure', 'kibana rce'."
 ---
 

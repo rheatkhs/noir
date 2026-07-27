@@ -1,5 +1,5 @@
 ---
-name: ctf-reverse-anti-analysis
+name: noir-ctf-reverse-anti-analysis
 description: "CTF anti-analysis bypass. Linux anti-debug (ptrace, /proc, timing, SIGILL), Windows anti-debug (PEB, NtQuery, TLS callbacks, hardware BP detection), anti-VM/sandbox detection, Frida detection bypass, code integrity bypass, anti-disassembly, MBA simplification. Triggers: 'anti-debug', 'anti-analysis', 'ptrace bypass', 'debugger detection', 'anti-vm', 'tls callbacks', 'self-hash bypass', 'mba simplification', 'ld_preload hook'."
 ---
 

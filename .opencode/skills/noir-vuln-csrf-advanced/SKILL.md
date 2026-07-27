@@ -1,5 +1,5 @@
 ---
-name: vuln-csrf-advanced
+name: noir-vuln-csrf-advanced
 description: "Advanced CSRF bypass — SameSite cookie bypass via navigation, click-jacking chain, CSRF via Flash redirect, subdomain CSRF bypass, sibling domain CSRF, browser-based CSRF bypass via service worker. Triggers: 'csrf advanced', 'samesite lax bypass', 'csrf navigation', 'csrf samesite bypass', 'sibling domain csrf', 'csrf via redirect', 'advanced csrf', 'csrf clickjacking'."
 ---
 

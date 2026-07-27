@@ -1,5 +1,5 @@
 ---
-name: framework-dotnet
+name: noir-framework-dotnet
 description: "ASP.NET/Core security testing — ViewState deserialization, TRACE method info leak, Razor SSTI, Windows auth bypass, IIS misconfiguration, web.config exposure, machineKey extraction. Triggers: 'dotnet', 'asp.net', '.net framework', 'aspx', 'razor', 'iis security', 'viewstate', 'machinekey'."
 ---
 

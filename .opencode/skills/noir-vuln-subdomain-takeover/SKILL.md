@@ -1,5 +1,5 @@
 ---
-name: vuln-subdomain-takeover
+name: noir-vuln-subdomain-takeover
 description: "Subdomain takeover testing — dangling CNAME detection, cloud service fingerprinting, GitHub Pages takeover, S3 bucket takeover, Heroku/Netlify/Vercel claim, NS takeover. Triggers: 'subdomain takeover', 'dangling dns', 'cname takeover', 'domain takeover', 'dns takeover', 'cloud subdomain takeover', 's3 takeover', 'github pages takeover', 'dangling cname'."
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: recon-asn-whois
+name: noir-recon-asn-whois
 description: "ASN, WHOIS, and OSINT reconnaissance — IP range discovery via ASN, WHOIS pivoting, BGP intelligence, CIDR block enumeration, IP history, corporate netblock mapping. Triggers: 'asn recon', 'asn lookup', 'whois recon', 'ip range', 'netblock', 'bgp intel', 'cidr enum', 'ip history', 'corporate ip', 'asn enumeration'."
 ---
 

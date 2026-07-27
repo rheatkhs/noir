@@ -1,5 +1,5 @@
 ---
-name: pre-submission-review
+name: noir-pre-publish-review
 description: "Nuclear-grade .6-agent pre-submission submission gate. Runs /get-unpublished-changes to detect all changes since last npm release, spawns up to .0 ultrabrain agents for deep per-change analysis, invokes /review-work (5 agents) for holistic review, and . oracle for overall release synthesis. Use before EVERY finding submission. Triggers: 'pre-submission review', 'review before publish', 'release review', 'pre-release review', 'ready to publish?', 'can I publish?', 'pre-submission', 'safe to publish', 'publishing review', 'pre-submission check'."
 ---
 

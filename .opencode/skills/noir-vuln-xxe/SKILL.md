@@ -1,5 +1,5 @@
 ---
-name: vuln-xxe
+name: noir-vuln-xxe
 description: "XML External Entity (XXE) injection testing — local file read, SSRF via XXE, blind OOB XXE via DNS/HTTP callbacks, parameter entity XXE, DTD-based exfiltration, XXE via SVG/DOCX/XLSX. Triggers: 'xxe', 'xml external entity', 'xxe injection', 'xml injection', 'blind xxe', 'dtd injection', 'oob xxe', 'xml ssrf', 'svg xxe', 'file read via xml'."
 ---
 

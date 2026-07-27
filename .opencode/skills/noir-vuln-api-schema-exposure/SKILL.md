@@ -1,5 +1,5 @@
 ---
-name: vuln-api-schema-exposure
+name: noir-vuln-api-schema-exposure
 description: "API schema exposure testing — OpenAPI/Swagger discovery, GraphQL introspection, WSDL exposure, gRPC reflection, API documentation endpoints. Triggers: 'api schema', 'swagger exposed', 'openapi exposure', 'graphql introspection', 'api docs exposed', 'api specification', 'wsdl exposure', 'api endpoint discovery'."
 ---
 

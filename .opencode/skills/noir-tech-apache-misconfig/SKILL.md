@@ -1,5 +1,5 @@
 ---
-name: tech-apache-misconfig
+name: noir-tech-apache-misconfig
 description: "Apache httpd misconfiguration testing — .htaccess bypass, mod_status, directory listing, server-info, TRACE method, Optionsbleed, path traversal via Alias. Triggers: 'apache misconfig', 'apache security', 'apache pentest', 'htaccess bypass', 'mod_status', 'apache directory listing'."
 ---
 

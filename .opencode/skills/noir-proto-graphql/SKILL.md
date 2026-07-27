@@ -1,5 +1,5 @@
 ---
-name: proto-graphql
+name: noir-proto-graphql
 description: "GraphQL security testing skill. Tests introspection, authorization bypasses, IDOR via aliases, batching abuse, path-level auth bypass, and federation exploitation. Triggers: 'graphql', 'graphql security', 'graphql introspection', 'graphql idor', 'graphql auth bypass', 'graphql injection', 'graphql testing', '__schema', 'query mutation'."
 ---
 

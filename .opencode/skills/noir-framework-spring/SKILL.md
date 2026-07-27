@@ -1,5 +1,5 @@
 ---
-name: framework-spring
+name: noir-framework-spring
 description: "Spring/Spring Boot security testing — actuator endpoint exposure (/actuator/env /actuator/heapdump), SpEL injection, Spring4Shell (CVE-2022-22965), Spring Security misconfig, H2 console, Eureka registry. Triggers: 'spring', 'spring boot', 'spring security', 'actuator endpoints', 'spel injection', 'spring4shell', 'java spring', 'actuator heapdump', 'spring actuator'."
 ---
 

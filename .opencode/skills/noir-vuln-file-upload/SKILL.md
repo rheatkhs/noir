@@ -1,5 +1,5 @@
 ---
-name: vuln-file-upload
+name: noir-vuln-file-upload
 description: "File upload vulnerability testing — extension bypass, MIME type bypass, magic bytes bypass, double extension, null byte, polyglot files, webshell upload, path traversal via filename. Triggers: 'file upload', 'file upload bypass', 'unrestricted upload', 'webshell upload', 'rce via upload', 'extension bypass', 'mime bypass', 'image upload rce'."
 ---
 

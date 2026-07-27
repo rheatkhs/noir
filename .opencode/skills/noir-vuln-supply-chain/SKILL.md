@@ -1,5 +1,5 @@
 ---
-name: vuln-supply-chain
+name: noir-vuln-supply-chain
 description: "Supply chain security testing — dependency confusion, typosquatting, npm/PyPI package hijacking, malicious dependency injection, CI/CD pipeline attacks, GitHub Actions poisoning. Triggers: 'supply chain', 'dependency confusion', 'typosquatting', 'package hijacking', 'npm package attack', 'dependency injection', 'supply chain attack', 'third party risk'."
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: recon-cloud-assets
+name: noir-recon-cloud-assets
 description: "Cloud asset discovery reconnaissance. S3 bucket enumeration, Azure Blob storage, GCP Cloud Storage, cloud subdomain identification, misconfigured storage exposure, cloud infrastructure mapping. Triggers: 'cloud assets', 's3 bucket', 'azure blob', 'gcp storage', 'cloud recon', 'cloud enumeration', 'cloud misconfiguration', 'storage bucket', 'cloud infrastructure discovery'."
 ---
 

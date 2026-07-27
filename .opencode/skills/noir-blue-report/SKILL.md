@@ -1,5 +1,5 @@
 ---
-name: blue-report
+name: noir-blue-report
 description: "Blue team reporting skill. Incident response reports, IOC documentation, and executive summaries. Use for blue team reporting and documentation. Triggers: 'blue report', 'ir report', 'ioc', 'executive summary', 'incident report'."
 version: 1.0.0
 phase: ["reporting"]

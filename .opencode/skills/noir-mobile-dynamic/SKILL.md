@@ -1,5 +1,5 @@
 ---
-name: mobile-dynamic
+name: noir-mobile-dynamic
 description: "Mobile dynamic testing skill. API security testing, traffic analysis, session management, authentication bypass, and business logic testing for mobile backend APIs. Triggers: 'mobile api', 'mobile dynamic', 'mobile traffic', 'api testing mobile', 'mobile backend'."
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: payload-lfi
+name: noir-payload-lfi
 description: "LFI/path traversal payload collection — directory traversal sequences, null byte, URL encoding, double encoding, PHP wrappers, log poisoning for RCE. Triggers: 'lfi payload', 'local file inclusion payload', 'path traversal payload', 'php wrapper', 'log poisoning'."
 ---
 

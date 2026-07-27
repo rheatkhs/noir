@@ -1,5 +1,5 @@
 ---
-name: vuln-sqli
+name: noir-vuln-sqli
 description: "SQL injection testing skill. Comprehensive SQLi methodology: parameter discovery, manual probing, error/boolean/time-based/union/OOB techniques, DBMS-specific payloads, and WAF bypass. Triggers: 'sql injection', 'sqli', 'sql injection testing', 'sqlmap', 'database injection', 'error based sqli', 'blind sqli', 'union based', 'time based sqli', 'nosql injection'."
 ---
 

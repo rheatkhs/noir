@@ -1,5 +1,5 @@
 ---
-name: payload-xss
+name: noir-payload-xss
 description: "XSS payload collection — reflected/stored/DOM, filter bypass, CSP bypass, polyglot, event handlers, SVG/HTML5, mXSS, blind XSS, cookie theft, keylogger payloads. Triggers: 'xss payload', 'cross site scripting payload', 'xss bypass', 'csp bypass payload', 'xss filter bypass', 'reflected xss payload', 'stored xss payload', 'dom xss payload', 'blind xss payload'."
 ---
 

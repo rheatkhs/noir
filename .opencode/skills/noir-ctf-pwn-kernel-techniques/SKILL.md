@@ -1,5 +1,5 @@
 ---
-name: ctf-pwn-kernel-techniques
+name: noir-ctf-pwn-kernel-techniques
 description: "CTF kernel exploitation advanced techniques. tty_struct RIP hijack via fake vtable with leave gadget stack pivot, AAW via ioctl register control for modprobe_path overwrite, userfaultfd race stabilization with page split across boundary, SLUB freelist pointer hardening (middle offset kernel 5.7+), freelist XOR obfuscation bypass, kernel panic info leak via KASLR-disabled RIP jump, race window extension via MADV_DONTNEED and mprotect page fault forcing (DiceCTF 2026), cross-cache attack via CPU-split strategy (CPU0 alloc CPU1 free), PTE overlap primitive for arbitrary file write. Triggers: 'tty_struct exploit', 'kernel vtable hijack', 'userfaultfd race', 'slub freelist', 'cross-cache attack', 'pte overlap', 'kernel race condition', 'ioctl krop', 'kernel arbitrary write', 'slab cross-cache'."
 ---
 

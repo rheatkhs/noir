@@ -1,5 +1,5 @@
 ---
-name: tech-cloud-security
+name: noir-tech-cloud-security
 description: "Cloud security assessment skill for AWS, GCP, and Azure. Tests IMDS abuse, IAM privilege escalation, misconfigured storage, exposed credentials, serverless security, and container escapes. Triggers: 'cloud security', 'aws pentest', 'gcp pentest', 'azure pentest', 'cloud assessment', 'iam privilege escalation', 's3 bucket', 'cloud credentials', 'cloud misconfiguration', 'imds abuse'."
 ---
 
