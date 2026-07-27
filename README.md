@@ -2,74 +2,93 @@
 
 > An autonomous security penetration testing agent for opencode.
 
-Noir is an open-source, agentic security scanning framework designed for opencode. It transforms natural language commands into structured vulnerability assessments — reconnaissance, exploitation, validation, and reporting — all guided by LLM-driven reasoning.
+Noir transforms natural language commands into structured vulnerability assessments — reconnaissance, exploitation, validation, and reporting — all guided by LLM-driven reasoning.
 
 ## Requirements
 
-- [opencode](https://opencode.ai) or any MCP-compatible agentic CLI
-- `nmap`, `curl`, `ffuf`, `python3` — available on `PATH`
+- [opencode](https://opencode.ai) or any MCP-compatible CLI
+- `nmap`, `curl`, `ffuf`, `python3` on `PATH`
 - LLM API key (`ROUTER_API_KEY` or `OPENAI_API_KEY`) — or use the built-in free model
 
 ## Getting Started
 
 ```bash
-# Open the project
 cd noir
 opencode
 
-# Scan a target
+# Full scan
 scan http://localhost:3000
 
-# Or use natural language:
-# "scan localhost:3000 for vulnerabilities"
-# "recon http://localhost:8000"
-# "test the API at http://localhost:3000/api"
+# Specific phases
+"recon http://localhost:8000"
+"test sql injection on http://localhost:3000/api/login"
+"check for ssrf on http://localhost:3000/fetch"
+"validate findings on http://localhost:3000"
 ```
 
-## Architecture
+## Skills
 
-Noir operates as a four-phase pipeline, each phase implemented as an opencode skill:
+| Skill | Purpose |
+|-------|---------|
+| `noir-recon` | Port scan (`nmap`), directory fuzzing (`ffuf`), header probing, LLM endpoint discovery |
+| `noir-fuzzing` | Parameter fuzzing, HTTP method discovery, header injection, recursive directory brute force |
+| `noir-exploit` | SQLi, Path Traversal payload testing |
+| `noir-ssrf` | Server-Side Request Forgery — cloud metadata, internal services, protocol smuggling |
+| `noir-idor` | Insecure Direct Object Reference — horizontal & vertical privilege escalation |
+| `noir-broken-auth` | Weak credentials, JWT attacks, session fixation, rate limiting, password reset abuse |
+| `noir-race` | Race condition & TOCTOU testing with concurrent request techniques |
+| `noir-validate` | Python PoC script generation & execution to confirm findings |
+| `noir-playbook` | Master playbook orchestrating the full 5-phase assessment workflow |
 
-| Phase | Skill | Description |
-|-------|-------|-------------|
-| Reconnaissance | `noir-recon` | Port scanning with `nmap`, directory fuzzing with `ffuf`, header probing with `curl`, LLM-assisted endpoint discovery |
-| Exploitation | `noir-exploit` | OWASP Top 10 payload testing — SQLi, Path Traversal, IDOR, SSRF, Broken Auth |
-| Validation | `noir-validate` | Standalone Python PoC script generation and execution to confirm findings |
-| Reporting | (built into validate) | Markdown report with summary, findings, PoC code, and evidence — saved to `./noir_reports/` |
+## Playbook: Full Assessment
+
+The `noir-playbook` skill orchestrates the complete workflow:
+
+```
+Phase 1: Reconnaissance   → noir-recon
+Phase 2: Discovery        → noir-fuzzing
+Phase 3: Exploitation     → noir-exploit, noir-ssrf, noir-idor, noir-broken-auth, noir-race
+Phase 4: Validation       → noir-validate
+Phase 5: Reporting        → noir-validate (built-in)
+```
 
 ## Project Structure
 
 ```
-noir/
-├── .opencode/
-│   ├── agents/
-│   │   └── noir.md                # Agent definition & system prompt
-│   ├── commands/
-│   │   └── scan.md                # Scan command template
-│   └── skills/
-│       ├── noir-recon/SKILL.md    # Reconnaissance instructions
-│       ├── noir-exploit/SKILL.md  # Exploitation instructions
-│       └── noir-validate/SKILL.md # Validation & reporting instructions
-├── opencode.jsonc                  # opencode configuration
-├── prd.md                          # Product Requirements Document
-└── README.md
+.opencode/
+├── agents/noir.md              # Agent definition
+├── commands/scan.md            # Scan command
+├── skills/
+│   ├── noir-recon/SKILL.md
+│   ├── noir-fuzzing/SKILL.md
+│   ├── noir-exploit/SKILL.md
+│   ├── noir-ssrf/SKILL.md
+│   ├── noir-idor/SKILL.md
+│   ├── noir-broken-auth/SKILL.md
+│   ├── noir-race/SKILL.md
+│   ├── noir-validate/SKILL.md
+│   └── noir-playbook/SKILL.md
+└── tools/REFERENCE.md          # Tool installation reference
+opencode.jsonc
+prd.md
+README.md
 ```
 
 ## Configuration
 
-The agent is configured in `opencode.jsonc`:
+Agent settings in `opencode.jsonc`:
 
-- **Default model:** `oc/deepseek-v4-flash-free` (free tier, no API key required)
-- **Permissions:** `nmap` and `curl` allowed; file edits denied; reads allowed
+- **Model:** `oc/deepseek-v4-flash-free` (free, no API key needed)
+- **Permissions:** `nmap`/`curl` allowed; edits denied; reads allowed
 - **Skills:** auto-loaded from `.opencode/skills/`
 
-To use a different model, set `OPENAI_API_KEY` or `ROUTER_API_KEY` in your environment and update the `model` field in `opencode.jsonc`.
+To use your own LLM, set `OPENAI_API_KEY` or `ROUTER_API_KEY` in env.
 
 ## Commands
 
 | Command | Description |
 |---------|-------------|
-| `scan <url>` | Execute full security assessment against the target |
+| `scan <url>` | Full security assessment |
 
 ## License
 
