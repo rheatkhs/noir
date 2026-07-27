@@ -1,7 +1,7 @@
 # Noir
 
 Autonomous security penetration testing agent for [opencode](https://opencode.ai).  
-249 skill playbooks · 10 engagement modes · Zero-config setup
+249 skill playbooks · 10 engagement modes · Recon MCP server
 
 [![opencode](https://img.shields.io/badge/opencode-agent-8A2BE2)](https://opencode.ai)
 [![skills](https://img.shields.io/badge/skills-249-00FF88)](.opencode/skills)
@@ -22,9 +22,9 @@ scan http://target.com in ctf mode
 
 ### Requirements
 
-| Tool                              | Purpose                                |
-| --------------------------------- | -------------------------------------- |
-| [opencode](https://opencode.ai)   | Agentic CLI runtime                    |
+| Tool | Purpose |
+|------|---------|
+| [opencode](https://opencode.ai) | Agentic CLI runtime |
 | `nmap`, `curl`, `ffuf`, `python3` | Scanning, requests, fuzzing, scripting |
 
 ---
@@ -33,18 +33,34 @@ scan http://target.com in ctf mode
 
 Auto-detected from target URL or set explicitly.
 
-| Mode                  | Use Case                       | Priority                | Output              |
-| --------------------- | ------------------------------ | ----------------------- | ------------------- |
-| `auto`                | Unknown target                 | Adaptive                | Standard            |
-| `bug-bounty`          | HackerOne, Bugcrowd, Intigriti | Recon > Enum > Exploit  | HackerOne format    |
-| `red-team`            | Stealth ops, AD, persistence   | Recon > Exploit > Enum  | Executive summary   |
-| `ctf`                 | HackTheBox, TryHackMe, picoCTF | Exploit > Enum > Recon  | Flag submission     |
-| `blue-team`           | Detection, IR, defense         | Enum > Recon > Report   | IR report           |
-| `offensive`           | Aggressive exploitation        | Exploit > Enum > Recon  | Technical           |
-| `grey-hat`            | Balanced assessment            | Balanced                | Technical           |
-| `forensic`            | Evidence preservation          | Forensics > Report      | Chain-of-custody    |
-| `reverse-engineering` | Binaries, firmware, malware    | RE > Exploit > Utility  | Technical RE        |
-| `mobile-pentest`      | Android / iOS assessment       | Mobile > Enum > Exploit | OWASP Mobile Top 10 |
+| Mode | Use Case | Priority | Output |
+|------|----------|----------|--------|
+| `auto` | Unknown target | Adaptive | Standard |
+| `bug-bounty` | HackerOne, Bugcrowd, Intigriti | Recon > Enum > Exploit | HackerOne format |
+| `red-team` | Stealth ops, AD, persistence | Recon > Exploit > Enum | Executive summary |
+| `ctf` | HackTheBox, TryHackMe, picoCTF | Exploit > Enum > Recon | Flag submission |
+| `blue-team` | Detection, IR, defense | Enum > Recon > Report | IR report |
+| `offensive` | Aggressive exploitation | Exploit > Enum > Recon | Technical |
+| `grey-hat` | Balanced assessment | Balanced | Technical |
+| `forensic` | Evidence preservation | Forensics > Report | Chain-of-custody |
+| `reverse-engineering` | Binaries, firmware, malware | RE > Exploit > Utility | Technical RE |
+| `mobile-pentest` | Android / iOS assessment | Mobile > Enum > Exploit | OWASP Mobile Top 10 |
+
+---
+
+## Recon MCP Server
+
+Noir ships with a lightweight MCP server (`noir-mcp/recon_server.py`) that wraps recon tools into callable tools. The agent calls these directly instead of generating ad-hoc bash commands.
+
+| Tool | What it does |
+|------|-------------|
+| `nmap_scan` | Port scan target host |
+| `http_probe` | Fetch HTTP headers / page content |
+| `dns_lookup` | DNS record lookup (A, MX, TXT, etc.) |
+| `whois_lookup` | WHOIS domain/IP lookup |
+| `ffuf_fuzz` | Directory fuzzing with custom wordlist |
+
+Registered in `opencode.jsonc` under `mcp` — auto-loaded on project open.
 
 ---
 
@@ -77,11 +93,9 @@ Auto-detected from target URL or set explicitly.
   agents/noir.md         # Agent definition
   commands/scan.md       # Scan command
   skills/                # 249 skill playbooks
-    noir-vuln-sqli/
-    noir-vuln-xss/
-    ...
+noir-mcp/
+  recon_server.py        # Recon MCP server (nmap, curl, dig, whois, ffuf)
 opencode.jsonc           # Configuration
-README.md
 ```
 
 ---
@@ -99,10 +113,17 @@ README.md
       "permission": {
         "bash": { "nmap *": "allow", "curl *": "allow", "*": "ask" },
         "edit": "deny",
-        "read": "allow",
-      },
-    },
+        "read": "allow"
+      }
+    }
   },
+  "mcp": {
+    "noir-recon": {
+      "type": "local",
+      "command": ["python", "noir-mcp/recon_server.py"],
+      "enabled": true
+    }
+  }
 }
 ```
 

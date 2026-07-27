@@ -1,2 +1,5 @@
 .opencode/node_modules/
+.venv/
+__pycache__/
+*.pyc
 noir_reports/
