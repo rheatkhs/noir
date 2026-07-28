@@ -74,7 +74,32 @@ Merge new endpoints from JS analysis into `endpoints.txt`. Remove skipped endpoi
 
 ---
 
-## Step 3: Vulnerability Scanning [PARALLEL]
+## Step 3: Browser-Based Scanning [PARALLEL]
+
+Launch this step alongside Step 4 (vulnerability scanning). Run as independent concurrent operations.
+
+**Browser scan on base URL + top discovered endpoints:**
+```bash
+pip install playwright && playwright install chromium 2>/dev/null || true
+python tools/browser_scanner.py <base_url> --max-pages 30 --output noir_reports/<domain>/browser/
+```
+
+The browser scanner detects:
+- DOM XSS sinks (innerHTML, eval, document.write)
+- Cookie security flags (HttpOnly, Secure, SameSite)
+- CSP headers (missing, weak, unsafe-inline)
+- Clickjacking (X-Frame-Options, CSP frame-ancestors)
+- Form CSRF tokens
+- Form injection vulnerabilities (XSS, SQLi, SSTI via form submission)
+- Client-side routes (SPA route discovery)
+
+Merge findings from `noir_reports/<domain>/browser/browser_*.json` into `potential_findings.md`.
+
+Use `noir-tool-browser-scanning` skill for detailed instructions.
+
+---
+
+## Step 4: Vulnerability Scanning [PARALLEL]
 
 This is the core parallel step. For each endpoint, run ALL 8 vulnerability checks simultaneously:
 
@@ -141,7 +166,7 @@ Collect all potential findings from all parallel tasks into `noir_reports/<domai
 
 ---
 
-## Step 4: Validation + Scoring [PARALLEL]
+## Step 5: Validation + Scoring [PARALLEL]
 
 For each potential finding, run validation, CVSS scoring, and remediation generation simultaneously:
 
@@ -174,7 +199,7 @@ For each validated finding:
 
 ---
 
-## Step 5: Persist + Report
+## Step 6: Persist + Report
 
 **Persist to database:**
 ```bash
@@ -198,7 +223,7 @@ python tools/db.py scan '{"target": "<domain>", "endpoints": <count>, "potential
 
 ---
 
-## Step 6: Output
+## Step 7: Output
 
 ```
 Attack complete for $ARGUMENTS
