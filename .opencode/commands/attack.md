@@ -58,7 +58,23 @@ Collect all discovered paths. Write to `noir_reports/<domain>/endpoints.txt`.
 
 ---
 
-## Step 4: JavaScript Analysis (noir-recon-js-analysis, noir-recon-js-hostname, noir-recon-secrets)
+## Step 4: Cache Endpoint Responses
+
+For each unique endpoint in `noir_reports/<domain>/endpoints.txt`, fetch and hash the response:
+
+```bash
+body=$(curl -s <endpoint> 2>/dev/null || echo "")
+hash=$(echo -n "$body" | sha256sum | cut -d' ' -f1)
+python noir-db.py check <endpoint> "$hash"
+# If output is "UNCHANGED: skipping", skip this endpoint in all following steps
+python noir-db.py cache <endpoint> "$hash" $status_code $content_type
+```
+
+Skip re-testing any endpoint whose response hash hasn't changed since the last scan. Log skipped endpoints to `noir_reports/<domain>/skipped.txt`.
+
+---
+
+## Step 5: JavaScript Analysis (noir-recon-js-analysis, noir-recon-js-hostname, noir-recon-secrets)
 
 For each discovered page:
 ```bash
@@ -152,13 +168,25 @@ sys.exit(1)
 
 Only mark as VALIDATED if the script exits with code 0.
 
+For each validated finding, assign a CVSS 4.0 score using `noir-vuln-cvss`:
+1. Determine the CVSS vector based on the exploitation context
+2. Construct the vector string
+3. Estimate the score
+
+Then generate a remediation snippet using `noir-vuln-remediation`:
+1. Identify the vulnerability type
+2. Select the matching language/framework pattern
+3. Adapt the BAD/GOOD code to match the target
+
+Include the CVSS vector, score, and remediation code when persisting the finding.
+
 ---
 
 ## Step 7: Persist to Database
 
-For each validated finding, save to the findings database:
+For each validated finding, save to the findings database with CVSS score:
 ```bash
-python noir-db.py add '{"target": "<domain>", "vuln_type": "...", "endpoint": "...", "payload": "...", "severity": "high", "poc": "...", "evidence": "..."}'
+python noir-db.py add '{"target": "<domain>", "vuln_type": "...", "endpoint": "...", "payload": "...", "severity": "<severity>", "cvss": <score>, "poc": "...", "evidence": "..."}'
 ```
 
 Save scan summary:
@@ -172,8 +200,8 @@ python noir-db.py scan '{"target": "<domain>", "endpoints": <count>, "potential"
 
 Write `noir_reports/<domain>/report_<timestamp>.md` with:
 - Summary: endpoints found, potential vulns, validated vulns
-- Full findings table
-- For each validated vuln: type, endpoint, payload, PoC code, evidence, CVSS estimate
+- Full findings table with CVSS scores and severity badges
+- For each validated vuln: type, endpoint, CVSS vector, severity, payload, PoC code, evidence, remediation code
 
 Write `noir_reports/<domain>/todos.md` with:
 - Endpoints not yet tested

@@ -78,6 +78,8 @@ When no specific mode is indicated, follow this pipeline:
 - For each potential vulnerability, write a standalone Python PoC script.
 - Run the PoC to confirm the vulnerability is reproducible.
 - Only mark a finding as validated if the PoC exits with code 0.
+- Use `noir-vuln-cvss` to assign a CVSS 4.0 vector and severity score to each validated finding.
+- Use `noir-vuln-remediation` to generate a code fix for each validated finding.
 
 ### Phase 4: Reporting
 - Persist every validated finding to the database:
