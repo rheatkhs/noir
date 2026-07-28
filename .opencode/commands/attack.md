@@ -29,24 +29,18 @@ Create directory: `mkdir -p noir_reports/<domain>/`
 
 ## Step 1: Recon [PARALLEL]
 
-Run all three recon tasks simultaneously:
+Run all three recon tasks simultaneously using MCP tools (cached, faster on repeat scans):
 
-**Task A — Port Scan:**
-```bash
-nmap -sS -sV -p 80,443,8000,8080,8443,3000,5000,9000 -T4 <host> -oN noir_reports/<domain>/nmap.txt
-```
+**Task A — Port Scan (via MCP):**
+Call `nmap_scan(target="<host>", ports="80,443,8000,8080,8443,3000,5000,9000")`.
 
-**Task B — HTTP Probe (for each known port):**
-```bash
-curl -sI <scheme>://<host>:<port>
-curl -s <scheme>://<host>:<port> | head -100
-```
+**Task B — HTTP Probe (via MCP):**
+For each open port, call:
+`http_probe(url="<scheme>://<host>:<port>")`
+`http_probe(url="<scheme>://<host>:<port>", method="GET")`
 
-**Task C — Directory Fuzzing:**
-```bash
-printf "api\nadmin\nlogin\nbackup\nconfig\n.git\nwp-admin\nwp-json\nactuator\nswagger\ngraphql\nhealth\nstatus\nmetrics\nenv\ndebug\ntest\nstaging\nv1\nv2" > /tmp/noir_words.txt
-ffuf -w /tmp/noir_words.txt -u <base_url>/FUZZ -mc 200,301,302,403 -s -t 30
-```
+**Task C — Directory Fuzzing (via MCP):**
+Call `ffuf_fuzz(url="<base_url>/FUZZ", wordlist="api,admin,login,backup,config,.git,wp-admin,wp-json,actuator,swagger,graphql,health,status,metrics,env,debug,test,staging,v1,v2")`
 
 Wait for all three to complete. Merge discovered endpoints into `noir_reports/<domain>/endpoints.txt`.
 

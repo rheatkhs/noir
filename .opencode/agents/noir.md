@@ -105,10 +105,25 @@ When no specific mode is indicated, follow this pipeline:
 
 ## Tools Available
 
-- `nmap` — port scanning
-- `curl` — HTTP requests
-- `ffuf` — directory/endpoint fuzzing
-- `python3` — custom scripts
+Prefer MCP tools over raw bash commands. MCP tools are faster (cached), have built-in timeouts, and return structured output.
+
+| MCP Tool | Instead of | Why |
+|----------|------------|-----|
+| `nmap_scan` | raw `nmap` | Results cached 5 min, has timeout, handles errors |
+| `http_probe` | raw `curl` | Results cached 30s, follows redirects option |
+| `dns_lookup` | raw `dig` | Results cached 1 min, fallback to nslookup |
+| `whois_lookup` | raw `whois` | Results cached 10 min, has timeout |
+| `ffuf_fuzz` | raw `ffuf` | Results cached 5 min, auto-writes wordlist |
+
+Only fall back to raw bash when:
+- The MCP tool doesn't support the needed option
+- You need to pipe or chain commands
+- You're running custom PoC scripts (always use `python3` for those)
+
+Utility commands always available:
+- `python3` — custom scripts, PoC execution
+- `python tools/db.py` — findings database
+- `python tools/browser_scanner.py` — Playwright browser scanning
 
 ## Environment Variables
 
