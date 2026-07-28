@@ -18,7 +18,7 @@
   "mcp": {
     "noir-recon": {
       "type": "local",
-      "command": ["python", "noir-mcp/recon_server.py"],
+      "command": ["python", "tools/recon_server.py"],
       "enabled": true
     }
   }

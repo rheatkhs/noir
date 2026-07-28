@@ -65,9 +65,9 @@ For each unique endpoint in `noir_reports/<domain>/endpoints.txt`, fetch and has
 ```bash
 body=$(curl -s <endpoint> 2>/dev/null || echo "")
 hash=$(echo -n "$body" | sha256sum | cut -d' ' -f1)
-python noir-db.py check <endpoint> "$hash"
+python tools/db.py check <endpoint> "$hash"
 # If output is "UNCHANGED: skipping", skip this endpoint in all following steps
-python noir-db.py cache <endpoint> "$hash" $status_code $content_type
+python tools/db.py cache <endpoint> "$hash" $status_code $content_type
 ```
 
 Skip re-testing any endpoint whose response hash hasn't changed since the last scan. Log skipped endpoints to `noir_reports/<domain>/skipped.txt`.
@@ -186,12 +186,12 @@ Include the CVSS vector, score, and remediation code when persisting the finding
 
 For each validated finding, save to the findings database with CVSS score:
 ```bash
-python noir-db.py add '{"target": "<domain>", "vuln_type": "...", "endpoint": "...", "payload": "...", "severity": "<severity>", "cvss": <score>, "poc": "...", "evidence": "..."}'
+python tools/db.py add '{"target": "<domain>", "vuln_type": "...", "endpoint": "...", "payload": "...", "severity": "<severity>", "cvss": <score>, "poc": "...", "evidence": "..."}'
 ```
 
 Save scan summary:
 ```bash
-python noir-db.py scan '{"target": "<domain>", "endpoints": <count>, "potential": <count>, "validated": <count>}'
+python tools/db.py scan '{"target": "<domain>", "endpoints": <count>, "potential": <count>, "validated": <count>}'
 ```
 
 ---
@@ -220,5 +220,5 @@ Attack complete for $ARGUMENTS
   Validated findings: <count>
   Report: noir_reports/<domain>/report_<timestamp>.md
   Todos:  noir_reports/<domain>/todos.md
-  Query:  python noir-db.py query "SELECT * FROM findings WHERE target='<domain>'"
+  Query:  python tools/db.py query "SELECT * FROM findings WHERE target='<domain>'"
 ```

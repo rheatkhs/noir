@@ -3,7 +3,7 @@ import json
 import sys
 import time
 
-SERVER_SCRIPT = "noir-mcp/recon_server.py"
+SERVER_SCRIPT = "tools/recon_server.py"
 
 def test_server_starts_and_lists_tools():
     proc = subprocess.Popen(

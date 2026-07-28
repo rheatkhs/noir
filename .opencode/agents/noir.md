@@ -84,11 +84,11 @@ When no specific mode is indicated, follow this pipeline:
 ### Phase 4: Reporting
 - Persist every validated finding to the database:
   ```bash
-  python noir-db.py add '{"target": "<domain>", "vuln_type": "...", "endpoint": "...", "payload": "...", "severity": "high", "poc": "...", "evidence": "..."}'
+  python tools/db.py add '{"target": "<domain>", "vuln_type": "...", "endpoint": "...", "payload": "...", "severity": "high", "poc": "...", "evidence": "..."}'
   ```
 - Save a scan summary record:
   ```bash
-  python noir-db.py scan '{"target": "<domain>", "endpoints": N, "potential": N, "validated": N}'
+  python tools/db.py scan '{"target": "<domain>", "endpoints": N, "potential": N, "validated": N}'
   ```
 - Generate a markdown report with:
   - Summary of discovered endpoints and findings
@@ -99,9 +99,9 @@ When no specific mode is indicated, follow this pipeline:
 
 ## Database Queries
 
-- List all findings: `python noir-db.py query`
-- Filter by target: `python noir-db.py query "SELECT * FROM findings WHERE target='<domain>'"`
-- Summary per target: `python noir-db.py summary`
+- List all findings: `python tools/db.py query`
+- Filter by target: `python tools/db.py query "SELECT * FROM findings WHERE target='<domain>'"`
+- Summary per target: `python tools/db.py summary`
 
 ## Tools Available
 

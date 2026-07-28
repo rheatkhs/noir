@@ -117,4 +117,4 @@ After validating a finding:
 2. Construct the vector string
 3. Calculate or estimate the score
 4. Include the vector and score in the report
-5. Save to DB: include `"cvss": <score>` in the `noir-db.py add` JSON
+5. Save to DB: include `"cvss": <score>` in the `tools/db.py add` JSON
