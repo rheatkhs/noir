@@ -28,47 +28,33 @@ Autonomous security penetration testing agent for [opencode](https://opencode.ai
 ## Architecture
 
 ```mermaid
-flowchart LR
-    subgraph User
-        CLI["opencode CLI"]
-    end
+flowchart TB
+    CLI["opencode CLI"]
 
     subgraph Agent["Noir Agent (.opencode/agents/noir.md)"]
         AGENT["Agent Kernel"] --> MODES["Mode Detector"]
         MODES --> SCOPE["Scope Enforcer"]
-        SCOPE --> SKILLS["Skill Router<br/>251 playbooks"]
-    end
-
-    subgraph MCP["Recon MCP Server<br/>(tools/recon_server.py)"]
-        direction LR
-        NMAP["nmap_scan"] --- HTTP["http_probe"]
-        HTTP --- DNS["dns_lookup"]
-        DNS --- WHOIS["whois_lookup"]
-        WHOIS --- FFUF["ffuf_fuzz"]
+        SCOPE --> SKILLS["Skill Router · 251 playbooks"]
     end
 
     subgraph Pipeline["Attack Pipeline"]
-        direction LR
-        R["① Recon<br/>nmap·ffuf·curl"] --> JS["② JS Analysis<br/>endpoints·secrets"]
-        JS --> CACHE["③ Diff Cache<br/>hash compare"]
-        CACHE --> VULN["④ Vuln Scan<br/>SQLi XSS LFI SSRF IDOR RCE SSTI"]
-        VULN --> POC["⑤ PoC Validation<br/>Python scripts"]
-        POC --> CVSS["⑥ CVSS 4.0<br/>scoring"]
-        CVSS --> REM["⑦ Remediation<br/>BAD/GOOD patterns"]
-        REM --> DB["⑧ Persist<br/>findings.db"]
-        DB --> REPORT["⑨ Report<br/>report_*.md"]
+        PC1["① Recon → ② JS Analysis → ③ Cache"] --> PC2["④ Vuln Scan (8 types)<br/>SQLi XSS LFI SSRF IDOR RCE SSTI redirect"]
+        PC2 --> PC3["⑤ PoC Validation → ⑥ CVSS 4.0 → ⑦ Remediation"]
+        PC3 --> PC4["⑧ Persist (findings.db) → ⑨ Report"]
+    end
+
+    subgraph MCP["Recon MCP Server (tools/recon_server.py)"]
+        MCP_TOOLS["nmap_scan · http_probe · dns_lookup · whois_lookup · ffuf_fuzz · ssl_check · cve_search · subdomain_enum"]
     end
 
     subgraph Sandbox["Docker Sandbox (Dockerfile)"]
-        direction LR
-        PYTHON["python:3.11-slim"] --> TOOLS["nmap·curl·ffuf<br/>playwright"]
-        TOOLS --> WORK["/workspace"]
+        DOCKER["python:3.11-slim + nmap + curl + ffuf + playwright"]
     end
 
     CLI --> AGENT
-    SKILLS --> R
-    R <--> MCP
-    REPORT -.->|writes to| WORK
+    SKILLS --> PC1
+    PC1 <--> MCP_TOOLS
+    PC4 -.->|writes to| DOCKER
 
     style Sandbox fill:#1a1a2e,stroke:#e94560,stroke-width:2px
     style Pipeline fill:#16213e,stroke:#0f3460,stroke-width:1px
