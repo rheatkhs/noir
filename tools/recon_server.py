@@ -502,5 +502,69 @@ def cache_clear() -> str:
     _cache.clear()
     return "Cache cleared"
 
+@mcp.tool()
+def db_summary(detail: str = "overview") -> str:
+    """Query the findings database and return a human-readable summary. Use detail='overview', 'open', 'per_target', or 'latest'."""
+    import sqlite3, os
+    db = os.path.expanduser("~/.noir/findings.db")
+    if not os.path.exists(db):
+        return "No findings database found at ~/.noir/findings.db. Run a scan first."
+    conn = sqlite3.connect(db)
+    conn.row_factory = sqlite3.Row
+
+    if detail == "open":
+        rows = conn.execute("SELECT * FROM findings WHERE status='open' ORDER BY cvss DESC").fetchall()
+        if not rows:
+            return "No open findings. Security is clean."
+        parts = [f"Open findings ({len(rows)}):"]
+        for r in rows:
+            sev = r["severity"] or "medium"
+            cvss = f" (CVSS {r['cvss']})" if r["cvss"] else ""
+            parts.append(f"  [{sev.upper()}{cvss}] {r['vuln_type']} on {r['endpoint']} — {r['target']}")
+        return "\n".join(parts)
+
+    if detail == "per_target":
+        rows = conn.execute("""
+            SELECT target, COUNT(*) as total,
+                   SUM(CASE WHEN status='open' THEN 1 ELSE 0 END) as open,
+                   SUM(CASE WHEN status='fixed' THEN 1 ELSE 0 END) as fixed,
+                   MAX(MAX(cvss,0)) as max_cvss
+            FROM findings GROUP BY target ORDER BY total DESC
+        """).fetchall()
+        if not rows:
+            return "No targets scanned yet."
+        parts = [f"Targets scanned: {len(rows)}"]
+        for r in rows:
+            parts.append(f"  {r['target']}: {r['total']} findings ({r['open']} open, {r['fixed']} fixed, max CVSS {r['max_cvss'] or 'N/A'})")
+        return "\n".join(parts)
+
+    if detail == "latest":
+        rows = conn.execute("SELECT * FROM findings ORDER BY created_at DESC LIMIT 5").fetchall()
+        if not rows:
+            return "No findings yet."
+        parts = ["Latest 5 findings:"]
+        for r in rows:
+            parts.append(f"  [{r['created_at'][:19]}] {r['vuln_type']} on {r['endpoint']} ({r['status']})")
+        return "\n".join(parts)
+
+    # overview (default)
+    total = conn.execute("SELECT COUNT(*) as c FROM findings").fetchone()["c"]
+    open_f = conn.execute("SELECT COUNT(*) as c FROM findings WHERE status='open'").fetchone()["c"]
+    fixed = conn.execute("SELECT COUNT(*) as c FROM findings WHERE status='fixed'").fetchone()["c"]
+    targets = conn.execute("SELECT COUNT(DISTINCT target) as c FROM findings").fetchone()["c"]
+    top = conn.execute("SELECT vuln_type, COUNT(*) as c FROM findings GROUP BY vuln_type ORDER BY c DESC LIMIT 5").fetchall()
+    sev = conn.execute("SELECT severity, COUNT(*) as c FROM findings GROUP BY severity ORDER BY c DESC").fetchall()
+
+    parts = [f"Findings database: {total} total ({open_f} open, {fixed} fixed) across {targets} target(s)."]
+    if top:
+        parts.append("Most common vuln types:")
+        for r in top:
+            parts.append(f"  {r['vuln_type']}: {r['c']}")
+    if sev:
+        parts.append("Severity distribution:")
+        for r in sev:
+            parts.append(f"  {r['severity']}: {r['c']}")
+    return "\n".join(parts)
+
 if __name__ == "__main__":
     mcp.run(transport="stdio")

@@ -99,9 +99,19 @@ When no specific mode is indicated, follow this pipeline:
 
 ## Database Queries
 
-- List all findings: `python tools/db.py query`
-- Filter by target: `python tools/db.py query "SELECT * FROM findings WHERE target='<domain>'"`
-- Summary per target: `python tools/db.py summary`
+Use the `db_summary` MCP tool for quick summaries. Fall back to raw `python tools/db.py` for custom queries:
+
+| Call | What it returns |
+|------|----------------|
+| `db_summary()` | Overview: total findings, open/fixed, top vuln types, severity distribution |
+| `db_summary(detail="open")` | All open findings with CVSS scores, sorted by severity |
+| `db_summary(detail="per_target")` | Per-target breakdown: findings, status, max CVSS |
+| `db_summary(detail="latest")` | Most recent 5 findings |
+
+Raw DB commands:
+- `python tools/db.py query` — all findings
+- `python tools/db.py query "SELECT * FROM findings WHERE target='<domain>'"`
+- `python tools/db.py summary` — per-target summary
 
 ## Tools Available
 

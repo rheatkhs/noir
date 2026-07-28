@@ -104,14 +104,34 @@ def cmd_scan(args):
 
 def cmd_summary(args):
     conn = get_conn()
+    total = conn.execute("SELECT COUNT(*) as c FROM findings").fetchone()["c"]
+    open_f = conn.execute("SELECT COUNT(*) as c FROM findings WHERE status='open'").fetchone()["c"]
+    fixed = conn.execute("SELECT COUNT(*) as c FROM findings WHERE status='fixed'").fetchone()["c"]
+    targets = conn.execute("SELECT COUNT(DISTINCT target) as c FROM findings").fetchone()["c"]
+    top = conn.execute("SELECT vuln_type, COUNT(*) as c FROM findings GROUP BY vuln_type ORDER BY c DESC LIMIT 5").fetchall()
+    sev = conn.execute("SELECT severity, COUNT(*) as c FROM findings GROUP BY severity ORDER BY c DESC").fetchall()
+
+    print(f"=== Noir Findings Summary ===")
+    print(f"Total findings: {total} ({open_f} open, {fixed} fixed) across {targets} target(s)")
+    if top:
+        print(f"\nMost common vuln types:")
+        for r in top:
+            print(f"  {r['vuln_type']}: {r['c']}")
+    if sev:
+        print(f"\nSeverity distribution:")
+        for r in sev:
+            print(f"  {r['severity']}: {r['c']}")
+    print(f"\nPer target breakdown:")
     rows = conn.execute("""
         SELECT target, COUNT(*) as total,
                SUM(CASE WHEN status='open' THEN 1 ELSE 0 END) as open,
-               SUM(CASE WHEN status='fixed' THEN 1 ELSE 0 END) as fixed
+               SUM(CASE WHEN status='fixed' THEN 1 ELSE 0 END) as fixed,
+               MAX(cvss) as max_cvss
         FROM findings GROUP BY target ORDER BY total DESC
     """).fetchall()
     for r in rows:
-        print(f"{r['target']:40s} {r['total']:3d} total  {r['open']:3d} open  {r['fixed']:3d} fixed")
+        cvss = f" (CVSS {r['max_cvss']:.1f})" if r['max_cvss'] else ""
+        print(f"  {r['target']:40s} {r['total']:3d} total  {r['open']:3d} open  {r['fixed']:3d} fixed{cvss}")
 
 def cmd_cache(args):
     """Store response hash for an endpoint. Usage: cache <endpoint> <body_hash> [status_code] [content_type]"""
