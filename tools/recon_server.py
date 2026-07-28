@@ -4,6 +4,8 @@ import hashlib
 import json
 import os
 import re
+from urllib.request import urlopen, Request
+from urllib.error import HTTPError
 from mcp.server.fastmcp import FastMCP
 
 mcp = FastMCP("noir-recon")
@@ -187,7 +189,7 @@ def subdomain_enum(domain: str, force: bool = False) -> str:
     try:
         import urllib.request
         url = f"https://crt.sh/?q=%25.{domain}&output=json"
-        req = urllib.request.urlopen(url, timeout=20)
+        req = urlopen(url, timeout=20)
         data = json.loads(req.read().decode())
         subdomains = set()
         for entry in data:
@@ -252,7 +254,7 @@ def cve_search(product: str, version: str = "", force: bool = False) -> str:
         import urllib.request
         query = f"{product} {version}".strip()
         url = f"https://cve.circl.lu/api/search/{urllib.parse.quote(query)}"
-        req = urllib.request.urlopen(url, timeout=15)
+        req = urlopen(url, timeout=15)
         data = json.loads(req.read().decode())
 
         results = []
@@ -298,6 +300,191 @@ asyncio.run(run())
         return f"Screenshot: {path}"
     except Exception as e:
         return f"Screenshot failed: {e}"
+
+@mcp.tool()
+def wayback_urls(domain: str, limit: int = 50, force: bool = False) -> str:
+    """Fetch historical URLs from Wayback Machine CDX API. Finds hidden endpoints and old paths. Results cached 1 hour."""
+    cache_key = f"wayback:{domain}:{limit}"
+    if not force:
+        cached = _cached("wayback", "cve", domain, limit)
+        if cached:
+            return f"[CACHED]\n{cached}"
+    try:
+        import urllib.request
+        url = f"https://web.archive.org/cdx/search/cdx?url={domain}/*&output=json&limit={limit}&fl=original,timestamp,statuscode"
+        req = urlopen(url, timeout=30)
+        data = json.loads(req.read().decode())
+        lines = []
+        for entry in data[1:]:  # skip header
+            lines.append(f"{entry[2]} {entry[1]} {entry[0]}" if len(entry) >= 3 else str(entry))
+        result = f"Wayback: {len(lines)} unique URLs\n" + "\n".join(lines[:limit])
+        _store("wayback", "cve", result, domain, limit)
+        return result
+    except Exception as e:
+        return f"Wayback error: {e}"
+
+@mcp.tool()
+def waf_detect(url: str, force: bool = False) -> str:
+    """Fingerprint Web Application Firewall from response headers and cookies. Results cached 10 min."""
+    if not force:
+        cached = _cached("waf", "ssl", url)
+        if cached:
+            return f"[CACHED]\n{cached}"
+    headers = _run(["curl", "-sI", "-L", url], timeout=15)
+    lower = headers.lower()
+    findings = []
+
+    waf_signatures = {
+        "Cloudflare": ["cf-ray", "__cfduid", "cf-cache-status", "server: cloudflare"],
+        "AWS WAF": ["x-amzn-requestid", "x-amzn-trace-id", "aws-waf"],
+        "Akamai": ["x-akamai", "akamai", "x-akamai-request-id"],
+        "ModSecurity": ["mod_security", "modsecurity", "nb_user"],
+        "F5 BIG-IP": ["bigip", "big-ip", "x-cnection"],
+        "Sucuri": ["sucuri", "x-sucuri-id", "x-sucuri-cache"],
+        "Imperva": ["incapsula", "x-iinfo", "x-cdn"],
+        "Wordfence": ["wordfence"],
+        "Stackpath": ["stackpath"],
+    }
+
+    for waf_name, sigs in waf_signatures.items():
+        for sig in sigs:
+            if sig in lower:
+                findings.append(waf_name)
+                break
+
+    result = "\n".join(findings) if findings else "No WAF detected"
+    _store("waf", "ssl", result, url)
+    return result
+
+@mcp.tool()
+def cors_check(url: str, force: bool = False) -> str:
+    """Test CORS misconfiguration on a URL. Results cached 10 min."""
+    if not force:
+        cached = _cached("cors", "ssl", url)
+        if cached:
+            return f"[CACHED]\n{cached}"
+
+    import urllib.request
+    results = []
+
+    origins = ["https://evil.com", "null", "https://example.com", "http://127.0.0.1"]
+    for origin in origins:
+        try:
+            req = Request(url)
+            req.add_header("Origin", origin)
+            resp = urlopen(req, timeout=10)
+            acao = resp.headers.get("Access-Control-Allow-Origin", "")
+            acc = resp.headers.get("Access-Control-Allow-Credentials", "")
+            if acao:
+                note = f"Origin: {origin} → ACAO: {acao}"
+                if acc:
+                    note += f" Credentials: {acc}"
+                results.append(note)
+        except Exception as e:
+            results.append(f"Origin: {origin} → {type(e).__name__}")
+
+    result = "\n".join(results) if results else "No CORS headers found"
+    _store("cors", "ssl", result, url)
+    return result
+
+@mcp.tool()
+def dns_bruteforce(domain: str, wordlist: str = "www,mail,admin,api,dev,staging,test,blog,cdn,app,ftp,web,demo,portal,beta,docs", force: bool = False) -> str:
+    """Brute force subdomains using a wordlist. Complements crt.sh. Results cached 5 min."""
+    if not force:
+        cached = _cached("dns_bf", "subdomain", domain, wordlist)
+        if cached:
+            return f"[CACHED]\n{cached}"
+    subs = []
+    for sub in wordlist.split(","):
+        sub = sub.strip()
+        if not sub:
+            continue
+        full = f"{sub}.{domain}"
+        out = _run(["dig", "+short", full], timeout=5)
+        if out.strip() and "timed out" not in out:
+            ips = " ".join(out.strip().split("\n")[:3])
+            subs.append(f"{full} → {ips}")
+    result = "\n".join(subs) if subs else "No subdomains found via bruteforce"
+    _store("dns_bf", "subdomain", result, domain, wordlist)
+    return result
+
+@mcp.tool()
+def param_fuzz(url: str, wordlist: str = "id,user,admin,debug,token,key,api_key,secret,file,url,redirect,page,limit,offset,sort,filter,search,q,callback,format,type,action,cmd,password,email,role,status", force: bool = False) -> str:
+    """Fuzz hidden GET parameters on a URL. Results cached 10 min."""
+    if not force:
+        cached = _cached("param", "ssl", url, wordlist)
+        if cached:
+            return f"[CACHED]\n{cached}"
+
+    import urllib.request
+    base = url.rstrip("/?&")
+    found = []
+    for param in wordlist.split(","):
+        param = param.strip()
+        if not param:
+            continue
+        try:
+            full_url = f"{base}?{param}=1"
+            req = Request(full_url)
+            req.add_header("User-Agent", "Mozilla/5.0")
+            resp = urlopen(req, timeout=10)
+            if resp.status in (200, 302, 403):
+                found.append(f"{param} → {resp.status} ({len(resp.read())} bytes)")
+        except Exception:
+            pass  # 4xx/5xx = param likely doesn't exist
+
+    result = "\n".join(found) if found else "No undocumented params found"
+    _store("param", "ssl", result, url, wordlist)
+    return result
+
+@mcp.tool()
+def method_discover(url: str, force: bool = False) -> str:
+    """Test HTTP methods (GET, POST, PUT, PATCH, DELETE, OPTIONS, HEAD, TRACE) on a URL. Results cached 10 min."""
+    if not force:
+        cached = _cached("method", "ssl", url)
+        if cached:
+            return f"[CACHED]\n{cached}"
+
+    import urllib.request
+    methods = ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS", "HEAD", "TRACE"]
+    results = []
+    for method in methods:
+        try:
+            req = Request(url, method=method)
+            req.add_header("User-Agent", "Mozilla/5.0")
+            resp = urlopen(req, timeout=10)
+            results.append(f"{method} → {resp.status}")
+        except HTTPError as e:
+            results.append(f"{method} → {e.code}")
+        except Exception as e:
+            results.append(f"{method} → {type(e).__name__}")
+
+    result = "\n".join(results)
+    _store("method", "ssl", result, url)
+    return result
+
+@mcp.tool()
+def git_leak(url: str, force: bool = False) -> str:
+    """Check for exposed .git/config, HEAD, and other repository files. Results cached 10 min."""
+    base = url.rstrip("/")
+    files_to_check = ["/.git/config", "/.git/HEAD", "/.git/COMMIT_EDITMSG", "/.git/description", "/.gitignore"]
+    found = []
+    for path in files_to_check:
+        import urllib.request
+        try:
+            full = base + path
+            req = Request(full, method="HEAD")
+            req.add_header("User-Agent", "Mozilla/5.0")
+            resp = urlopen(req, timeout=10)
+            if resp.status == 200:
+                ct = resp.headers.get("Content-Type", "")
+                cl = resp.headers.get("Content-Length", "?")
+                import hashlib
+                found.append(f"EXPOSED: {path} ({cl} bytes)")
+        except Exception:
+            pass
+    result = "\n".join(found) if found else "No exposed .git files detected"
+    return result
 
 @mcp.tool()
 def cache_stats() -> str:
