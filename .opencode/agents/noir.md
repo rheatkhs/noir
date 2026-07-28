@@ -148,6 +148,72 @@ Utility commands always available:
 - `python3` — custom scripts, PoC execution
 - `python tools/db.py` — findings database
 - `python tools/browser_scanner.py` — Playwright browser scanning
+- `python tools/auth.py` — auth session manager (login, cookie jar, token refresh)
+- `python tools/queue.py` — multi-target scan queue
+- `python tools/chainer.py` — attack chaining engine (LFI→RCE, SSRF→meta, SQLi→shell)
+
+## Auth Sessions
+
+For authenticated scanning, use `python tools/auth.py`:
+
+```bash
+# Add a session
+python tools/auth.py add <target> basic <username> <password>
+python tools/auth.py add <target> bearer <token>
+python tools/auth.py add <target> form <username> <password> [login_url]
+
+# Verify session
+python tools/auth.py check <target>
+
+# Make authenticated requests
+python tools/auth.py curl <target> <url>
+
+# List / remove
+python tools/auth.py list
+python tools/auth.py remove <target>
+```
+
+When scanning a target with a saved session, use `auth.curl` for all HTTP requests to maintain authentication.
+
+## Multi-Target Queue
+
+For scanning multiple targets or scheduling recurring scans:
+
+```bash
+# Add targets to queue
+python tools/queue.py add http://target1.com --mode ctf
+python tools/queue.py add http://target2.com --schedule daily
+
+# Process queue
+python tools/queue.py run
+
+# View results
+python tools/queue.py results --since 7
+```
+
+## Attack Chaining
+
+After findings are in the database, run the chainer to escalate:
+
+```bash
+# Scan for chain opportunities
+python tools/chainer.py scan
+
+# Execute chain on a specific finding
+python tools/chainer.py run <finding_id>
+
+# View chain results
+python tools/chainer.py list
+```
+
+Chains executed:
+- LFI → Log Poisoning → RCE (PHP targets)
+- SSRF → Cloud Metadata (AWS/GCP/Azure credential extraction)
+- SQLi → xp_cmdshell RCE (MSSQL targets)
+- File Upload → Webshell
+- XXE → Deeper File Read
+- IDOR → Privilege Escalation
+- SSRF → Internal Port Scan / Pivot
 
 ## Environment Variables
 

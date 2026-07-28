@@ -103,6 +103,9 @@ docker run -it --rm -v "$(pwd):/workspace" noir
 | **Recon MCP server** | Standalone server wrapping nmap, curl, dig, whois, ffuf as callable tools |
 | **10 engagement modes** | Auto-detected modes optimizing tool priority, workflow, and output format |
 | **251 skill playbooks** | Vulnerability classes, CTF, frameworks, protocols, post-exploitation, payloads, forensics, mobile, IoT, AD/red team |
+| **Auth manager** | Persist sessions (basic, form, bearer). Authenticated requests through cookie jar |
+| **Multi-target queue** | Add targets, schedule recurring scans (hourly/daily), batch process |
+| **Attack chaining** | Auto-escalate findings: LFI→RCE, SSRF→cloud creds, SQLi→xp_cmdshell, IDOR→privilege escalation |
 
 ---
 
@@ -177,7 +180,10 @@ Registered in `opencode.jsonc` — auto-loaded on project open. Each tool has bu
   skills/                # 251 skill playbooks (vulns, CTF, framework, proto, etc)
 scripts/                 # Dev/test scripts
 tools/
-  db.py                 # SQLite findings database (SQLite)
+  db.py                 # SQLite findings database
+  auth.py               # Auth session manager (basic, form, bearer, cookie jar)
+  queue.py              # Multi-target scan queue (schedule, batch, results)
+  chainer.py            # Attack chaining engine (LFI→RCE, SSRF→meta, SQLi→shell)
   recon_server.py       # MCP server (FastMCP)
   browser_scanner.py    # Playwright DOM / cookie / CSP scanner
 opencode.jsonc           # Agent + skill + MCP config
