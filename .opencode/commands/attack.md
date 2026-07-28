@@ -154,7 +154,21 @@ Only mark as VALIDATED if the script exits with code 0.
 
 ---
 
-## Step 7: Generate Report (noir-validate)
+## Step 7: Persist to Database
+
+For each validated finding, save to the findings database:
+```bash
+python noir-db.py add '{"target": "<domain>", "vuln_type": "...", "endpoint": "...", "payload": "...", "severity": "high", "poc": "...", "evidence": "..."}'
+```
+
+Save scan summary:
+```bash
+python noir-db.py scan '{"target": "<domain>", "endpoints": <count>, "potential": <count>, "validated": <count>}'
+```
+
+---
+
+## Step 8: Generate Report (noir-validate)
 
 Write `noir_reports/<domain>/report_<timestamp>.md` with:
 - Summary: endpoints found, potential vulns, validated vulns
@@ -168,7 +182,7 @@ Write `noir_reports/<domain>/todos.md` with:
 
 ---
 
-## Step 8: Output
+## Step 9: Output
 
 Return:
 ```
@@ -178,4 +192,5 @@ Attack complete for $ARGUMENTS
   Validated findings: <count>
   Report: noir_reports/<domain>/report_<timestamp>.md
   Todos:  noir_reports/<domain>/todos.md
+  Query:  python noir-db.py query "SELECT * FROM findings WHERE target='<domain>'"
 ```

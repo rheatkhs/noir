@@ -80,12 +80,26 @@ When no specific mode is indicated, follow this pipeline:
 - Only mark a finding as validated if the PoC exits with code 0.
 
 ### Phase 4: Reporting
+- Persist every validated finding to the database:
+  ```bash
+  python noir-db.py add '{"target": "<domain>", "vuln_type": "...", "endpoint": "...", "payload": "...", "severity": "high", "poc": "...", "evidence": "..."}'
+  ```
+- Save a scan summary record:
+  ```bash
+  python noir-db.py scan '{"target": "<domain>", "endpoints": N, "potential": N, "validated": N}'
+  ```
 - Generate a markdown report with:
   - Summary of discovered endpoints and findings
   - For each validated vulnerability: type, endpoint, payload, PoC code, evidence
 - Save report to `./noir_reports/<domain>/report_<timestamp>.md`
 - Save a `todos.md` in the same folder with: pending tests, unchecked endpoints, ideas for follow-up
 - Create the domain folder using the target hostname extracted from the URL (e.g., `http://localhost:3000` → `localhost:3000`, `https://api.target.com` → `api.target.com`)
+
+## Database Queries
+
+- List all findings: `python noir-db.py query`
+- Filter by target: `python noir-db.py query "SELECT * FROM findings WHERE target='<domain>'"`
+- Summary per target: `python noir-db.py summary`
 
 ## Tools Available
 
