@@ -10,6 +10,74 @@ Autonomous security penetration testing agent for [opencode](https://opencode.ai
 
 ---
 
+> **⚠ DISCLAIMER & ETHICAL GUIDELINES**
+>
+> Noir is a **security testing tool** designed for **authorized assessments only**. By using this tool you agree:
+>
+> - **Authorization required** — Only scan targets you own or have explicit written permission to test. Unauthorized scanning is illegal in most jurisdictions.
+> - **Responsible disclosure** — Report discovered vulnerabilities through the vendor's responsible disclosure program. Do not publicly disclose unpatched vulnerabilities.
+> - **No malicious use** — Do not use Noir for unauthorized access, data theft, denial of service, or any activity that violates applicable laws.
+> - **Zero false positives** — Only validated, reproducible PoCs are flagged. Every finding includes a working exploit script and CVSS 4.0 score.
+> - **Scope enforcement** — Noir enforces target-scope rules at every phase. URLs outside the target domain are automatically discarded.
+> - **Destructive command blocking** — Commands like `rm -rf`, `dd`, `mkfs`, `chmod 777`, and aggressive DDoS payloads are blocked at the agent permission layer.
+>
+> **Violating these guidelines may result in criminal charges, civil liability, and account suspension from your cloud/service provider. You — not the authors — bear full responsibility for your actions.**
+
+
+
+## Architecture
+
+```mermaid
+flowchart LR
+    subgraph User
+        CLI["opencode CLI"]
+    end
+
+    subgraph Agent["Noir Agent (.opencode/agents/noir.md)"]
+        AGENT["Agent Kernel"] --> MODES["Mode Detector"]
+        MODES --> SCOPE["Scope Enforcer"]
+        SCOPE --> SKILLS["Skill Router<br/>251 playbooks"]
+    end
+
+    subgraph MCP["Recon MCP Server<br/>(tools/recon_server.py)"]
+        direction LR
+        NMAP["nmap_scan"] --- HTTP["http_probe"]
+        HTTP --- DNS["dns_lookup"]
+        DNS --- WHOIS["whois_lookup"]
+        WHOIS --- FFUF["ffuf_fuzz"]
+    end
+
+    subgraph Pipeline["Attack Pipeline"]
+        direction LR
+        R["① Recon<br/>nmap·ffuf·curl"] --> JS["② JS Analysis<br/>endpoints·secrets"]
+        JS --> CACHE["③ Diff Cache<br/>hash compare"]
+        CACHE --> VULN["④ Vuln Scan<br/>SQLi XSS LFI SSRF IDOR RCE SSTI"]
+        VULN --> POC["⑤ PoC Validation<br/>Python scripts"]
+        POC --> CVSS["⑥ CVSS 4.0<br/>scoring"]
+        CVSS --> REM["⑦ Remediation<br/>BAD/GOOD patterns"]
+        REM --> DB["⑧ Persist<br/>findings.db"]
+        DB --> REPORT["⑨ Report<br/>report_*.md"]
+    end
+
+    subgraph Sandbox["Docker Sandbox (Dockerfile)"]
+        direction LR
+        PYTHON["python:3.11-slim"] --> TOOLS["nmap·curl·ffuf<br/>playwright"]
+        TOOLS --> WORK["/workspace"]
+    end
+
+    CLI --> AGENT
+    SKILLS --> R
+    R <--> MCP
+    REPORT -.->|writes to| WORK
+
+    style Sandbox fill:#1a1a2e,stroke:#e94560,stroke-width:2px
+    style Pipeline fill:#16213e,stroke:#0f3460,stroke-width:1px
+    style MCP fill:#0f3460,stroke:#533483,stroke-width:1px
+    style Agent fill:#533483,stroke:#e94560,stroke-width:2px
+```
+
+---
+
 ## Quick Start
 
 ```bash
@@ -27,6 +95,13 @@ scan http://target.com in ctf mode
 |------|---------|
 | [opencode](https://opencode.ai) | Agentic CLI runtime |
 | `nmap`, `curl`, `ffuf`, `python3` | Scanning, requests, fuzzing, scripting |
+
+Or use the Docker sandbox:
+
+```bash
+docker build -t noir .
+docker run -it --rm -v "$(pwd):/workspace" noir
+```
 
 ---
 
@@ -90,15 +165,18 @@ python tools/db.py update 1 fixed
 
 ## Recon MCP Server
 
-Registered in `opencode.jsonc` — auto-loaded on project open.
+Registered in `opencode.jsonc` — auto-loaded on project open. Each tool has built-in caching, timeouts, and structured output.
 
-| Tool | What it does |
-|------|-------------|
-| `nmap_scan` | Port scan target host |
-| `http_probe` | Fetch HTTP headers / page content |
-| `dns_lookup` | DNS record lookup |
-| `whois_lookup` | WHOIS domain/IP lookup |
-| `ffuf_fuzz` | Directory fuzzing with custom wordlist |
+| Tool | What it does | Cache TTL |
+|------|-------------|-----------|
+| `nmap_scan` | Port scan target host | 5 min |
+| `http_probe` | Fetch HTTP headers / page content | 30 s |
+| `dns_lookup` | DNS record lookup | 1 min |
+| `whois_lookup` | WHOIS domain/IP lookup | 10 min |
+| `ffuf_fuzz` | Directory fuzzing with custom wordlist | 5 min |
+| `ssl_check` | SSL/TLS certificate & cipher audit | 10 min |
+| `cve_search` | CVE lookup by product + version | 1 hour |
+| `subdomain_enum` | crt.sh / certspotter subdomain discovery | 5 min |
 
 ---
 
@@ -107,15 +185,17 @@ Registered in `opencode.jsonc` — auto-loaded on project open.
 ```
 .github/workflows/       # CI (skill validation + MCP smoke test)
 .opencode/
-  agents/noir.md         # Agent definition
-  commands/attack.md     # Autonomous attack pipeline
-  commands/scan.md       # Guided scan command
-  skills/                # 251 skill playbooks
+  agents/noir.md         # Agent definition + operating principles
+  commands/attack.md     # Autonomous attack pipeline (9 phases)
+  commands/scan.md       # Guided scan command + mode detection
+  skills/                # 251 skill playbooks (vulns, CTF, framework, proto, etc)
 scripts/                 # Dev/test scripts
 tools/
-  db.py                 # SQLite findings database
-  recon_server.py       # MCP server
-opencode.jsonc           # Configuration
+  db.py                 # SQLite findings database (SQLite)
+  recon_server.py       # MCP server (FastMCP)
+  browser_scanner.py    # Playwright DOM / cookie / CSP scanner
+opencode.jsonc           # Agent + skill + MCP config
+Dockerfile               # Container sandbox (python:3.11-slim + nmap + ffuf)
 ```
 
 ---
