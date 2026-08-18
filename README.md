@@ -66,7 +66,17 @@ flowchart TB
 
 ---
 
-## 🖮 Quick Start
+
+## 📢 Commands
+
+| Command | Theme | Description |
+|---|---|---|
+| infiltrate <url> | House Infiltration | Runs the full autonomous cooperative pipeline scan |
+| escape <url> | House Escape Plan | Performs standard scanning & threat analysis sequence |
+| decode-minerva | Minerva Clues | Explores and decodes hidden secrets, API keys & OSINT data |
+| play-tag | Tag Simulation | Launches tag/chase script simulation in playground environment |
+| disable-transmitter | Trace Deletion | Runs execution logs cleaning and temporary file cleanup |
+\n## 🖮 Quick Start
 ```bash
 git clone https://github.com/rheatkhs/noir.git
 cd noir
