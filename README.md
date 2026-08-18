@@ -75,7 +75,10 @@ flowchart TB
 | escape <url> | House Escape Plan | Performs standard scanning & threat analysis sequence |
 | decode-minerva | Minerva Clues | Explores and decodes hidden secrets, API keys & OSINT data |
 | play-tag | Tag Simulation | Launches tag/chase script simulation in playground environment |
-| disable-transmitter | Trace Deletion | Runs execution logs cleaning and temporary file cleanup |
+| disable-transmitter | Trace Deletion | Runs execution logs cleaning and temporary file cleanup |\n| cross-the-wall | Cross The Wall | Performs SOCKS/SSH tunneling and network pivoting |
+| make-a-promise | The Promise | Validates target scoping, exclusions, and safety rules |
+| goldy-pond | Goldy Pond | Runs batch target scans and queue scheduler operations |
+
 \n## 🖮 Quick Start
 ```bash
 git clone https://github.com/rheatkhs/noir.git
