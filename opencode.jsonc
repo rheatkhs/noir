@@ -1,24 +1,91 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "default_agent": "noir",
+  "default_agent": "isabella",
   "agent": {
-    "noir": {
-      "description": "Autonomous security penetration testing agent. Use for vulnerability scanning, recon, exploitation, and PoC validation.",
+    "isabella": {
+      "description": "Orchestrator of the Grace Field House team. Coordinates, schedules, and merges reports.",
       "mode": "primary",
       "permission": {
-        "bash": { "nmap *": "allow", "curl *": "allow", "*": "ask" },
+        "bash": "deny",
+        "edit": "allow",
+        "read": "allow"
+      }
+    },
+    "gilda": {
+      "description": "Recon and scout agent. Performs port scans, fuzzing, and initial target discovery.",
+      "permission": {
+        "bash": {
+          "nmap *": "allow",
+          "ffuf *": "allow",
+          "curl *": "allow",
+          "*": "ask"
+        },
         "edit": "deny",
+        "read": "allow"
+      }
+    },
+    "norman": {
+      "description": "Strategic analysis agent. Analyzes recon data, maps vectors, and distributes attack targets.",
+      "permission": {
+        "bash": "deny",
+        "edit": "deny",
+        "read": "allow"
+      }
+    },
+    "emma": {
+      "description": "Offensive web and logic vulnerability scanner. Tests IDOR, CSRF, SSRF, XSS.",
+      "permission": {
+        "bash": {
+          "curl *": "allow",
+          "*": "ask"
+        },
+        "edit": "deny",
+        "read": "allow"
+      }
+    },
+    "don": {
+      "description": "Offensive system vulnerability tester. Explores SQLi, RCE, LFI, and system ports.",
+      "permission": {
+        "bash": {
+          "curl *": "allow",
+          "*": "ask"
+        },
+        "edit": "deny",
+        "read": "allow"
+      }
+    },
+    "ray": {
+      "description": "Exploit validation and chainer agent. Writes and executes PoCs, builds attack chains.",
+      "permission": {
+        "bash": {
+          "python3 *": "allow",
+          "*": "ask"
+        },
+        "edit": "allow",
+        "read": "allow"
+      }
+    },
+    "phil": {
+      "description": "Reporting and cleanup agent. Gathers evidence and formats findings into the final report.",
+      "permission": {
+        "bash": "deny",
+        "edit": "allow",
         "read": "allow"
       }
     }
   },
   "skills": {
-    "paths": [".opencode/skills"]
+    "paths": [
+      ".opencode/skills"
+    ]
   },
   "mcp": {
     "noir-recon": {
       "type": "local",
-      "command": ["python", "tools/recon_server.py"],
+      "command": [
+        "python",
+        "tools/recon_server.py"
+      ],
       "enabled": true
     }
   }
