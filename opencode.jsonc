@@ -72,6 +72,14 @@
         "edit": "allow",
         "read": "allow"
       }
+    },
+    "krone": {
+      "description": "Stealth and evasion agent. Optimizes requests to bypass WAFs and enforces rate limits.",
+      "permission": {
+        "bash": "deny",
+        "edit": "allow",
+        "read": "allow"
+      }
     }
   },
   "skills": {
