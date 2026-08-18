@@ -46,6 +46,14 @@ def get_conn():
             last_checked TEXT DEFAULT (datetime('now'))
         )
     """)
+
+    conn.execute("""
+        CREATE TABLE IF NOT EXISTS agent_state (
+            key TEXT PRIMARY KEY,
+            val TEXT NOT NULL,
+            updated_at TEXT DEFAULT (datetime('now'))
+        )
+    """)
     conn.commit()
     return conn
 
@@ -165,6 +173,23 @@ def cmd_check(args):
     else:
         print(f"CHANGED: hash differs (was {row['body_hash'][:12]}..., now {current_hash[:12]}...)")
 
+
+def cmd_set_state(args):
+    key, val = args[0], args[1]
+    conn = get_conn()
+    conn.execute("INSERT INTO agent_state (key, val) VALUES (?, ?) ON CONFLICT(key) DO UPDATE SET val=excluded.val, updated_at=datetime('now')", (key, val))
+    conn.commit()
+    print("OK: state set")
+
+def cmd_get_state(args):
+    key = args[0]
+    conn = get_conn()
+    row = conn.execute("SELECT val FROM agent_state WHERE key=?", (key,)).fetchone()
+    if row:
+        print(row["val"])
+    else:
+        print("")
+
 if __name__ == "__main__":
     if len(sys.argv) < 2:
         print("Usage: python noir-db.py <add|update|query|scan|summary|cache|check> [args]")
@@ -173,4 +198,4 @@ if __name__ == "__main__":
     args = sys.argv[2:]
     {"add": cmd_add, "update": cmd_update, "query": cmd_query,
      "scan": cmd_scan, "summary": cmd_summary,
-     "cache": cmd_cache, "check": cmd_check}.get(cmd, lambda _: print(f"Unknown: {cmd}"))(args)
+     "cache": cmd_cache, "check": cmd_check, "set_state": cmd_set_state, "get_state": cmd_get_state}.get(cmd, lambda _: print(f"Unknown: {cmd}"))(args)

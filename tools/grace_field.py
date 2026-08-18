@@ -72,7 +72,7 @@ class GraceFieldOrchestrator:
 
         # 6. Phil (Reporting & HTML)
         print("[6] Phil starting report compilation...")
-        report_prompt = f"Collect all data from validated_findings.json. Generate a beautiful, interactive HTML security report under {self.report_dir}/report.html. Clean up findings files."
+        report_prompt = f"Run python tools/report_gen.py {self.hostname} {self.report_dir}/report.html and clean up findings files."
         await self._run_agent("phil", report_prompt)
 
         print("[+] Scan completed!")
