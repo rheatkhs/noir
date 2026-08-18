@@ -73,8 +73,8 @@ cd noir
 opencode
 
 # Isabella will autonomously initiate the scan flow
-attack http://localhost:3000
-agent isabella "scan http://target.com"
+infiltrate http://localhost:3000
+agent isabella "escape http://target.com"
 ```
 
 ---
